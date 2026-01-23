@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Chinyi Eggs Technology</title>
+  <meta name="description" content="Contact Chinyi Eggs Technology for product inquiries, samples, and partnership opportunities.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600&family=Noto+Serif:wght@400;500;600&family=Noto+Serif+TC:wght@400;500&family=Source+Sans+Pro:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-mark">
+          <svg viewBox="0 0 32 40"><ellipse cx="16" cy="22" rx="12" ry="15"/></svg>
+        </div>
+        <span class="logo-text">CHINYI EGGS</span>
+      </a>
+      <div class="header-controls">
+        <div class="lang-switch">
+          <a href="#" class="active">EN</a>
+          <span>|</span>
+          <a href="#">中文</a>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Overlay -->
+  <nav class="nav-overlay" id="navOverlay">
+    <button class="nav-close" id="navClose">CLOSE ✕</button>
+    <div class="nav-content">
+      <div class="nav-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About Chinyi</a></li>
+          <li><a href="milestones.html">Corporate Milestones</a></li>
+          <li><a href="quality-control.html">Quality Control</a></li>
+          <li><a href="factory-tour.html">Factory Tour</a></li>
+        </ul>
+      </div>
+      <div class="nav-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="egg-tart-liquid.html">Prepared Egg Liquid</a></li>
+          <li><a href="hydrolyzed-eggshell-membrane.html">Biotech Ingredients</a></li>
+          <li><a href="egg-white-products.html">High-Protein Foods</a></li>
+        </ul>
+      </div>
+      <div class="nav-section">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="contact.html">Get in Touch</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="nav-footer"><div class="nav-footer-line">CHINYI EGGS</div></div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <div class="container">
+      <div class="breadcrumb-list">
+        <a href="index.html">Home</a>
+        <span class="separator">›</span>
+        <span class="current">Contact</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero hero-small hero-with-bg" style="background-image: url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&q=80');">
+    <div class="hero-content">
+      <p class="hero-label">Get in Touch</p>
+      <h1 class="hero-title">Contact Us</h1>
+      <div class="hero-divider"></div>
+      <p class="hero-subtitle">We look forward to hearing from you</p>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="section">
+    <div class="container">
+      <div class="content-narrow">
+        <div class="content-block">
+          <h3 class="content-title">Send Us a Message</h3>
+          <p>Whether you're interested in our products, seeking samples, or exploring partnership opportunities, please fill out the form below and our team will respond promptly.</p>
+
+          <form class="contact-form mt-lg" action="#" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="firstName">First Name <span class="required">*</span></label>
+                <input type="text" id="firstName" name="firstName" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="lastName">Last Name <span class="required">*</span></label>
+                <input type="text" id="lastName" name="lastName" class="form-input" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" class="form-input">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="company">Company Name</label>
+              <input type="text" id="company" name="company" class="form-input">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="country">Country / Region</label>
+              <select id="country" name="country" class="form-select">
+                <option value="">Please select</option>
+                <option value="TW">Taiwan</option>
+                <option value="JP">Japan</option>
+                <option value="CN">China</option>
+                <option value="HK">Hong Kong</option>
+                <option value="KR">South Korea</option>
+                <option value="SG">Singapore</option>
+                <option value="MY">Malaysia</option>
+                <option value="TH">Thailand</option>
+                <option value="VN">Vietnam</option>
+                <option value="ID">Indonesia</option>
+                <option value="PH">Philippines</option>
+                <option value="AU">Australia</option>
+                <option value="NZ">New Zealand</option>
+                <option value="US">United States</option>
+                <option value="CA">Canada</option>
+                <option value="UK">United Kingdom</option>
+                <option value="DE">Germany</option>
+                <option value="FR">France</option>
+                <option value="OTHER">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="inquiry">Inquiry Type <span class="required">*</span></label>
+              <select id="inquiry" name="inquiry" class="form-select" required>
+                <option value="">Please select</option>
+                <option value="product">Product Information</option>
+                <option value="sample">Sample Request</option>
+                <option value="quote">Price Quote</option>
+                <option value="oem">OEM/ODM Inquiry</option>
+                <option value="distribution">Distribution Partnership</option>
+                <option value="technical">Technical Support</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="products">Products of Interest</label>
+              <select id="products" name="products" class="form-select">
+                <option value="">Please select</option>
+                <option value="liquid">Prepared Egg Liquid Series</option>
+                <option value="membrane">Hydrolyzed Eggshell Membrane</option>
+                <option value="eggshell">Eggshell Membrane</option>
+                <option value="calcium">Eggshell Calcium Powder</option>
+                <option value="calcined">Calcined Eggshell Powder</option>
+                <option value="oil">Egg Oil</option>
+                <option value="protein">High-Protein Egg White Products</option>
+                <option value="multiple">Multiple Products</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Message <span class="required">*</span></label>
+              <textarea id="message" name="message" class="form-textarea" required placeholder="Please describe your inquiry in detail..."></textarea>
+            </div>
+
+            <div class="form-group text-center mt-lg">
+              <button type="submit" class="btn btn-primary btn-lg">Submit Inquiry</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="content-block mt-xl">
+          <h3 class="content-title">Company Information</h3>
+          <div class="highlight-box">
+            <p><strong>Chinyi Eggs Technology Co., Ltd.</strong></p>
+            <p style="margin-bottom: 0.5rem;">No. 37, Xinmin Road, Chiayi City 600, Taiwan</p>
+            <p style="margin-bottom: 0.5rem;">Tel: +886-5-235-4049</p>
+            <p style="margin-bottom: 0;">Fax: +886-5-235-4050</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">CHINYI EGGS TECHNOLOGY</div>
+      <div class="footer-divider"></div>
+      <nav class="footer-nav">
+        <a href="about.html">Company</a>
+        <a href="egg-tart-liquid.html">Products</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-contact">
+        No. 37, Xinmin Road, Chiayi City, Taiwan<br>Tel: 05-2354049
+      </div>
+      <div class="footer-certs">
+        <span class="footer-cert">HACCP</span>
+        <span class="footer-cert">ISO 22000</span>
+        <span class="footer-cert">CAS</span>
+        <span class="footer-cert">HALAL</span>
+      </div>
+      <div class="footer-bottom">© 2024 Chinyi Eggs Technology Co., Ltd. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navOverlay = document.getElementById('navOverlay');
+    const navClose = document.getElementById('navClose');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navOverlay.classList.toggle('active');
+      document.body.style.overflow = navOverlay.classList.contains('active') ? 'hidden' : '';
+    });
+    navClose.addEventListener('click', () => {
+      menuToggle.classList.remove('active');
+      navOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  </script>
+</body>
+</html>
