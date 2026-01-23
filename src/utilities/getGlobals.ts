@@ -7,14 +7,26 @@ import { unstable_cache } from 'next/cache'
 type Global = keyof Config['globals']
 
 async function getGlobal(slug: Global, depth = 0) {
-  const payload = await getPayload({ config: configPromise })
+  try {
+    const payload = await getPayload({ config: configPromise })
 
-  const global = await payload.findGlobal({
-    slug,
-    depth,
-  })
+    const global = await payload.findGlobal({
+      slug,
+      depth,
+    })
 
-  return global
+    return global
+  } catch (error) {
+    console.error(`Error fetching global ${slug}:`, error)
+    // Return empty default based on slug
+    if (slug === 'header') {
+      return { navItems: [] } as Config['globals']['header']
+    }
+    if (slug === 'footer') {
+      return { navItems: [] } as Config['globals']['footer']
+    }
+    return {} as Config['globals'][typeof slug]
+  }
 }
 
 /**
