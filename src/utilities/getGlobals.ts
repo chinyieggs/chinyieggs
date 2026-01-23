@@ -20,12 +20,12 @@ async function getGlobal(slug: Global, depth = 0) {
     console.error(`Error fetching global ${slug}:`, error)
     // Return empty default based on slug
     if (slug === 'header') {
-      return { navItems: [] } as Config['globals']['header']
+      return { navItems: [] } as unknown as Config['globals']['header']
     }
     if (slug === 'footer') {
-      return { navItems: [] } as Config['globals']['footer']
+      return { navItems: [] } as unknown as Config['globals']['footer']
     }
-    return {} as Config['globals'][typeof slug]
+    return {} as unknown as Config['globals'][typeof slug]
   }
 }
 
