@@ -35,4 +35,5 @@ async function getGlobal(slug: Global, depth = 0) {
 export const getCachedGlobal = (slug: Global, depth = 0) =>
   unstable_cache(async () => getGlobal(slug, depth), [slug], {
     tags: [`global_${slug}`],
+    revalidate: 3600, // 快取 1 小時
   })

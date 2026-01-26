@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
 
+// ISR: 頁面每 60 秒重新驗證一次
+export const revalidate = 60
+
 import { PayloadRedirects } from '@/components/PayloadRedirects'
 import configPromise from '@payload-config'
 import { getPayload, type RequiredDataFromCollectionSlug } from 'payload'

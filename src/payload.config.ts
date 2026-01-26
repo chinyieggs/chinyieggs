@@ -99,6 +99,7 @@ export default buildConfig({
   db: vercelPostgresAdapter({
     pool: {
       connectionString: process.env.POSTGRES_URL || '',
+      max: 1, // Serverless 建議設為 1，讓 Supabase pooler 管理連接
     },
     push: process.env.NODE_ENV !== 'production',
   }),
