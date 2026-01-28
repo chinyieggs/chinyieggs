@@ -387,24 +387,37 @@ button.btn.btn--style-primary:hover,
   border-radius: 12px;
   padding: 6px;
   border: 1px solid var(--warm-200);
+  display: flex;
+  justify-content: center;
 }
 
 .tabs-field__tab-button {
   border-radius: 8px;
   transition: all 0.25s ease;
   color: var(--warm-600);
+  font-weight: 500;
+  padding-bottom: 0 !important;
+  padding: 8px 16px !important;
+  opacity: 1 !important;
+}
+
+.tabs-field__tab-button:after {
+  display: none !important;
 }
 
 .tabs-field__tab-button:hover {
   background-color: var(--warm-200);
+  color: var(--warm-800);
 }
 
-.tabs-field__tab-button--active {
-  background-color: #FFFFFF;
-  color: var(--warm-800);
+.tabs-field__tab-button--active,
+.tabs-field__tab-button--active:hover {
+  background-color: #FFFFFF !important;
+  color: var(--warm-800) !important;
+  font-weight: 600;
   box-shadow:
-    0 2px 4px rgba(var(--shadow-color), 0.06),
-    0 4px 8px rgba(var(--shadow-color), 0.04);
+    0 1px 3px rgba(var(--shadow-color), 0.08),
+    0 2px 6px rgba(var(--shadow-color), 0.04);
 }
 
 /* =====================================================
@@ -524,7 +537,7 @@ button.btn.btn--style-primary:hover,
 .rich-text-lexical {
   border-radius: 12px;
   border: 1.5px solid var(--warm-200);
-  overflow: hidden;
+  overflow: clip;
 }
 
 .rich-text-lexical:focus-within {
@@ -534,7 +547,21 @@ button.btn.btn--style-primary:hover,
 
 .rich-text-lexical__toolbar {
   background-color: var(--warm-50);
-  border-bottom: 1px solid var(--warm-200);
+  border: none !important;
+  border-bottom: 1px solid var(--warm-200) !important;
+  border-radius: 0 !important;
+}
+
+.fixed-toolbar {
+  border: none !important;
+  transform: none !important;
+  border-bottom: 1px solid var(--warm-200) !important;
+  border-radius: 12px 12px 0 0 !important;
+}
+
+.fixed-toolbar:before,
+.fixed-toolbar:after {
+  border-radius: 12px 12px 0 0 !important;
 }
 
 /* =====================================================
@@ -554,6 +581,22 @@ button.btn.btn--style-primary:hover,
 .blocks-field__row:hover {
   border-color: var(--warm-300);
   box-shadow: 0 4px 12px rgba(var(--shadow-color), 0.08);
+}
+
+.section-title {
+  text-align: center;
+  min-width: 120px;
+  border-radius: 20px;
+  background-color: var(--warm-100);
+  border: 1px solid var(--warm-200);
+  padding: 4px 12px;
+}
+
+.section-title__input {
+  text-align: center;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 /* =====================================================
