@@ -206,6 +206,7 @@ export interface Page {
     | SpecTableBlock
     | CertificationGridBlock
     | SectionIntroBlock
+    | ImageCarouselBlock
   )[];
   meta?: {
     title?: string | null;
@@ -997,6 +998,33 @@ export interface SectionIntroBlock {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ImageCarouselBlock".
+ */
+export interface ImageCarouselBlock {
+  images?:
+    | {
+        image?: (number | null) | Media;
+        /**
+         * 如果沒有上傳圖片，可使用外部 URL
+         */
+        imageUrl?: string | null;
+        /**
+         * 可選的圖片描述文字
+         */
+        caption?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  autoplay?: boolean | null;
+  autoplayInterval?: ('3' | '5' | '7' | '10') | null;
+  pauseOnHover?: boolean | null;
+  showThumbnails?: boolean | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'imageCarousel';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "users".
  */
 export interface User {
@@ -1291,6 +1319,7 @@ export interface PagesSelect<T extends boolean = true> {
         specTable?: T | SpecTableBlockSelect<T>;
         certificationGrid?: T | CertificationGridBlockSelect<T>;
         sectionIntro?: T | SectionIntroBlockSelect<T>;
+        imageCarousel?: T | ImageCarouselBlockSelect<T>;
       };
   meta?:
     | T
@@ -1615,6 +1644,26 @@ export interface SectionIntroBlockSelect<T extends boolean = true> {
   ctaLabel?: T;
   ctaLink?: T;
   textAlign?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ImageCarouselBlock_select".
+ */
+export interface ImageCarouselBlockSelect<T extends boolean = true> {
+  images?:
+    | T
+    | {
+        image?: T;
+        imageUrl?: T;
+        caption?: T;
+        id?: T;
+      };
+  autoplay?: T;
+  autoplayInterval?: T;
+  pauseOnHover?: T;
+  showThumbnails?: T;
   id?: T;
   blockName?: T;
 }

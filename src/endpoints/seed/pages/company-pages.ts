@@ -638,6 +638,37 @@ export const factoryTourPage = (): RequiredDataFromCollectionSlug<'pages'> => ({
         "Using internationally recognized Pasteur low-temperature sterilization. Through a plate heat exchanger (preheat → heating for sterilization → cooling → chilling), we eliminate Salmonella, E. coli, and various harmful microbes and spoilage bacteria. The entire sterilization process is conducted through elevated, sealed piping systems—thoroughly isolating the process from external contamination.",
       ]),
     },
+    // Factory Gallery - ImageCarousel
+    {
+      blockType: 'imageCarousel',
+      blockName: 'Factory Gallery',
+      images: [
+        {
+          imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&q=80',
+          caption: '100K Class Cleanroom Production Area',
+        },
+        {
+          imageUrl: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1200&q=80',
+          caption: 'Automated Production Line',
+        },
+        {
+          imageUrl: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&q=80',
+          caption: 'Danish Continuous Sterilization Equipment',
+        },
+        {
+          imageUrl: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=80',
+          caption: 'Sealed Piping Systems',
+        },
+        {
+          imageUrl: 'https://images.unsplash.com/photo-1579003593419-98f949b9398f?w=1200&q=80',
+          caption: 'Quality Control Laboratory',
+        },
+      ],
+      autoplay: true,
+      autoplayInterval: '3',
+      pauseOnHover: true,
+      showThumbnails: true,
+    },
     // Factory Features
     {
       blockType: 'featureGrid',
