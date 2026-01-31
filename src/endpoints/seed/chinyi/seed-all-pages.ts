@@ -121,7 +121,6 @@ export const seedChinyiGlobals = async (payload: Payload): Promise<void> => {
       data: {
         style: 'japanese',
         logoText: 'CHINYI EGGS',
-        showLanguageSwitch: true,
         navItems: [
           {
             link: { type: 'custom', label: 'Company', url: '/about' },

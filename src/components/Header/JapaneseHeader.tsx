@@ -15,14 +15,12 @@ interface JapaneseHeaderProps {
   data?: Header
   navSections?: NavSection[]
   logoText?: string
-  showLangSwitch?: boolean
 }
 
 export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
   data: _data,
   navSections,
   logoText = 'CHINYI EGGS',
-  showLangSwitch = true,
 }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
@@ -108,17 +106,6 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
 
           {/* Right Controls */}
           <div className="flex items-center gap-8">
-            {/* Language Switch */}
-            {showLangSwitch && (
-              <div className="hidden md:flex items-center gap-2 text-xs tracking-[0.1em]">
-                <button className="p-1 opacity-100 text-sumi">EN</button>
-                <span className="text-hai">|</span>
-                <button className="p-1 opacity-40 hover:opacity-100 transition-opacity">
-                  中文
-                </button>
-              </div>
-            )}
-
             {/* Menu Toggle - 48x48px with 6px gap, 1px lines */}
             <button
               className={cn(

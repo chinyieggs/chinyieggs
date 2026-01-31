@@ -8,7 +8,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import type { Header as HeaderType } from '@/payload-types'
 
 import { CMSLink } from '@/components/Link'
-import { ThemeToggle } from '@/components/ui/theme-toggle'
 import Link from 'next/link'
 import { SearchIcon } from 'lucide-react'
 
@@ -95,7 +94,6 @@ export const HeaderNav: React.FC<{ data: HeaderType }> = ({ data }) => {
           <span className="sr-only">Search</span>
           <SearchIcon className="w-5" />
         </Link>
-        <ThemeToggle />
       </div>
     </nav>
   )

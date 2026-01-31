@@ -1997,10 +1997,6 @@ export interface Header {
    * Logo 文字（僅 Japanese 樣式）
    */
   logoText?: string | null;
-  /**
-   * 顯示語言切換按鈕
-   */
-  showLanguageSwitch?: boolean | null;
   navItems?:
     | {
         link: {
@@ -2101,7 +2097,6 @@ export interface Footer {
 export interface HeaderSelect<T extends boolean = true> {
   style?: T;
   logoText?: T;
-  showLanguageSwitch?: T;
   navItems?:
     | T
     | {

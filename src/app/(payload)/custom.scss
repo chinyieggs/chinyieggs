@@ -128,7 +128,7 @@
 
 .nav__link--active {
   background: linear-gradient(135deg, var(--warm-500) 0%, var(--warm-600) 100%);
-  color: #FFFFFF !important;
+  color: #FFFFFF;
   box-shadow: 0 2px 8px rgba(164, 119, 100, 0.3);
 }
 
@@ -236,19 +236,19 @@ textarea:focus {
 
 /* Select 下拉選單 */
 .react-select__control {
-  border-radius: 10px !important;
-  border: 1.5px solid var(--warm-200) !important;
-  background-color: var(--warm-50) !important;
-  transition: all 0.25s ease !important;
+  border-radius: 10px;
+  border: 1.5px solid var(--warm-200);
+  background-color: var(--warm-50);
+  transition: all 0.25s ease;
 }
 
 .react-select__control:hover {
-  border-color: var(--warm-300) !important;
+  border-color: var(--warm-300);
 }
 
 .react-select__control--is-focused {
-  border-color: var(--warm-500) !important;
-  box-shadow: 0 0 0 4px rgba(164, 119, 100, 0.12) !important;
+  border-color: var(--warm-500);
+  box-shadow: 0 0 0 4px rgba(164, 119, 100, 0.12);
 }
 
 /* =====================================================
@@ -396,13 +396,13 @@ button.btn.btn--style-primary:hover,
   transition: all 0.25s ease;
   color: var(--warm-600);
   font-weight: 500;
-  padding-bottom: 0 !important;
-  padding: 8px 16px !important;
-  opacity: 1 !important;
+  padding-bottom: 0;
+  padding: 8px 16px;
+  opacity: 1;
 }
 
 .tabs-field__tab-button:after {
-  display: none !important;
+  display: none;
 }
 
 .tabs-field__tab-button:hover {
@@ -412,8 +412,8 @@ button.btn.btn--style-primary:hover,
 
 .tabs-field__tab-button--active,
 .tabs-field__tab-button--active:hover {
-  background-color: #FFFFFF !important;
-  color: var(--warm-800) !important;
+  background-color: #FFFFFF;
+  color: var(--warm-800);
   font-weight: 600;
   box-shadow:
     0 1px 3px rgba(var(--shadow-color), 0.08),
@@ -547,21 +547,27 @@ button.btn.btn--style-primary:hover,
 
 .rich-text-lexical__toolbar {
   background-color: var(--warm-50);
-  border: none !important;
-  border-bottom: 1px solid var(--warm-200) !important;
-  border-radius: 0 !important;
+  border: none;
+  border-bottom: 1px solid var(--warm-200);
+  border-radius: 0;
+}
+
+/* Lexical 編輯器內容區域 padding */
+.rich-text-lexical .editor {
+  padding: 16px;
+  min-height: 80px;
 }
 
 .fixed-toolbar {
-  border: none !important;
-  transform: none !important;
-  border-bottom: 1px solid var(--warm-200) !important;
-  border-radius: 12px 12px 0 0 !important;
+  border: none;
+  transform: none;
+  border-bottom: 1px solid var(--warm-200);
+  border-radius: 12px 12px 0 0;
 }
 
 .fixed-toolbar:before,
 .fixed-toolbar:after {
-  border-radius: 12px 12px 0 0 !important;
+  border-radius: 12px 12px 0 0;
 }
 
 /* =====================================================
@@ -594,24 +600,49 @@ button.btn.btn--style-primary:hover,
 
 .section-title__input {
   text-align: center;
-  background-color: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 /* =====================================================
    上傳區域
    ===================================================== */
-.upload__dropzone {
+.upload__dropzone,
+.dropzone {
   border-radius: 16px;
   border: 2px dashed var(--warm-300);
   background-color: var(--warm-50);
   transition: all 0.25s ease;
 }
 
-.upload__dropzone:hover {
+.upload__dropzone:hover,
+.dropzone:hover {
   border-color: var(--warm-400);
   background-color: var(--warm-100);
+}
+
+/* 上傳區域內部內容 */
+.file-field__upload {
+  padding: 16px 24px;
+}
+
+.file-field__dropzoneContent {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 100px;
+}
+
+.file-field__dropzoneButtons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* =====================================================
@@ -624,6 +655,7 @@ h1, h2, h3, h4, h5, h6 {
 .field-label {
   color: var(--warm-700);
   font-weight: 500;
+  padding: 8px 0 8px 8px;
 }
 
 /* =====================================================

@@ -36,7 +36,6 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
       <JapaneseHeader
         data={data}
         logoText={data?.logoText || 'CHINYI EGGS'}
-        showLangSwitch={data?.showLanguageSwitch ?? true}
       />
     )
   }
@@ -46,7 +45,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
     <header className="container relative z-20   " {...(theme ? { 'data-theme': theme } : {})}>
       <div className="py-8 flex justify-between">
         <Link href="/">
-          <Logo loading="eager" priority="high" className="invert dark:invert-0" />
+          <Logo loading="eager" priority="high" className="invert" />
         </Link>
         <HeaderNav data={data} />
       </div>

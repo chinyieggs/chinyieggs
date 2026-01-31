@@ -58,10 +58,11 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
             />
           )}
           {/* Overlay - using kinari color like original HTML */}
+          {/* overlayOpacity: 0 = 完全透明, 100 = 完全不透明 */}
           <div
             className="absolute inset-0"
             style={{
-              backgroundColor: 'rgba(245, 243, 238, 0.85)',
+              backgroundColor: `rgba(245, 243, 238, ${overlayOpacity / 100})`,
             }}
           />
         </div>

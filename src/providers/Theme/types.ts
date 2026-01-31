@@ -1,10 +1,9 @@
-export type Theme = 'dark' | 'light'
+export type Theme = 'light'
 
 export interface ThemeContextType {
-  setTheme: (theme: Theme | null) => void
-  theme?: Theme | null
+  theme: 'light'
 }
 
 export function themeIsValid(string: null | string): string is Theme {
-  return string ? ['dark', 'light'].includes(string) : false
+  return string === 'light'
 }

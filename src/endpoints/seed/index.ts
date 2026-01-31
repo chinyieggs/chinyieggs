@@ -127,7 +127,6 @@ export const seed = async ({
       data: {
         style: 'japanese',
         logoText: 'CHINYI EGGS',
-        showLanguageSwitch: true,
         navItems: [
           {
             link: {

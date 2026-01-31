@@ -70,58 +70,6 @@
     --error: 0 72% 51%;
   }
 
-  [data-theme='dark'] {
-    /* ===== 深色模式 - 日式暖色調系統 ===== */
-    /* 深色模式下的勤億橘紅（稍亮以保持對比） */
-    --aka: 10 75% 55%;                    /* 深色模式橘紅 */
-    --aka-dark: 10 80% 45%;               /* 深色模式深橘紅 */
-    --aka-light: 10 65% 70%;              /* 深色模式淺橘紅 */
-    --aka-pale: 10 30% 20%;               /* 深色模式極淺橘紅 */
-
-    /* 深色模式中性色 */
-    --shiro: 30 5% 12%;                   /* 深色象牙背景 */
-    --kinari: 30 8% 16%;                  /* 深色米色 */
-    --hai: 0 0% 60%;                      /* 淺灰文字 */
-    --hai-light: 0 0% 70%;                /* 更淺灰 */
-    --sumi: 0 0% 95%;                     /* 淺色文字 */
-
-    /* 深色模式強調色 */
-    --ki: 42 50% 50%;                     /* 深色金色 */
-    --cha: 30 15% 50%;                    /* 深色茶色 */
-
-    /* ===== 系統色彩映射 ===== */
-    --background: 25 10% 8%;              /* 暖深灰背景 */
-    --foreground: 40 10% 95%;             /* 暖白文字 */
-
-    --card: 25 8% 12%;                    /* 卡片暖深灰背景 */
-    --card-foreground: 40 10% 95%;        /* 卡片暖白文字 */
-
-    --popover: 25 10% 8%;                 /* Popover 暖深灰背景 */
-    --popover-foreground: 40 10% 95%;     /* Popover 暖白文字 */
-
-    --primary: var(--aka);                /* 主色橘紅 */
-    --primary-foreground: 0 0% 100%;      /* 主色按鈕文字白色 */
-
-    --secondary: 25 8% 18%;               /* 次要按鈕暖深灰 */
-    --secondary-foreground: 40 10% 95%;   /* 次要按鈕暖白文字 */
-
-    --muted: 25 6% 18%;                   /* 柔和背景暖深灰 */
-    --muted-foreground: 0 0% 60%;         /* 柔和文字灰色 */
-
-    --accent: var(--aka);                 /* 強調色橘紅 */
-    --accent-foreground: 0 0% 100%;       /* 強調文字白色 */
-
-    --destructive: 0 62.8% 30.6%;         /* 刪除深紅色 */
-    --destructive-foreground: 0 0% 98%;   /* 刪除文字淺色 */
-
-    --border: 25 8% 20%;                  /* 暖深灰邊框 */
-    --input: 25 8% 20%;                   /* 輸入框邊框 */
-    --ring: var(--aka);                   /* 聚焦環橘紅色 */
-
-    --success: 142 76% 36%;
-    --warning: 38 92% 50%;
-    --error: 0 62% 55%;
-  }
 }
 
 @layer base {
@@ -145,11 +93,6 @@
   }
 }
 
-html {
-  opacity: 0;
-}
-
-html[data-theme='dark'],
 html[data-theme='light'] {
   opacity: initial;
 }

@@ -32,15 +32,6 @@ export const Header: GlobalConfig = {
       },
     },
     {
-      name: 'showLanguageSwitch',
-      type: 'checkbox',
-      defaultValue: true,
-      admin: {
-        condition: (_, { style }) => style === 'japanese',
-        description: '顯示語言切換按鈕',
-      },
-    },
-    {
       name: 'navItems',
       type: 'array',
       fields: [
