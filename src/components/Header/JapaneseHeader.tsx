@@ -18,7 +18,7 @@ interface JapaneseHeaderProps {
 }
 
 export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
-  data: _data,
+  data,
   navSections,
   logoText = 'CHINYI EGGS',
 }) => {
@@ -53,7 +53,50 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
   }, [isOpen])
 
   // Build nav sections from Payload data or use provided navSections
-  const sections: NavSection[] = navSections || [
+  const buildSectionsFromPayload = (): NavSection[] => {
+    if (!data?.navItems || data.navItems.length === 0) {
+      return []
+    }
+
+    return data.navItems.map((navItem) => {
+      const link = navItem.link
+      const title = link?.label || ''
+
+      // Build items from submenu if exists, otherwise use the main link
+      const items: { label: string; href: string }[] = []
+
+      if (navItem.submenu && navItem.submenu.length > 0) {
+        navItem.submenu.forEach((subItem) => {
+          const subLink = subItem.link
+          if (subLink) {
+            const href = subLink.type === 'reference' && subLink.reference
+              ? `/${(subLink.reference.value as { slug?: string })?.slug || ''}`
+              : subLink.url || '/'
+            items.push({
+              label: subLink.label || '',
+              href,
+            })
+          }
+        })
+      } else {
+        // No submenu, use the main link as the only item
+        const href = link?.type === 'reference' && link.reference
+          ? `/${(link.reference.value as { slug?: string })?.slug || ''}`
+          : link?.url || '/'
+        items.push({
+          label: link?.label || '',
+          href,
+        })
+      }
+
+      return { title, items }
+    })
+  }
+
+  const payloadSections = buildSectionsFromPayload()
+
+  // Use Payload data if available, then navSections prop, then fallback
+  const sections: NavSection[] = payloadSections.length > 0 ? payloadSections : (navSections || [
     {
       title: 'Company',
       items: [
@@ -75,7 +118,7 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
       title: 'Contact',
       items: [{ label: 'Get in Touch', href: '/contact' }],
     },
-  ]
+  ])
 
   return (
     <>
