@@ -62,7 +62,7 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
           <div
             className="absolute inset-0"
             style={{
-              backgroundColor: `rgba(245, 243, 238, ${overlayOpacity / 100})`,
+              backgroundColor: `rgba(245, 243, 238, ${(overlayOpacity ?? 40) / 100})`,
             }}
           />
         </div>
