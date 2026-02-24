@@ -21,7 +21,6 @@ export const JapaneseHero: Block = {
       name: 'title',
       type: 'text',
       label: '主標題',
-      required: true,
       defaultValue: 'CHINYI EGGS',
     },
     {
