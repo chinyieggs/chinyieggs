@@ -691,7 +691,7 @@ export interface JapaneseHeroBlock {
    * Hero 上方的小標籤
    */
   label?: string | null;
-  title: string;
+  title?: string | null;
   subtitle?: string | null;
   /**
    * 首頁使用 Sans-serif，其他頁面使用 Serif
@@ -703,6 +703,10 @@ export interface JapaneseHeroBlock {
    */
   backgroundImageUrl?: string | null;
   size?: ('small' | 'medium' | 'large' | 'full') | null;
+  /**
+   * 標題與副標題之間的橘色裝飾線
+   */
+  showDivider?: boolean | null;
   /**
    * 背景遮罩的透明度 (0-100)
    */
@@ -1437,6 +1441,7 @@ export interface JapaneseHeroBlockSelect<T extends boolean = true> {
   backgroundImage?: T;
   backgroundImageUrl?: T;
   size?: T;
+  showDivider?: T;
   overlayOpacity?: T;
   id?: T;
   blockName?: T;
