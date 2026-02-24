@@ -2,7 +2,8 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import { Globe } from 'lucide-react'
 import { cn } from '@/utilities/ui'
 import type { Header } from '@/payload-types'
 
@@ -24,6 +25,8 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [langOpen, setLangOpen] = useState(false)
+  const langRef = useRef<HTMLDivElement>(null)
   const pathname = usePathname()
 
   // Handle scroll effect
@@ -35,10 +38,24 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Close menu on route change
+  // Close menus on route change
   useEffect(() => {
     setIsOpen(false)
+    setLangOpen(false)
   }, [pathname])
+
+  // Close language dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) {
+        setLangOpen(false)
+      }
+    }
+    if (langOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [langOpen])
 
   // Prevent body scroll when menu is open
   useEffect(() => {
@@ -148,7 +165,36 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
           </Link>
 
           {/* Right Controls */}
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-4">
+            {/* Language Switcher */}
+            <div className="relative" ref={langRef}>
+              <button
+                className="w-10 h-10 flex items-center justify-center text-sumi hover:text-aka transition-colors"
+                onClick={() => setLangOpen(!langOpen)}
+                aria-label="Switch language"
+              >
+                <Globe className="w-5 h-5" />
+              </button>
+              {langOpen && (
+                <div className="absolute right-0 top-full mt-2 bg-white rounded-md shadow-lg border border-border py-1 min-w-[140px] z-[1002]">
+                  <button
+                    className="w-full text-left px-4 py-2 text-sm text-sumi hover:bg-kinari flex items-center gap-2 transition-colors"
+                    onClick={() => setLangOpen(false)}
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-aka" />
+                    English
+                  </button>
+                  <button
+                    className="w-full text-left px-4 py-2 text-sm text-sumi hover:bg-kinari flex items-center gap-2 transition-colors"
+                    onClick={() => { window.location.href = 'https://tw.chinyieggs.com' }}
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-transparent" />
+                    繁體中文
+                  </button>
+                </div>
+              )}
+            </div>
+
             {/* Menu Toggle - 48x48px with 6px gap, 1px lines */}
             <button
               className={cn(
