@@ -23,6 +23,7 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
   backgroundImage,
   backgroundImageUrl,
   size = 'medium',
+  showDivider = true,
   overlayOpacity = 40,
   className,
 }) => {
@@ -101,14 +102,16 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
         )}
 
         {/* Divider - 60px width, margin 2rem auto */}
-        <div
-          style={{
-            width: '60px',
-            height: '1px',
-            background: '#E8380D',
-            margin: '2rem auto',
-          }}
-        />
+        {showDivider && (
+          <div
+            style={{
+              width: '60px',
+              height: '1px',
+              background: '#E8380D',
+              margin: '2rem auto',
+            }}
+          />
+        )}
 
         {/* Subtitle - 1rem, line-height 1.8 */}
         {subtitle && (

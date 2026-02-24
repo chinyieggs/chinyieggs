@@ -72,6 +72,15 @@ export const JapaneseHero: Block = {
       ],
     },
     {
+      name: 'showDivider',
+      type: 'checkbox',
+      label: '顯示分隔線',
+      defaultValue: true,
+      admin: {
+        description: '標題與副標題之間的橘色裝飾線',
+      },
+    },
+    {
       name: 'overlayOpacity',
       type: 'number',
       label: '遮罩透明度',
