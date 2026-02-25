@@ -100,6 +100,7 @@ export default buildConfig({
     pool: {
       connectionString: process.env.POSTGRES_URL || '',
       max: 1, // Serverless 建議設為 1，讓 Supabase pooler 管理連接
+      ssl: { rejectUnauthorized: false },
     },
     push: process.env.NODE_ENV !== 'production',
   }),
