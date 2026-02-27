@@ -36,6 +36,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
       <JapaneseHeader
         data={data}
         logoText={data?.logoText || 'CHINYI EGGS'}
+        logo={data?.logo}
       />
     )
   }

@@ -32,6 +32,15 @@ export const Header: GlobalConfig = {
       },
     },
     {
+      name: 'logo',
+      type: 'upload',
+      relationTo: 'media',
+      admin: {
+        condition: (_, { style }) => style === 'japanese',
+        description: 'Logo 圖片（僅 Japanese 樣式，建議使用透明背景 PNG 或 SVG）',
+      },
+    },
+    {
       name: 'navItems',
       type: 'array',
       fields: [

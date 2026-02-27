@@ -2051,6 +2051,10 @@ export interface Header {
    * Logo 文字（僅 Japanese 樣式）
    */
   logoText?: string | null;
+  /**
+   * Logo 圖片（僅 Japanese 樣式，建議使用透明背景 PNG 或 SVG）
+   */
+  logo?: (number | null) | Media;
   navItems?:
     | {
         link: {
@@ -2151,6 +2155,7 @@ export interface Footer {
 export interface HeaderSelect<T extends boolean = true> {
   style?: T;
   logoText?: T;
+  logo?: T;
   navItems?:
     | T
     | {

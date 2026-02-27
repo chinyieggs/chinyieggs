@@ -1,11 +1,13 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useEffect, useRef, useState } from 'react'
 import { Globe } from 'lucide-react'
 import { cn } from '@/utilities/ui'
-import type { Header } from '@/payload-types'
+import { getMediaUrl } from '@/utilities/getMediaUrl'
+import type { Header, Media } from '@/payload-types'
 
 interface NavSection {
   title: string
@@ -16,12 +18,14 @@ interface JapaneseHeaderProps {
   data?: Header
   navSections?: NavSection[]
   logoText?: string
+  logo?: Media | number | null
 }
 
 export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
   data,
   navSections,
   logoText = 'CHINYI EGGS',
+  logo,
 }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
@@ -151,11 +155,21 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
         <div className="flex items-center justify-between h-full max-w-[1200px] mx-auto px-8">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-8 h-10 text-aka">
-              <svg viewBox="0 0 32 40" className="w-full h-full fill-current">
-                <ellipse cx="16" cy="22" rx="12" ry="15" />
-              </svg>
-            </div>
+            {logo && typeof logo === 'object' && logo.url ? (
+              <Image
+                src={getMediaUrl(logo.url)}
+                alt={logo.alt || logoText}
+                width={32}
+                height={40}
+                className="w-8 h-10 object-contain"
+              />
+            ) : (
+              <div className="w-8 h-10 text-aka">
+                <svg viewBox="0 0 32 40" className="w-full h-full fill-current">
+                  <ellipse cx="16" cy="22" rx="12" ry="15" />
+                </svg>
+              </div>
+            )}
             <span
               className="text-lg tracking-[0.15em] text-sumi"
               style={{ fontFamily: "'Source Sans Pro', -apple-system, sans-serif" }}
