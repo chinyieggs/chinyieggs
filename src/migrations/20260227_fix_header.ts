@@ -31,7 +31,23 @@ export async function up({ db }: MigrateUpArgs): Promise<void> {
     ALTER TABLE "header" ADD COLUMN IF NOT EXISTS "logo_text" varchar DEFAULT 'CHINYI EGGS';
   `)
 
-  // 3. Create header_nav_items_submenu table if not exists
+  // 3. Add logo_id column to header table (upload field with single relationTo stores as direct column)
+  await db.execute(sql`
+    ALTER TABLE "header" ADD COLUMN IF NOT EXISTS "logo_id" integer;
+  `)
+  await db.execute(sql`
+    DO $$ BEGIN
+      ALTER TABLE "header"
+        ADD CONSTRAINT "header_logo_id_media_id_fk"
+        FOREIGN KEY ("logo_id") REFERENCES "media"("id") ON DELETE set null ON UPDATE no action;
+    EXCEPTION WHEN duplicate_object THEN null;
+    END $$;
+  `)
+  await db.execute(sql`
+    CREATE INDEX IF NOT EXISTS "header_logo_idx" ON "header" USING btree ("logo_id");
+  `)
+
+  // 4. Create header_nav_items_submenu table if not exists
   await db.execute(sql`
     CREATE TABLE IF NOT EXISTS "header_nav_items_submenu" (
       "_order" integer NOT NULL,
@@ -62,38 +78,16 @@ export async function up({ db }: MigrateUpArgs): Promise<void> {
     EXCEPTION WHEN duplicate_object THEN null;
     END $$;
   `)
-
-  // 4. Add media_id to header_rels for the logo upload field
-  await db.execute(sql`
-    ALTER TABLE "header_rels" ADD COLUMN IF NOT EXISTS "media_id" integer;
-  `)
-
-  // Add foreign key for media_id
-  await db.execute(sql`
-    DO $$ BEGIN
-      ALTER TABLE "header_rels"
-        ADD CONSTRAINT "header_rels_media_fk"
-        FOREIGN KEY ("media_id") REFERENCES "media"("id") ON DELETE cascade ON UPDATE no action;
-    EXCEPTION WHEN duplicate_object THEN null;
-    END $$;
-  `)
-
-  // Add index for media_id
-  await db.execute(sql`
-    CREATE INDEX IF NOT EXISTS "header_rels_media_id_idx" ON "header_rels" USING btree ("media_id");
-  `)
 }
 
 export async function down({ db }: MigrateDownArgs): Promise<void> {
-  // Remove media_id from header_rels
-  await db.execute(sql`ALTER TABLE "header_rels" DROP CONSTRAINT IF EXISTS "header_rels_media_fk";`)
-  await db.execute(sql`DROP INDEX IF EXISTS "header_rels_media_id_idx";`)
-  await db.execute(sql`ALTER TABLE "header_rels" DROP COLUMN IF EXISTS "media_id";`)
-
   // Drop submenu table
   await db.execute(sql`DROP TABLE IF EXISTS "header_nav_items_submenu";`)
 
   // Remove added columns from header
+  await db.execute(sql`ALTER TABLE "header" DROP CONSTRAINT IF EXISTS "header_logo_id_media_id_fk";`)
+  await db.execute(sql`DROP INDEX IF EXISTS "header_logo_idx";`)
+  await db.execute(sql`ALTER TABLE "header" DROP COLUMN IF EXISTS "logo_id";`)
   await db.execute(sql`ALTER TABLE "header" DROP COLUMN IF EXISTS "style";`)
   await db.execute(sql`ALTER TABLE "header" DROP COLUMN IF EXISTS "logo_text";`)
 
