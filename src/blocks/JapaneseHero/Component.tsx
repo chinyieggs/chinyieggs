@@ -37,27 +37,25 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
   return (
     <section
       className={cn(
-        'relative flex items-center justify-center overflow-hidden',
-        sizeClasses[size as keyof typeof sizeClasses],
+        'relative overflow-hidden',
         className,
       )}
     >
-      {/* Background Image */}
+      {/* Background Image: natural flow */}
       {imageUrl && (
-        <div className="absolute inset-0">
-          {bgImage ? (
-            <Media
-              resource={bgImage}
-              fill
-              imgClassName="object-cover"
-              priority
-            />
-          ) : (
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${imageUrl})` }}
-            />
-          )}
+        <>
+          <div className={cn('w-full', sizeClasses[size as keyof typeof sizeClasses])}>
+            {bgImage ? (
+              <Media
+                className="w-full"
+                resource={bgImage}
+                imgClassName="w-full h-auto block"
+                priority
+              />
+            ) : (
+              <img src={imageUrl} alt="" className="w-full h-auto block" />
+            )}
+          </div>
           {/* Overlay - using kinari color like original HTML */}
           {/* overlayOpacity: 0 = 完全透明, 100 = 完全不透明 */}
           <div
@@ -66,66 +64,71 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
               backgroundColor: `rgba(245, 243, 238, ${(overlayOpacity ?? 40) / 100})`,
             }}
           />
-        </div>
+        </>
       )}
 
+      {/* Minimum height when no image */}
+      {!imageUrl && <div className={sizeClasses[size as keyof typeof sizeClasses]} />}
+
       {/* Content */}
-      <div className="relative z-10 text-center px-8 max-w-[600px] mx-auto">
-        {/* Label - 0.75rem, letter-spacing 0.3em, margin-bottom 2rem */}
-        {label && (
-          <p
-            className="text-aka uppercase"
-            style={{
-              fontSize: '0.75rem',
-              letterSpacing: '0.3em',
-              marginBottom: '2rem',
-            }}
-          >
-            {label}
-          </p>
-        )}
+      <div className="absolute inset-0 z-10 flex items-center justify-center">
+        <div className="text-center px-8 max-w-[600px] mx-auto">
+          {/* Label - 0.75rem, letter-spacing 0.3em, margin-bottom 2rem */}
+          {label && (
+            <p
+              className="text-aka uppercase"
+              style={{
+                fontSize: '0.75rem',
+                letterSpacing: '0.3em',
+                marginBottom: '2rem',
+              }}
+            >
+              {label}
+            </p>
+          )}
 
-        {/* Title - clamp(2.5rem, 6vw, 4rem), margin-bottom 1rem */}
-        {title && (
-          <h1
-            className="text-sumi"
-            style={{
-              fontFamily: titleFontFamily,
-              fontSize: 'clamp(2.5rem, 6vw, 4rem)',
-              fontWeight: 600,
-              letterSpacing: '0.02em',
-              marginBottom: '1rem',
-            }}
-          >
-            {title}
-          </h1>
-        )}
+          {/* Title - clamp(2.5rem, 6vw, 4rem), margin-bottom 1rem */}
+          {title && (
+            <h1
+              className="text-sumi"
+              style={{
+                fontFamily: titleFontFamily,
+                fontSize: 'clamp(2.5rem, 6vw, 4rem)',
+                fontWeight: 600,
+                letterSpacing: '0.02em',
+                marginBottom: '1rem',
+              }}
+            >
+              {title}
+            </h1>
+          )}
 
-        {/* Divider - 60px width, margin 2rem auto */}
-        {showDivider && (
-          <div
-            style={{
-              width: '60px',
-              height: '1px',
-              background: '#E8380D',
-              margin: '2rem auto',
-            }}
-          />
-        )}
+          {/* Divider - 60px width, margin 2rem auto */}
+          {showDivider && (
+            <div
+              style={{
+                width: '60px',
+                height: '1px',
+                background: '#E8380D',
+                margin: '2rem auto',
+              }}
+            />
+          )}
 
-        {/* Subtitle - 1rem, line-height 1.8 */}
-        {subtitle && (
-          <p
-            className="text-hai"
-            style={{
-              fontSize: '1rem',
-              fontWeight: 400,
-              lineHeight: 1.8,
-            }}
-          >
-            {subtitle}
-          </p>
-        )}
+          {/* Subtitle - 1rem, line-height 1.8 */}
+          {subtitle && (
+            <p
+              className="text-hai"
+              style={{
+                fontSize: '1rem',
+                fontWeight: 400,
+                lineHeight: 1.8,
+              }}
+            >
+              {subtitle}
+            </p>
+          )}
+        </div>
       </div>
     </section>
   )
