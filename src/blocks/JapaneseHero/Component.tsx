@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import { cn } from '@/utilities/ui'
 import { Media } from '@/components/Media'
 import type { JapaneseHeroBlock as JapaneseHeroBlockType, Media as MediaType } from '@/payload-types'
@@ -140,23 +139,6 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
         </div>
       </div>
 
-      {/* CTA Buttons - positioned at bottom of hero */}
-      <div className="absolute bottom-12 md:bottom-16 left-0 right-0 z-10 flex justify-center px-6">
-        <div className="flex flex-wrap justify-center gap-4">
-          <Link
-            href="/egg-tart-liquid"
-            className="inline-flex items-center px-8 py-3.5 bg-aka border border-aka text-white text-sm tracking-[0.08em] hover:bg-aka-dark hover:border-aka-dark transition-all"
-          >
-            Explore Our Products
-          </Link>
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-8 py-3.5 border border-sumi text-sumi text-sm tracking-[0.08em] hover:bg-sumi hover:text-shiro transition-all"
-          >
-            Contact Us
-          </Link>
-        </div>
-      </div>
     </section>
   )
 }
