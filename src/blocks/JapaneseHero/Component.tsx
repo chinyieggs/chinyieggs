@@ -77,9 +77,9 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
             <p
               className="text-aka uppercase"
               style={{
-                fontSize: '0.75rem',
+                fontSize: 'clamp(0.5rem, 1.8vw, 0.75rem)',
                 letterSpacing: '0.3em',
-                marginBottom: '2rem',
+                marginBottom: 'clamp(0.75rem, 3vw, 2rem)',
               }}
             >
               {label}
@@ -92,10 +92,10 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
               className="text-sumi"
               style={{
                 fontFamily: titleFontFamily,
-                fontSize: 'clamp(2.5rem, 6vw, 4rem)',
+                fontSize: 'clamp(1.5rem, 5vw, 4rem)',
                 fontWeight: 600,
                 letterSpacing: '0.02em',
-                marginBottom: '1rem',
+                marginBottom: 'clamp(0.5rem, 1.5vw, 1rem)',
               }}
             >
               {title}
@@ -106,10 +106,10 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
           {showDivider && hasTextContent && (
             <div
               style={{
-                width: '60px',
+                width: 'clamp(30px, 8vw, 60px)',
                 height: '1px',
                 background: '#E8380D',
-                margin: '2rem auto',
+                margin: 'clamp(0.5rem, 2.5vw, 2rem) auto',
               }}
             />
           )}
@@ -119,7 +119,7 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
             <p
               className="text-hai"
               style={{
-                fontSize: '1rem',
+                fontSize: 'clamp(0.7rem, 2.2vw, 1rem)',
                 fontWeight: 400,
                 lineHeight: 1.8,
               }}
