@@ -23,7 +23,7 @@ export const HighImpactHero: React.FC<Page['hero']> = ({ links, media, richText 
         {media && typeof media === 'object' && (
           <Media
             className="w-full"
-            imgClassName="w-full h-auto block"
+            imgClassName="w-full h-auto min-h-[80vh] object-cover block"
             priority
             resource={media}
           />

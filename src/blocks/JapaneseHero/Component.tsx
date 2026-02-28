@@ -15,6 +15,13 @@ const sizeClasses = {
   full: 'min-h-screen',
 }
 
+const imgSizeClasses = {
+  small: 'min-h-[50vh]',
+  medium: 'min-h-[70vh]',
+  large: 'min-h-[100vh]',
+  full: 'min-h-screen',
+}
+
 export const JapaneseHeroBlock: React.FC<Props> = ({
   label,
   title,
@@ -49,11 +56,11 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
               <Media
                 className="w-full"
                 resource={bgImage}
-                imgClassName="w-full h-auto block"
+                imgClassName={cn('w-full h-auto object-cover block', imgSizeClasses[size as keyof typeof imgSizeClasses])}
                 priority
               />
             ) : (
-              <img src={imageUrl} alt="" className="w-full h-auto block" />
+              <img src={imageUrl} alt="" className={cn('w-full h-auto object-cover block', imgSizeClasses[size as keyof typeof imgSizeClasses])} />
             )}
           </div>
           {/* Overlay - using kinari color like original HTML */}
