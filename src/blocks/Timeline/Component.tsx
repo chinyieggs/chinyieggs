@@ -53,7 +53,7 @@ export const TimelineBlock: React.FC<Props> = ({
                 <AnimatedSection
                   key={index}
                   animation={animation}
-                  delay={index * 0.15}
+                  delay={index * 0.08}
                 >
                   <div
                     className="timeline-item"

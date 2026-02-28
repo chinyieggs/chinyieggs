@@ -100,7 +100,7 @@ export const ProductGridBlock: React.FC<Props> = ({
             )
 
             return (
-              <AnimatedSection key={index} animation="fade-up" delay={index * 0.1}>
+              <AnimatedSection key={index} animation="fade-up" delay={index * 0.06}>
                 {linkUrl ? (
                   <Link href={linkUrl} className="block">
                     {CardContent}

@@ -43,7 +43,7 @@ export const HighImpactHero: React.FC<Page['hero']> = ({ links, media, richText 
                 <RichText className="mb-6" data={richText} enableGutter={false} />
               </AnimatedSection>
             )}
-            <AnimatedSection animation="fade-up" delay={0.2}>
+            <AnimatedSection animation="fade-up" delay={0.1}>
               {hasLinks ? (
                 <ul className="flex flex-wrap md:justify-center gap-4">
                   {links.map(({ link }, i) => {

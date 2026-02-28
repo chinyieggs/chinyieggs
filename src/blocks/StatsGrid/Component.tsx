@@ -44,7 +44,7 @@ export const StatsGridBlock: React.FC<Props> = ({
       <div className="container mx-auto px-4 md:px-8">
         <div className={cn('grid gap-8 md:gap-12', columnClass)}>
           {items.map((item, index) => (
-            <AnimatedSection key={index} animation="fade-up" delay={index * 0.1}>
+            <AnimatedSection key={index} animation="fade-up" delay={index * 0.06}>
               <div className="text-center">
                 {/* Number */}
                 <div

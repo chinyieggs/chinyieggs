@@ -7,19 +7,19 @@ import { Variants } from 'framer-motion'
 
 // 從下往上淡入
 export const fadeUpVariants: Variants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
 }
 
 // 從右往左淡入
 export const fadeLeftVariants: Variants = {
-  hidden: { opacity: 0, x: 30 },
+  hidden: { opacity: 0, x: 20 },
   visible: { opacity: 1, x: 0 },
 }
 
 // 從左往右淡入
 export const fadeRightVariants: Variants = {
-  hidden: { opacity: 0, x: -30 },
+  hidden: { opacity: 0, x: -20 },
   visible: { opacity: 1, x: 0 },
 }
 
@@ -31,14 +31,14 @@ export const fadeInVariants: Variants = {
 
 // 縮放淡入
 export const zoomInVariants: Variants = {
-  hidden: { opacity: 0, scale: 0.9 },
+  hidden: { opacity: 0, scale: 0.95 },
   visible: { opacity: 1, scale: 1 },
 }
 
-// 默認過渡配置（使用 ease-out 曲線，更自然）
+// 默認過渡配置
 export const defaultTransition = {
-  duration: 0.6,
-  ease: [0.25, 0.1, 0.25, 1.0] as [number, number, number, number], // cubic-bezier easing
+  duration: 0.4,
+  ease: [0.25, 0.1, 0.25, 1.0] as [number, number, number, number],
 }
 
 // Stagger 容器變體（用於父元素，子元素會延遲動畫）
@@ -47,8 +47,8 @@ export const staggerContainerVariants: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.1,
+      staggerChildren: 0.08,
+      delayChildren: 0.05,
     },
   },
 }

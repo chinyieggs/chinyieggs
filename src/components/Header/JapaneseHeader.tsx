@@ -209,9 +209,12 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
             {sections.map((section, sectionIndex) => {
               const hasSubmenu = section.items.length > 1
               const singleHref = section.items.length === 1 ? section.items[0].href : section.items[0]?.href
+              const isContact = section.title?.toLowerCase() === 'contact'
+
+              // Contact rendered separately as CTA
+              if (isContact) return null
 
               if (!hasSubmenu) {
-                // Direct link (e.g., Contact)
                 return (
                   <Link
                     key={section.title || `nav-${sectionIndex}`}
@@ -312,6 +315,21 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
                 </div>
               )}
             </div>
+
+            {/* Contact CTA - desktop only, rightmost */}
+            {(() => {
+              const contactSection = sections.find((s) => s.title?.toLowerCase() === 'contact')
+              if (!contactSection) return null
+              const contactHref = contactSection.items[0]?.href || '/contact'
+              return (
+                <Link
+                  href={contactHref}
+                  className="hidden md:inline-flex items-center px-5 py-2 bg-aka text-white text-sm tracking-[0.08em] hover:bg-aka-dark transition-colors"
+                >
+                  Contact
+                </Link>
+              )
+            })()}
 
             {/* Mobile Menu Toggle - visible only on mobile */}
             <button

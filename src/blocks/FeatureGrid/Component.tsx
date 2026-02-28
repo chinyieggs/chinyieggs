@@ -32,7 +32,7 @@ export const FeatureGridBlock: React.FC<Props> = ({
             const imageUrl = image?.url || item.imageUrl
 
             return (
-              <AnimatedSection key={index} animation="fade-up" delay={index * 0.1}>
+              <AnimatedSection key={index} animation="fade-up" delay={index * 0.06}>
                 <div className="feature-card-item">
                   {/* feature-icon: 160px height */}
                   {imageUrl && (
