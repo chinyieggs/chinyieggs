@@ -75,7 +75,7 @@ export const CertificationGridBlock: React.FC<Props> = ({
               return (
                 <div
                   key={index}
-                  className="group flex flex-col items-center justify-center text-center p-6 md:p-8 border border-border bg-kinari/50 hover:border-aka/40 hover:bg-aka-pale transition-all duration-300 cursor-default"
+                  className="group flex flex-col items-center justify-center text-center p-6 md:p-8 bg-white rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-default"
                 >
                   {icon ? (
                     <div className="relative w-10 h-10 md:w-12 md:h-12 mb-3">

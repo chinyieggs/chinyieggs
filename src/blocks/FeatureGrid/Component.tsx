@@ -80,15 +80,17 @@ export const FeatureGridBlock: React.FC<Props> = ({
       <style dangerouslySetInnerHTML={{ __html: `
         .feature-card-item {
           padding: 0;
-          background: #FAFAF8;
-          border: 1px solid #E5E2DB;
+          background: #FFFFFF;
+          border: none;
+          border-radius: 12px;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04);
+          overflow: hidden;
           text-align: center;
-          transition: all 0.4s ease;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .feature-card-item:hover {
-          border-color: #F5A89A;
-          transform: translateY(-4px);
-          box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+          transform: translateY(-3px);
+          box-shadow: 0 8px 24px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04);
         }
         .feature-icon-wrapper {
           width: 100%;
