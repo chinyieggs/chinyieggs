@@ -9,16 +9,16 @@ type Props = JapaneseHeroBlockType & {
 
 // Match original CSS: .hero = 100vh, .hero-small = 50vh
 const sizeClasses = {
-  small: 'min-h-[50vh]',
-  medium: 'min-h-[70vh]',
-  large: 'min-h-[100vh]',
-  full: 'min-h-screen',
+  small: 'md:min-h-[50vh]',
+  medium: 'md:min-h-[60vh]',
+  large: 'md:min-h-[80vh]',
+  full: 'md:min-h-screen',
 }
 
 const imgSizeClasses = {
   small: 'md:min-h-[50vh]',
-  medium: 'md:min-h-[70vh]',
-  large: 'md:min-h-[100vh]',
+  medium: 'md:min-h-[60vh]',
+  large: 'md:min-h-[80vh]',
   full: 'md:min-h-screen',
 }
 
