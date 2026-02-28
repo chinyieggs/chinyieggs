@@ -7,19 +7,12 @@ type Props = JapaneseHeroBlockType & {
   className?: string
 }
 
-// Match original CSS: .hero = 100vh, .hero-small = 50vh
+// Fixed heights to ensure consistent hero sizing across pages
 const sizeClasses = {
-  small: 'md:min-h-[50vh]',
-  medium: 'md:min-h-[60vh]',
-  large: 'md:min-h-[80vh]',
-  full: 'md:min-h-screen',
-}
-
-const imgSizeClasses = {
-  small: 'md:min-h-[50vh]',
-  medium: 'md:min-h-[60vh]',
-  large: 'md:min-h-[80vh]',
-  full: 'md:min-h-screen',
+  small: 'md:h-[45vh]',
+  medium: 'md:h-[55vh]',
+  large: 'md:h-[75vh]',
+  full: 'md:h-screen',
 }
 
 export const JapaneseHeroBlock: React.FC<Props> = ({
@@ -53,16 +46,16 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
       {/* Background Image: natural flow */}
       {imageUrl && (
         <>
-          <div className={cn('w-full', sizeClasses[size as keyof typeof sizeClasses])}>
+          <div className={cn('w-full overflow-hidden', sizeClasses[size as keyof typeof sizeClasses])}>
             {bgImage ? (
               <Media
-                className="w-full"
+                className="w-full h-full"
                 resource={bgImage}
-                imgClassName={cn('w-full h-auto block md:object-cover', imgSizeClasses[size as keyof typeof imgSizeClasses])}
+                imgClassName="w-full h-full object-cover"
                 priority
               />
             ) : (
-              <img src={imageUrl} alt="" className={cn('w-full h-auto block md:object-cover', imgSizeClasses[size as keyof typeof imgSizeClasses])} />
+              <img src={imageUrl} alt="" className="w-full h-full object-cover" />
             )}
           </div>
           {/* Overlay - using kinari color like original HTML */}

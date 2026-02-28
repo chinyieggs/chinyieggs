@@ -22,11 +22,11 @@ export const HighImpactHero: React.FC<Page['hero']> = ({ links, media, richText 
   return (
     <div className="relative -mt-[10.4rem] text-white md:min-h-[50vh] bg-gray-900 md:bg-transparent">
       {/* Image: natural flow, determines block height */}
-      <div className="w-full select-none">
+      <div className="w-full select-none md:max-h-[60vh] overflow-hidden">
         {media && typeof media === 'object' && (
           <Media
             className="w-full"
-            imgClassName="w-full h-auto block md:min-h-[60vh] md:object-cover"
+            imgClassName="w-full h-auto block md:min-h-[60vh] md:max-h-[60vh] md:object-cover"
             priority
             resource={media}
           />

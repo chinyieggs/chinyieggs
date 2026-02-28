@@ -86,7 +86,7 @@ export default async function Page({ params: paramsPromise }: Args) {
       {draft && <LivePreviewListener />}
 
       <BreadcrumbJsonLd slug={decodedSlug} />
-      <Breadcrumb />
+      {decodedSlug !== 'home' && <Breadcrumb />}
       <RenderHero {...hero} />
       <RenderBlocks blocks={layout} />
     </article>
