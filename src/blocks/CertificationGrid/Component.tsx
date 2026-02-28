@@ -17,28 +17,13 @@ export const CertificationGridBlock: React.FC<Props> = ({
 }) => {
   if (!items || items.length === 0) return null
 
-  // Format certification name with line breaks (e.g., "ISO 22000" -> "ISO<br>22000")
-  const formatCertName = (name: string) => {
-    // Split on space and join with <br>
-    const parts = name.split(' ')
-    if (parts.length > 1) {
-      return parts.map((part, i) => (
-        <React.Fragment key={i}>
-          {part}
-          {i < parts.length - 1 && <br />}
-        </React.Fragment>
-      ))
-    }
-    return name
-  }
-
   return (
-    <section className={cn('py-[120px]', className)}>
-      <div className="max-w-[1200px] mx-auto px-8">
-        <div className="max-w-[800px] mx-auto">
-          {/* Section Header - matching static HTML */}
+    <section className={cn('py-12 md:py-20 lg:py-[120px]', className)}>
+      <div className="max-w-[1200px] mx-auto px-6 md:px-8">
+        <div className="max-w-[900px] mx-auto">
+          {/* Section Header */}
           {(sectionLabel || sectionTitle) && (
-            <div className="text-center mb-12">
+            <div className="text-center mb-10 md:mb-12">
               {sectionLabel && (
                 <p
                   className="text-aka uppercase"
@@ -77,54 +62,48 @@ export const CertificationGridBlock: React.FC<Props> = ({
 
           {/* Description */}
           {description && (
-            <p className="text-center text-hai leading-relaxed mb-8">
+            <p className="text-center text-hai leading-relaxed mb-10">
               {description}
             </p>
           )}
 
-          {/* Certification Grid - matching static HTML .cert-grid */}
-          <div
-            className="flex flex-wrap justify-center"
-            style={{ gap: '2rem' }}
-          >
+          {/* Certification Grid - upgraded badge cards */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {items.map((item, index) => {
               const icon = item.icon as MediaType | undefined
 
               return (
                 <div
                   key={index}
-                  className="flex flex-col items-center justify-center text-hai hover:text-aka hover:border-aka transition-all cursor-default"
-                  style={{
-                    width: '60px',
-                    height: '80px',
-                    border: '1px solid #E5E2DB',
-                    fontSize: '0.625rem',
-                    letterSpacing: '0.1em',
-                    padding: '0.5rem',
-                    textAlign: 'center',
-                    lineHeight: 1.4,
-                  }}
+                  className="group flex flex-col items-center justify-center text-center p-6 md:p-8 border border-border bg-kinari/50 hover:border-aka/40 hover:bg-aka-pale transition-all duration-300 cursor-default"
                 >
                   {icon ? (
-                    <div className="relative w-8 h-8 mb-1">
+                    <div className="relative w-10 h-10 md:w-12 md:h-12 mb-3">
                       <Media resource={icon} fill imgClassName="object-contain" />
                     </div>
-                  ) : null}
-                  <span>{formatCertName(item.name || '')}</span>
+                  ) : (
+                    <div className="w-10 h-10 md:w-12 md:h-12 mb-3 flex items-center justify-center">
+                      <svg viewBox="0 0 24 24" className="w-8 h-8 text-aka/60 group-hover:text-aka transition-colors" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </div>
+                  )}
+                  <span
+                    className="text-sumi group-hover:text-aka-dark font-semibold tracking-[0.08em] transition-colors"
+                    style={{ fontSize: '0.8125rem' }}
+                  >
+                    {item.name}
+                  </span>
                 </div>
               )
             })}
           </div>
 
           {/* CTA Button */}
-          <div className="text-center mt-8">
+          <div className="text-center mt-10">
             <Link
               href="/quality-control"
-              className="inline-block px-8 py-4 border border-sumi text-sumi hover:bg-sumi hover:text-shiro transition-all"
-              style={{
-                fontSize: '0.875rem',
-                letterSpacing: '0.1em',
-              }}
+              className="inline-flex items-center px-8 py-3.5 border border-sumi text-sumi text-sm tracking-[0.08em] hover:bg-sumi hover:text-shiro transition-all"
             >
               Quality Control →
             </Link>

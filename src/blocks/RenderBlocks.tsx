@@ -70,7 +70,7 @@ export const RenderBlocks: React.FC<{
                   key={index}
                   animation="fade-up"
                   delay={index * 0.05}
-                  className={needsMargin ? 'my-16' : ''}
+                  className={needsMargin ? 'my-8 md:my-16' : ''}
                 >
                   {/* @ts-expect-error there may be some mismatch between the expected types here */}
                   <Block {...block} disableInnerContainer />

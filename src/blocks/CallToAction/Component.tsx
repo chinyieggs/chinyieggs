@@ -7,16 +7,11 @@ import RichText from '@/components/RichText'
 
 export const CallToActionBlock: React.FC<CTABlockProps> = ({ links, richText }) => {
   return (
-    <div className="max-w-[1200px] mx-auto px-8">
+    <div className="max-w-[1200px] mx-auto px-6 md:px-8">
       <div className="max-w-[800px] mx-auto">
-        {/* CTA Section - matching static HTML .cta-section */}
+        {/* CTA Section */}
         <div
-          className="text-center"
-          style={{
-            padding: '6rem',
-            background: '#F5F3EE',
-            border: '1px solid #E5E2DB',
-          }}
+          className="text-center px-6 py-12 md:p-16 lg:p-24 bg-kinari border border-border"
         >
           {/* RichText content - title and description */}
           {richText && (
@@ -43,13 +38,9 @@ export const CallToActionBlock: React.FC<CTABlockProps> = ({ links, richText }) 
                     href={href}
                     className={
                       isPrimary
-                        ? 'inline-block px-8 py-4 bg-aka border border-aka text-white hover:bg-aka-dark hover:border-aka-dark transition-all'
-                        : 'inline-block px-8 py-4 border border-sumi text-sumi hover:bg-sumi hover:text-shiro transition-all'
+                        ? 'inline-flex items-center px-8 py-3.5 bg-aka border border-aka text-white text-sm tracking-[0.08em] hover:bg-aka-dark hover:border-aka-dark transition-all'
+                        : 'inline-flex items-center px-8 py-3.5 border border-sumi text-sumi text-sm tracking-[0.08em] hover:bg-sumi hover:text-shiro transition-all'
                     }
-                    style={{
-                      fontSize: '0.875rem',
-                      letterSpacing: '0.1em',
-                    }}
                   >
                     {label}
                   </Link>

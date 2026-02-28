@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import { cn } from '@/utilities/ui'
 import { Media } from '@/components/Media'
 import type { JapaneseHeroBlock as JapaneseHeroBlockType, Media as MediaType } from '@/payload-types'
@@ -41,6 +42,8 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
   const bgImage = backgroundImage as MediaType | undefined
   const imageUrl = bgImage?.url || backgroundImageUrl
 
+  const hasTextContent = label || title || subtitle
+
   return (
     <section
       className={cn(
@@ -64,7 +67,6 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
             )}
           </div>
           {/* Overlay - using kinari color like original HTML */}
-          {/* overlayOpacity: 0 = 完全透明, 100 = 完全不透明 */}
           <div
             className="absolute inset-0"
             style={{
@@ -79,8 +81,8 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
 
       {/* Content */}
       <div className="absolute inset-0 z-10 flex items-center justify-center">
-        <div className="text-center px-8 max-w-[600px] mx-auto">
-          {/* Label - 0.75rem, letter-spacing 0.3em, margin-bottom 2rem */}
+        <div className="text-center px-6 md:px-8 max-w-[600px] mx-auto">
+          {/* Label */}
           {label && (
             <p
               className="text-aka uppercase"
@@ -94,7 +96,7 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
             </p>
           )}
 
-          {/* Title - clamp(2.5rem, 6vw, 4rem), margin-bottom 1rem */}
+          {/* Title */}
           {title && (
             <h1
               className="text-sumi"
@@ -110,8 +112,8 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
             </h1>
           )}
 
-          {/* Divider - 60px width, margin 2rem auto */}
-          {showDivider && (
+          {/* Divider */}
+          {showDivider && hasTextContent && (
             <div
               style={{
                 width: '60px',
@@ -122,7 +124,7 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
             />
           )}
 
-          {/* Subtitle - 1rem, line-height 1.8 */}
+          {/* Subtitle */}
           {subtitle && (
             <p
               className="text-hai"
@@ -135,6 +137,24 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
               {subtitle}
             </p>
           )}
+        </div>
+      </div>
+
+      {/* CTA Buttons - positioned at bottom of hero */}
+      <div className="absolute bottom-12 md:bottom-16 left-0 right-0 z-10 flex justify-center px-6">
+        <div className="flex flex-wrap justify-center gap-4">
+          <Link
+            href="/egg-tart-liquid"
+            className="inline-flex items-center px-8 py-3.5 bg-aka border border-aka text-white text-sm tracking-[0.08em] hover:bg-aka-dark hover:border-aka-dark transition-all"
+          >
+            Explore Our Products
+          </Link>
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-8 py-3.5 border border-sumi text-sumi text-sm tracking-[0.08em] hover:bg-sumi hover:text-shiro transition-all"
+          >
+            Contact Us
+          </Link>
         </div>
       </div>
     </section>

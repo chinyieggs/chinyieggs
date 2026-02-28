@@ -21,7 +21,7 @@ export const SectionIntroBlock: React.FC<Props> = ({
   const isCenter = textAlign === 'center'
 
   return (
-    <section className={cn('py-[120px]', className)}>
+    <section className={cn('py-12 md:py-20 lg:py-[120px]', className)}>
       <div className="max-w-[1200px] mx-auto px-8">
         <div className="max-w-[800px] mx-auto">
           {/* Section Header */}
@@ -83,11 +83,7 @@ export const SectionIntroBlock: React.FC<Props> = ({
             <div className={cn('mt-8', isCenter && 'text-center')}>
               <Link
                 href={ctaLink}
-                className="inline-block px-8 py-3 border border-sumi text-sumi hover:bg-sumi hover:text-shiro transition-all"
-                style={{
-                  fontSize: '0.875rem',
-                  letterSpacing: '0.1em',
-                }}
+                className="inline-flex items-center px-8 py-3.5 border border-sumi text-sumi text-sm tracking-[0.08em] hover:bg-sumi hover:text-shiro transition-all"
               >
                 {ctaLabel}
               </Link>

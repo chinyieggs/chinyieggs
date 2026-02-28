@@ -30,7 +30,7 @@ export const ProductGridBlock: React.FC<Props> = ({
   const columnClass = columnClasses[columns as keyof typeof columnClasses] || columnClasses['3']
 
   return (
-    <section className={cn('py-section-sm md:py-section bg-shiro', className)}>
+    <section className={cn('py-12 md:py-section-sm lg:py-section bg-shiro', className)}>
       <div className="container mx-auto px-4 md:px-8">
         {/* Section Header */}
         {(sectionLabel || sectionTitle) && (

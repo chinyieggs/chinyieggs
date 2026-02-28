@@ -40,7 +40,7 @@ export const StatsGridBlock: React.FC<Props> = ({
   const columnClass = columnClasses[columns as keyof typeof columnClasses] || columnClasses['4']
 
   return (
-    <section className={cn('py-section-sm md:py-section', bgClass, className)}>
+    <section className={cn('py-12 md:py-section-sm lg:py-section', bgClass, className)}>
       <div className="container mx-auto px-4 md:px-8">
         <div className={cn('grid gap-8 md:gap-12', columnClass)}>
           {items.map((item, index) => (

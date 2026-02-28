@@ -3,8 +3,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import React, { useEffect, useRef, useState } from 'react'
-import { Globe } from 'lucide-react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
+import { Globe, ChevronDown } from 'lucide-react'
 import { cn } from '@/utilities/ui'
 import { getMediaUrl } from '@/utilities/getMediaUrl'
 import type { Header, Media } from '@/payload-types'
@@ -30,7 +30,9 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [langOpen, setLangOpen] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState<number | null>(null)
   const langRef = useRef<HTMLDivElement>(null)
+  const dropdownTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const pathname = usePathname()
 
   // Handle scroll effect
@@ -46,6 +48,7 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
   useEffect(() => {
     setIsOpen(false)
     setLangOpen(false)
+    setActiveDropdown(null)
   }, [pathname])
 
   // Close language dropdown on outside click
@@ -73,6 +76,27 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
     }
   }, [isOpen])
 
+  // Dropdown hover handlers with delay
+  const handleDropdownEnter = useCallback((index: number) => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current)
+      dropdownTimeoutRef.current = null
+    }
+    setActiveDropdown(index)
+  }, [])
+
+  const handleDropdownLeave = useCallback(() => {
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setActiveDropdown(null)
+    }, 150)
+  }, [])
+
+  useEffect(() => {
+    return () => {
+      if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current)
+    }
+  }, [])
+
   // Build nav sections from Payload data or use provided navSections
   const buildSectionsFromPayload = (): NavSection[] => {
     if (!data?.navItems || data.navItems.length === 0) {
@@ -83,7 +107,6 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
       const link = navItem.link
       const title = link?.label || ''
 
-      // Build items from submenu if exists, otherwise use the main link
       const items: { label: string; href: string }[] = []
 
       if (navItem.submenu && navItem.submenu.length > 0) {
@@ -100,7 +123,6 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
           }
         })
       } else {
-        // No submenu, use the main link as the only item
         const href = link?.type === 'reference' && link.reference
           ? `/${(link.reference.value as { slug?: string })?.slug || ''}`
           : link?.url || '/'
@@ -116,7 +138,6 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
 
   const payloadSections = buildSectionsFromPayload()
 
-  // Use Payload data if available, then navSections prop, then fallback
   const sections: NavSection[] = payloadSections.length > 0 ? payloadSections : (navSections || [
     {
       title: 'Company',
@@ -141,6 +162,11 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
     },
   ])
 
+  // Check if a section's items include the current path
+  const isSectionActive = (section: NavSection) => {
+    return section.items.some((item) => pathname === item.href)
+  }
+
   return (
     <>
       {/* Fixed Header */}
@@ -148,13 +174,13 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
         className={cn(
           'fixed top-0 left-0 right-0 z-[1000] h-20 transition-all duration-300 border-b',
           isScrolled
-            ? 'bg-shiro border-border'
+            ? 'bg-shiro/95 backdrop-blur-sm border-border shadow-sm'
             : 'bg-shiro border-border',
         )}
       >
-        <div className="flex items-center justify-between h-full max-w-[1200px] mx-auto px-8">
+        <div className="flex items-center justify-between h-full max-w-[1200px] mx-auto px-4 md:px-8">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center gap-3 group shrink-0">
             {logo && typeof logo === 'object' && logo.url ? (
               <Image
                 src={getMediaUrl(logo.url)}
@@ -178,8 +204,86 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
             </span>
           </Link>
 
+          {/* Desktop Navigation - hidden on mobile */}
+          <nav className="hidden md:flex items-center gap-1 ml-8">
+            {sections.map((section, sectionIndex) => {
+              const hasSubmenu = section.items.length > 1
+              const singleHref = section.items.length === 1 ? section.items[0].href : section.items[0]?.href
+
+              if (!hasSubmenu) {
+                // Direct link (e.g., Contact)
+                return (
+                  <Link
+                    key={section.title || `nav-${sectionIndex}`}
+                    href={singleHref || '/'}
+                    className={cn(
+                      'px-4 py-2 text-sm tracking-[0.08em] transition-colors',
+                      isSectionActive(section)
+                        ? 'text-aka'
+                        : 'text-sumi hover:text-aka',
+                    )}
+                  >
+                    {section.title}
+                  </Link>
+                )
+              }
+
+              // Dropdown menu
+              return (
+                <div
+                  key={section.title || `nav-${sectionIndex}`}
+                  className="relative"
+                  onMouseEnter={() => handleDropdownEnter(sectionIndex)}
+                  onMouseLeave={handleDropdownLeave}
+                >
+                  <button
+                    className={cn(
+                      'flex items-center gap-1 px-4 py-2 text-sm tracking-[0.08em] transition-colors',
+                      isSectionActive(section) || activeDropdown === sectionIndex
+                        ? 'text-aka'
+                        : 'text-sumi hover:text-aka',
+                    )}
+                  >
+                    {section.title}
+                    <ChevronDown className={cn(
+                      'w-3.5 h-3.5 transition-transform duration-200',
+                      activeDropdown === sectionIndex && 'rotate-180',
+                    )} />
+                  </button>
+
+                  {/* Dropdown Panel */}
+                  <div
+                    className={cn(
+                      'absolute top-full left-0 pt-2 transition-all duration-200',
+                      activeDropdown === sectionIndex
+                        ? 'opacity-100 visible translate-y-0'
+                        : 'opacity-0 invisible -translate-y-1',
+                    )}
+                  >
+                    <div className="bg-white rounded-md shadow-lg border border-border py-2 min-w-[200px]">
+                      {section.items.map((item, itemIndex) => (
+                        <Link
+                          key={item.href || `dropdown-${sectionIndex}-${itemIndex}`}
+                          href={item.href || '/'}
+                          className={cn(
+                            'block px-4 py-2.5 text-sm transition-colors',
+                            pathname === item.href
+                              ? 'text-aka bg-aka-pale'
+                              : 'text-sumi hover:text-aka hover:bg-kinari',
+                          )}
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+          </nav>
+
           {/* Right Controls */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 md:gap-4 shrink-0">
             {/* Language Switcher */}
             <div className="relative" ref={langRef}>
               <button
@@ -209,10 +313,10 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
               )}
             </div>
 
-            {/* Menu Toggle - 48x48px with 6px gap, 1px lines */}
+            {/* Mobile Menu Toggle - visible only on mobile */}
             <button
               className={cn(
-                'relative w-12 h-12 flex flex-col justify-center items-center',
+                'relative w-12 h-12 flex flex-col justify-center items-center md:hidden',
                 'hover:[&>span]:bg-aka',
               )}
               style={{ gap: '6px' }}
@@ -245,10 +349,10 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
         </div>
       </header>
 
-      {/* Full Screen Navigation Overlay */}
+      {/* Full Screen Navigation Overlay - Mobile only */}
       <nav
         className={cn(
-          'fixed inset-0 bg-shiro z-[1001] flex items-center justify-center',
+          'fixed inset-0 bg-shiro z-[1001] flex items-center justify-center md:hidden',
           isOpen ? 'opacity-100 visible' : 'opacity-0 invisible',
         )}
         style={{ transition: 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)' }}
@@ -262,43 +366,35 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
           CLOSE ✕
         </button>
 
-        {/* Nav Content - 3 Column Grid, gap: 6rem, padding: 6rem */}
+        {/* Nav Content */}
         <div
-          className="grid grid-cols-1 md:grid-cols-3 max-w-[900px]"
-          style={{ gap: '6rem', padding: '6rem' }}
+          className="flex flex-col gap-8 px-8 w-full max-w-sm"
         >
           {sections.map((section, sectionIndex) => (
-            <div key={section.title || `section-${sectionIndex}`} className="md:text-left text-center">
+            <div key={section.title || `section-${sectionIndex}`} className="text-center">
               <h3
                 className="tracking-[0.2em] text-hai uppercase border-b border-border"
                 style={{
                   fontFamily: "'Cormorant Garamond', 'Noto Serif', 'Noto Serif TC', serif",
                   fontSize: '0.875rem',
-                  marginBottom: '2rem',
-                  paddingBottom: '1rem',
+                  marginBottom: '1.25rem',
+                  paddingBottom: '0.75rem',
                 }}
               >
                 {section.title}
               </h3>
               <ul className="list-none">
                 {section.items.map((item, itemIndex) => (
-                  <li key={item.href || `item-${sectionIndex}-${itemIndex}`} style={{ marginBottom: '0.75rem' }}>
+                  <li key={item.href || `item-${sectionIndex}-${itemIndex}`} style={{ marginBottom: '0.5rem' }}>
                     <Link
                       href={item.href || '/'}
                       className={cn(
-                        'text-hai hover:text-aka inline-block',
+                        'text-hai hover:text-aka inline-block transition-colors',
                         pathname === item.href && 'text-aka',
                       )}
                       style={{
                         fontSize: '1rem',
                         fontWeight: 400,
-                        transition: 'all 0.2s ease',
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.transform = 'translateX(4px)'
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.transform = 'translateX(0)'
                       }}
                       onClick={() => setIsOpen(false)}
                     >
@@ -311,8 +407,8 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
           ))}
         </div>
 
-        {/* Nav Footer */}
-        <div className="absolute bottom-16 left-0 right-0 flex justify-center">
+        {/* Nav Footer - with safe bottom padding */}
+        <div className="absolute bottom-8 left-0 right-0 flex justify-center pb-safe">
           <div
             className="flex items-center gap-4 text-xs tracking-[0.3em] text-hai-light"
             style={{ fontFamily: "'Cormorant Garamond', 'Noto Serif', serif" }}
