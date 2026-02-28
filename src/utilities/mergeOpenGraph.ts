@@ -3,14 +3,19 @@ import { getServerSideURL } from './getURL'
 
 const defaultOpenGraph: Metadata['openGraph'] = {
   type: 'website',
-  description: 'An open-source website built with Payload and Next.js.',
+  description:
+    'Taiwan\'s leading egg products brand specializing in pasteurized liquid eggs, egg biotechnology ingredients, and high-protein foods.',
   images: [
     {
-      url: `${getServerSideURL()}/website-template-OG.webp`,
+      url: `${getServerSideURL()}/og-image.webp`,
+      width: 1200,
+      height: 630,
+      alt: 'Chinyi Eggs Technology',
     },
   ],
-  siteName: 'Payload Website Template',
-  title: 'Payload Website Template',
+  siteName: 'Chinyi Eggs Technology',
+  title: 'Chinyi Eggs Technology',
+  locale: 'en_US',
 }
 
 export const mergeOpenGraph = (og?: Metadata['openGraph']): Metadata['openGraph'] => {

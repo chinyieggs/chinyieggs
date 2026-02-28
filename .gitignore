@@ -13,6 +13,15 @@ public/robots.txt
 public/sitemap*.xml
 
 
+# Screenshots
+*.png
+
+# MCP config
+.mcp.json
+
+# TypeScript build info
+tsconfig.tsbuildinfo
+
 # Playwright
 node_modules/
 /test-results/

@@ -16,6 +16,7 @@ import { generateMeta } from '@/utilities/generateMeta'
 import PageClient from './page.client'
 import { LivePreviewListener } from '@/components/LivePreviewListener'
 import { Breadcrumb } from '@/components/Breadcrumb'
+import { BreadcrumbJsonLd } from '@/components/Breadcrumb/BreadcrumbJsonLd'
 
 export async function generateStaticParams() {
   try {
@@ -84,6 +85,7 @@ export default async function Page({ params: paramsPromise }: Args) {
 
       {draft && <LivePreviewListener />}
 
+      <BreadcrumbJsonLd slug={decodedSlug} />
       <Breadcrumb />
       <RenderHero {...hero} />
       <RenderBlocks blocks={layout} />
