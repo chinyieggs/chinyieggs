@@ -36,6 +36,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html className={cn(GeistSans.variable, GeistMono.variable)} lang="en" data-theme="light" suppressHydrationWarning>
       <head>
+        <meta name="google-site-verification" content="ewsW0vGDN7co4rVgeqYmbOiVzy3Va2gCvVKDYOonSAs" />
         <link href="/favicon.ico" rel="icon" sizes="32x32" />
         <link href="/favicon-32.png" rel="icon" type="image/png" sizes="32x32" />
         <link href="/favicon-16.png" rel="icon" type="image/png" sizes="16x16" />
