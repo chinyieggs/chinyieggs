@@ -40,7 +40,7 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
     <section
       className={cn(
         'relative',
-        sizeClasses[size as keyof typeof sizeClasses],
+        !imageUrl && sizeClasses[size as keyof typeof sizeClasses],
         className,
       )}
     >
