@@ -1,0 +1,503 @@
+{
+  "slug": "pudding-liquid",
+  "title": "Pudding Preparation Liquid Base",
+  "hero": {
+    "type": "none",
+    "richText": null,
+    "links": [],
+    "media": null
+  },
+  "layout": [
+    {
+      "id": "69a359c437d1d700047cb124",
+      "label": "Prepared Egg Liquid",
+      "title": "Pudding Preparation Liquid Base",
+      "subtitle": "Creamy pudding base with excellent setting stability",
+      "titleFont": "serif",
+      "backgroundImage": null,
+      "backgroundImageUrl": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=1920&q=80",
+      "size": "small",
+      "showDivider": true,
+      "overlayOpacity": 40,
+      "blockName": "Hero",
+      "blockType": "japaneseHero"
+    },
+    {
+      "id": "69a359c437d1d700047cb129",
+      "groupId": "prepared-liquid",
+      "style": "tabs",
+      "alignment": "center",
+      "blockName": "Product Navigation",
+      "items": [
+        {
+          "id": "69a359c437d1d700047cb125",
+          "label": "Egg Tart",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/egg-tart-liquid",
+            "label": "Egg Tart",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "69a359c437d1d700047cb126",
+          "label": "Chawanmushi",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/chawanmushi-liquid",
+            "label": "Chawanmushi",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "69a359c437d1d700047cb127",
+          "label": "Pudding",
+          "isActive": true,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/pudding-liquid",
+            "label": "Pudding",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "69a359c437d1d700047cb128",
+          "label": "Omelette",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/omelette-liquid",
+            "label": "Omelette",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "pageNav"
+    },
+    {
+      "id": "69a359c437d1d700047cb12b",
+      "blockName": "Series Overview",
+      "columns": [
+        {
+          "id": "69a359c437d1d700047cb12a",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Customized Prepared Egg Liquid Series",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Our Customized Prepared Egg Liquid Series is developed to meet the specific needs of foodservice operators, dessert manufacturers, and OEM partners.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "69a359c437d1d700047cb12c",
+      "media": null,
+      "imageUrl": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&q=80",
+      "alt": "Pudding dessert",
+      "width": 100,
+      "offsetX": 0,
+      "blockName": "Series Image",
+      "blockType": "mediaBlock"
+    },
+    {
+      "id": "69a359c437d1d700047cb12e",
+      "blockName": "Series Overview Continued",
+      "columns": [
+        {
+          "id": "69a359c437d1d700047cb12d",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "We provide tailor-made formulations, allowing customers to create consistent, high-quality egg-based products while improving production efficiency and reducing labor.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Through our advanced pasteurization process, strict quality control, and HACCP/ISO22000-certified facilities, each product offers safety, stability, and excellent performance for large-scale production.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "69a359c437d1d700047cb134",
+      "title": "Key Features",
+      "icon": "check",
+      "columns": "1",
+      "blockName": "Key Features",
+      "items": [
+        {
+          "id": "69a359c437d1d700047cb12f",
+          "text": "Customized formulation based on flavor, texture, sweetness, and viscosity requirements"
+        },
+        {
+          "id": "69a359c437d1d700047cb130",
+          "text": "Ready-to-use liquid base, simplifying preparation and ensuring consistent results"
+        },
+        {
+          "id": "69a359c437d1d700047cb131",
+          "text": "Pasteurized and food-safe, suitable for commercial kitchens and industrial production"
+        },
+        {
+          "id": "69a359c437d1d700047cb132",
+          "text": "Stable quality, ideal for frozen storage and long-distance distribution"
+        },
+        {
+          "id": "69a359c437d1d700047cb133",
+          "text": "Applicable for OEM/ODM development"
+        }
+      ],
+      "blockType": "checkList"
+    },
+    {
+      "id": "69a359c437d1d700047cb136",
+      "blockName": "Product Details",
+      "columns": [
+        {
+          "id": "69a359c437d1d700047cb135",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Pudding Preparation Liquid Base",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "A convenient pudding base offering a creamy, soft texture and excellent setting stability.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Ideal for: Dessert shops, convenience store suppliers, and frozen dessert manufacturers.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "69a359c437d1d700047cb13a",
+      "sectionLabel": "Applications",
+      "sectionTitle": "Application Examples",
+      "columns": "3",
+      "cardStyle": "imageTop",
+      "backgroundColor": "kinari",
+      "blockName": "Applications",
+      "items": [
+        {
+          "id": "69a359c437d1d700047cb137",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&q=80",
+          "title": "Classic Pudding",
+          "description": "Traditional caramel custard pudding"
+        },
+        {
+          "id": "69a359c437d1d700047cb138",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=400&q=80",
+          "title": "Convenience Store",
+          "description": "Ready-to-eat packaged desserts"
+        },
+        {
+          "id": "69a359c437d1d700047cb139",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&q=80",
+          "title": "OEM/ODM",
+          "description": "Private-label production partnerships"
+        }
+      ],
+      "blockType": "featureGrid"
+    },
+    {
+      "id": "69a359c437d1d700047cb13f",
+      "sectionLabel": "Advantages",
+      "sectionTitle": "Why Choose Chinyi Eggs?",
+      "columns": "4",
+      "cardStyle": "imageTop",
+      "backgroundColor": "shiro",
+      "blockName": "Why Choose Us",
+      "items": [
+        {
+          "id": "69a359c437d1d700047cb13b",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&q=80",
+          "title": "46 Years of Expertise",
+          "description": "Egg-processing expertise since 1981"
+        },
+        {
+          "id": "69a359c437d1d700047cb13c",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&q=80",
+          "title": "Certified Manufacturing",
+          "description": "HACCP & ISO 22000 certified"
+        },
+        {
+          "id": "69a359c437d1d700047cb13d",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&q=80",
+          "title": "Advanced Equipment",
+          "description": "Advanced pasteurization and automatic processing"
+        },
+        {
+          "id": "69a359c437d1d700047cb13e",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&q=80",
+          "title": "Strong R&D",
+          "description": "Strong R&D capability for new product development"
+        }
+      ],
+      "blockType": "featureGrid"
+    },
+    {
+      "id": "69a359c437d1d700047cb141",
+      "richText": {
+        "root": {
+          "type": "root",
+          "format": "",
+          "indent": 0,
+          "version": 1,
+          "children": [
+            {
+              "tag": "h3",
+              "type": "heading",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Interested in This Product?",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Contact us for samples, pricing, or custom formulation inquiries.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textFormat": 0
+            }
+          ],
+          "direction": "ltr"
+        }
+      },
+      "blockName": "CTA",
+      "links": [
+        {
+          "id": "69a359c437d1d700047cb140",
+          "link": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/contact",
+            "label": "Request Information →",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "cta"
+    }
+  ],
+  "meta": {
+    "title": "Pudding Preparation Liquid Base | Chinyi Eggs Technology",
+    "image": null,
+    "description": "Convenient pudding base offering a creamy, soft texture and excellent setting stability for commercial production."
+  }
+}

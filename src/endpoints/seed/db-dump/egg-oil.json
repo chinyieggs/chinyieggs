@@ -1,0 +1,395 @@
+{
+  "slug": "egg-oil",
+  "title": "Egg Oil",
+  "hero": {
+    "type": "none",
+    "richText": null,
+    "links": [],
+    "media": null
+  },
+  "layout": [
+    {
+      "id": "6976c6bff9030500047d2b88",
+      "label": "Biotech Ingredients",
+      "title": "Egg Oil",
+      "subtitle": "Lipid-rich oil extracted from egg yolks",
+      "titleFont": "serif",
+      "backgroundImage": 23,
+      "backgroundImageUrl": "",
+      "size": "small",
+      "showDivider": true,
+      "overlayOpacity": 70,
+      "blockName": "Hero",
+      "blockType": "japaneseHero"
+    },
+    {
+      "id": "6976c6bff9030500047d2b8e",
+      "groupId": "biotech",
+      "style": "tabs",
+      "alignment": "center",
+      "blockName": "Product Navigation",
+      "items": [
+        {
+          "id": "6976c6bff9030500047d2b89",
+          "label": "Hydrolyzed Membrane",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/hydrolyzed-eggshell-membrane",
+            "label": "Hydrolyzed Membrane",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c6bff9030500047d2b8a",
+          "label": "Eggshell Membrane",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/eggshell-membrane",
+            "label": "Eggshell Membrane",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c6bff9030500047d2b8b",
+          "label": "Calcium Powder",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/eggshell-calcium-powder",
+            "label": "Calcium Powder",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c6bff9030500047d2b8c",
+          "label": "Calcined Powder",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/calcined-eggshell-powder",
+            "label": "Calcined Powder",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c6bff9030500047d2b8d",
+          "label": "Egg Oil",
+          "isActive": true,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/egg-oil",
+            "label": "Egg Oil",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "pageNav"
+    },
+    {
+      "id": "6976c6bff9030500047d2b90",
+      "blockName": "Product Details",
+      "columns": [
+        {
+          "id": "6976c6bff9030500047d2b8f",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Egg Oil",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "A lipid-rich oil extracted from egg yolks.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Contains phospholipids, cholesterol, and fat-soluble vitamins (A, D, E).",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Used in cosmetics and nutraceuticals for skin nourishment and health benefits.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c6bff9030500047d2b91",
+      "media": null,
+      "imageUrl": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80",
+      "alt": "Skincare and cosmetics",
+      "width": 100,
+      "offsetX": 0,
+      "blockName": "Product Image",
+      "blockType": "mediaBlock"
+    },
+    {
+      "id": "6976c6bff9030500047d2b98",
+      "title": "Key Components",
+      "icon": "check",
+      "columns": "2",
+      "blockName": "Key Components",
+      "items": [
+        {
+          "id": "6976c6bff9030500047d2b92",
+          "text": "Phospholipids (Lecithin)"
+        },
+        {
+          "id": "6976c6bff9030500047d2b93",
+          "text": "Vitamin A"
+        },
+        {
+          "id": "6976c6bff9030500047d2b94",
+          "text": "Vitamin D"
+        },
+        {
+          "id": "6976c6bff9030500047d2b95",
+          "text": "Vitamin E"
+        },
+        {
+          "id": "6976c6bff9030500047d2b96",
+          "text": "Essential Fatty Acids"
+        },
+        {
+          "id": "6976c6bff9030500047d2b97",
+          "text": "Cholesterol"
+        }
+      ],
+      "blockType": "checkList"
+    },
+    {
+      "id": "6976c6bff9030500047d2b9d",
+      "sectionLabel": "Applications",
+      "sectionTitle": "Application Examples",
+      "columns": "4",
+      "cardStyle": "imageTop",
+      "backgroundColor": "kinari",
+      "blockName": "Applications",
+      "items": [
+        {
+          "id": "6976c6bff9030500047d2b99",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&q=80",
+          "title": "Skincare",
+          "description": "Moisturizers, serums, and anti-aging products"
+        },
+        {
+          "id": "6976c6bff9030500047d2b9a",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80",
+          "title": "Hair Care",
+          "description": "Hair oils and conditioning treatments"
+        },
+        {
+          "id": "6976c6bff9030500047d2b9b",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&q=80",
+          "title": "Nutraceuticals",
+          "description": "Soft gel capsules and supplements"
+        },
+        {
+          "id": "6976c6bff9030500047d2b9c",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&q=80",
+          "title": "Pet Care",
+          "description": "Skin and coat health supplements"
+        }
+      ],
+      "blockType": "featureGrid"
+    },
+    {
+      "id": "6976c6bff9030500047d2ba2",
+      "title": "Product Specifications",
+      "showHeaders": false,
+      "style": "striped",
+      "blockName": "Specifications",
+      "rows": [
+        {
+          "id": "6976c6bff9030500047d2b9e",
+          "label": "Form",
+          "value": "Clear to golden liquid oil"
+        },
+        {
+          "id": "6976c6bff9030500047d2b9f",
+          "label": "Color",
+          "value": "Golden yellow"
+        },
+        {
+          "id": "6976c6bff9030500047d2ba0",
+          "label": "Extraction",
+          "value": "Solvent-free mechanical extraction"
+        },
+        {
+          "id": "6976c6bff9030500047d2ba1",
+          "label": "Storage",
+          "value": "Cool, dark place; refrigeration recommended"
+        }
+      ],
+      "blockType": "specTable",
+      "columnHeaders": {
+        "labelHeader": "Item",
+        "valueHeader": "Specification"
+      }
+    },
+    {
+      "id": "6976c6bff9030500047d2ba4",
+      "richText": {
+        "root": {
+          "type": "root",
+          "format": "",
+          "indent": 0,
+          "version": 1,
+          "children": [
+            {
+              "tag": "h3",
+              "type": "heading",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Interested in This Product?",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Contact us for samples, specifications, or partnership inquiries.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textFormat": 0
+            }
+          ],
+          "direction": "ltr"
+        }
+      },
+      "blockName": "CTA",
+      "links": [
+        {
+          "id": "6976c6bff9030500047d2ba3",
+          "link": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/contact",
+            "label": "Request Information",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "cta"
+    }
+  ],
+  "meta": {
+    "title": "Egg Oil | Chinyi Eggs Technology",
+    "image": null,
+    "description": "A lipid-rich oil extracted from egg yolks. Contains phospholipids, cholesterol, and fat-soluble vitamins. Used in cosmetics and nutraceuticals."
+  }
+}

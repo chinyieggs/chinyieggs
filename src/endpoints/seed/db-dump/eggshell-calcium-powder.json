@@ -1,0 +1,377 @@
+{
+  "slug": "eggshell-calcium-powder",
+  "title": "Eggshell Calcium Powder",
+  "hero": {
+    "type": "none",
+    "richText": null,
+    "links": [],
+    "media": null
+  },
+  "layout": [
+    {
+      "id": "6976c6b2f9030500047d2b4e",
+      "label": "Biotech Ingredients",
+      "title": "Eggshell Calcium Powder",
+      "subtitle": "Natural calcium carbonate from eggshells",
+      "titleFont": "serif",
+      "backgroundImage": null,
+      "backgroundImageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1920&q=80",
+      "size": "small",
+      "showDivider": true,
+      "overlayOpacity": 40,
+      "blockName": "Hero",
+      "blockType": "japaneseHero"
+    },
+    {
+      "id": "6976c6b2f9030500047d2b54",
+      "groupId": "biotech",
+      "style": "tabs",
+      "alignment": "center",
+      "blockName": "Product Navigation",
+      "items": [
+        {
+          "id": "6976c6b2f9030500047d2b4f",
+          "label": "Hydrolyzed Membrane",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/hydrolyzed-eggshell-membrane",
+            "label": "Hydrolyzed Membrane",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c6b2f9030500047d2b50",
+          "label": "Eggshell Membrane",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/eggshell-membrane",
+            "label": "Eggshell Membrane",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c6b2f9030500047d2b51",
+          "label": "Calcium Powder",
+          "isActive": true,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/eggshell-calcium-powder",
+            "label": "Calcium Powder",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c6b2f9030500047d2b52",
+          "label": "Calcined Powder",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/calcined-eggshell-powder",
+            "label": "Calcined Powder",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c6b2f9030500047d2b53",
+          "label": "Egg Oil",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/egg-oil",
+            "label": "Egg Oil",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "pageNav"
+    },
+    {
+      "id": "6976c6b2f9030500047d2b56",
+      "blockName": "Product Details",
+      "columns": [
+        {
+          "id": "6976c6b2f9030500047d2b55",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Eggshell Calcium Powder",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "A natural calcium carbonate powder derived from eggshells.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Highly bioavailable calcium source for food fortification and dietary supplements.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c6b2f9030500047d2b57",
+      "media": null,
+      "imageUrl": "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&q=80",
+      "alt": "Natural calcium powder",
+      "width": 100,
+      "offsetX": 0,
+      "blockName": "Product Image",
+      "blockType": "mediaBlock"
+    },
+    {
+      "id": "6976c6b2f9030500047d2b5d",
+      "title": "Key Benefits",
+      "icon": "check",
+      "columns": "1",
+      "blockName": "Key Benefits",
+      "items": [
+        {
+          "id": "6976c6b2f9030500047d2b58",
+          "text": "Natural calcium carbonate (CaCO₃)"
+        },
+        {
+          "id": "6976c6b2f9030500047d2b59",
+          "text": "High bioavailability"
+        },
+        {
+          "id": "6976c6b2f9030500047d2b5a",
+          "text": "Contains trace minerals (Mg, Sr, etc.)"
+        },
+        {
+          "id": "6976c6b2f9030500047d2b5b",
+          "text": "Fine particle size for easy mixing"
+        },
+        {
+          "id": "6976c6b2f9030500047d2b5c",
+          "text": "Sustainable upcycled ingredient"
+        }
+      ],
+      "blockType": "checkList"
+    },
+    {
+      "id": "6976c6b2f9030500047d2b62",
+      "sectionLabel": "Applications",
+      "sectionTitle": "Application Examples",
+      "columns": "4",
+      "cardStyle": "imageTop",
+      "backgroundColor": "kinari",
+      "blockName": "Applications",
+      "items": [
+        {
+          "id": "6976c6b2f9030500047d2b5e",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&q=80",
+          "title": "Calcium Supplements",
+          "description": "Tablets and capsules for bone health"
+        },
+        {
+          "id": "6976c6b2f9030500047d2b5f",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&q=80",
+          "title": "Food Fortification",
+          "description": "Calcium enrichment for baked goods and beverages"
+        },
+        {
+          "id": "6976c6b2f9030500047d2b60",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&q=80",
+          "title": "Pet Food",
+          "description": "Calcium source for pet nutrition"
+        },
+        {
+          "id": "6976c6b2f9030500047d2b61",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=400&q=80",
+          "title": "Agriculture",
+          "description": "Soil amendment and fertilizer additive"
+        }
+      ],
+      "blockType": "featureGrid"
+    },
+    {
+      "id": "6976c6b2f9030500047d2b68",
+      "title": "Product Specifications",
+      "showHeaders": false,
+      "style": "striped",
+      "blockName": "Specifications",
+      "rows": [
+        {
+          "id": "6976c6b2f9030500047d2b63",
+          "label": "Form",
+          "value": "Fine powder"
+        },
+        {
+          "id": "6976c6b2f9030500047d2b64",
+          "label": "Color",
+          "value": "White to off-white"
+        },
+        {
+          "id": "6976c6b2f9030500047d2b65",
+          "label": "Calcium Content",
+          "value": "~38% elemental calcium"
+        },
+        {
+          "id": "6976c6b2f9030500047d2b66",
+          "label": "Processing",
+          "value": "Cleaned, dried, and milled"
+        },
+        {
+          "id": "6976c6b2f9030500047d2b67",
+          "label": "Storage",
+          "value": "Cool, dry place"
+        }
+      ],
+      "blockType": "specTable",
+      "columnHeaders": {
+        "labelHeader": "Item",
+        "valueHeader": "Specification"
+      }
+    },
+    {
+      "id": "6976c6b2f9030500047d2b6a",
+      "richText": {
+        "root": {
+          "type": "root",
+          "format": "",
+          "indent": 0,
+          "version": 1,
+          "children": [
+            {
+              "tag": "h3",
+              "type": "heading",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Interested in This Product?",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Contact us for samples, specifications, or partnership inquiries.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textFormat": 0
+            }
+          ],
+          "direction": "ltr"
+        }
+      },
+      "blockName": "CTA",
+      "links": [
+        {
+          "id": "6976c6b2f9030500047d2b69",
+          "link": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/contact",
+            "label": "Request Information",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "cta"
+    }
+  ],
+  "meta": {
+    "title": "Eggshell Calcium Powder | Chinyi Eggs Technology",
+    "image": null,
+    "description": "Natural calcium carbonate powder derived from eggshells. Highly bioavailable calcium source for food fortification and dietary supplements."
+  }
+}

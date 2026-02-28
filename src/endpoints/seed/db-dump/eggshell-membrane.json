@@ -1,0 +1,372 @@
+{
+  "slug": "eggshell-membrane",
+  "title": "Eggshell Membrane",
+  "hero": {
+    "type": "none",
+    "richText": null,
+    "links": [],
+    "media": null
+  },
+  "layout": [
+    {
+      "id": "6976c6acf9030500047d2b32",
+      "label": "Biotech Ingredients",
+      "title": "Eggshell Membrane",
+      "subtitle": "Natural dried membrane with collagen and elastin",
+      "titleFont": "serif",
+      "backgroundImage": null,
+      "backgroundImageUrl": "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=1920&q=80",
+      "size": "small",
+      "showDivider": true,
+      "overlayOpacity": 70,
+      "blockName": "Hero",
+      "blockType": "japaneseHero"
+    },
+    {
+      "id": "6976c6acf9030500047d2b38",
+      "groupId": "biotech",
+      "style": "tabs",
+      "alignment": "center",
+      "blockName": "Product Navigation",
+      "items": [
+        {
+          "id": "6976c6acf9030500047d2b33",
+          "label": "Hydrolyzed Membrane",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/hydrolyzed-eggshell-membrane",
+            "label": "Hydrolyzed Membrane",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c6acf9030500047d2b34",
+          "label": "Eggshell Membrane",
+          "isActive": true,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/eggshell-membrane",
+            "label": "Eggshell Membrane",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c6acf9030500047d2b35",
+          "label": "Calcium Powder",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/eggshell-calcium-powder",
+            "label": "Calcium Powder",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c6acf9030500047d2b36",
+          "label": "Calcined Powder",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/calcined-eggshell-powder",
+            "label": "Calcined Powder",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c6acf9030500047d2b37",
+          "label": "Egg Oil",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/egg-oil",
+            "label": "Egg Oil",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "pageNav"
+    },
+    {
+      "id": "6976c6acf9030500047d2b3a",
+      "blockName": "Product Details",
+      "columns": [
+        {
+          "id": "6976c6acf9030500047d2b39",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Eggshell Membrane",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "A natural dried eggshell membrane containing collagen, elastin, and glycosaminoglycans.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Suitable for supplements and cosmetic formulations.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c6acf9030500047d2b3b",
+      "media": null,
+      "imageUrl": "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80",
+      "alt": "Eggshell membrane structure",
+      "width": 100,
+      "offsetX": 0,
+      "blockName": "Product Image",
+      "blockType": "mediaBlock"
+    },
+    {
+      "id": "6976c6acf9030500047d2b41",
+      "title": "Key Characteristics",
+      "icon": "check",
+      "columns": "1",
+      "blockName": "Key Characteristics",
+      "items": [
+        {
+          "id": "6976c6acf9030500047d2b3c",
+          "text": "100% natural eggshell membrane"
+        },
+        {
+          "id": "6976c6acf9030500047d2b3d",
+          "text": "Retains native protein structure"
+        },
+        {
+          "id": "6976c6acf9030500047d2b3e",
+          "text": "Rich in collagen and elastin"
+        },
+        {
+          "id": "6976c6acf9030500047d2b3f",
+          "text": "Contains glycosaminoglycans"
+        },
+        {
+          "id": "6976c6acf9030500047d2b40",
+          "text": "Minimally processed"
+        }
+      ],
+      "blockType": "checkList"
+    },
+    {
+      "id": "6976c6acf9030500047d2b46",
+      "sectionLabel": "Applications",
+      "sectionTitle": "Application Examples",
+      "columns": "4",
+      "cardStyle": "imageTop",
+      "backgroundColor": "kinari",
+      "blockName": "Applications",
+      "items": [
+        {
+          "id": "6976c6acf9030500047d2b42",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&q=80",
+          "title": "Health Supplements",
+          "description": "Joint and connective tissue support formulations"
+        },
+        {
+          "id": "6976c6acf9030500047d2b43",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=400&q=80",
+          "title": "Cosmetics",
+          "description": "Natural ingredient for skincare products"
+        },
+        {
+          "id": "6976c6acf9030500047d2b44",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&q=80",
+          "title": "Research",
+          "description": "Biomedical and material science research"
+        },
+        {
+          "id": "6976c6acf9030500047d2b45",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&q=80",
+          "title": "Pet Nutrition",
+          "description": "Natural supplement for pet health"
+        }
+      ],
+      "blockType": "featureGrid"
+    },
+    {
+      "id": "6976c6acf9030500047d2b4b",
+      "title": "Product Specifications",
+      "showHeaders": false,
+      "style": "striped",
+      "blockName": "Specifications",
+      "rows": [
+        {
+          "id": "6976c6acf9030500047d2b47",
+          "label": "Form",
+          "value": "Dried membrane flakes or powder"
+        },
+        {
+          "id": "6976c6acf9030500047d2b48",
+          "label": "Color",
+          "value": "Off-white to light tan"
+        },
+        {
+          "id": "6976c6acf9030500047d2b49",
+          "label": "Processing",
+          "value": "Mechanical separation, washing, drying"
+        },
+        {
+          "id": "6976c6acf9030500047d2b4a",
+          "label": "Storage",
+          "value": "Cool, dry place away from light"
+        }
+      ],
+      "blockType": "specTable",
+      "columnHeaders": {
+        "labelHeader": "Item",
+        "valueHeader": "Specification"
+      }
+    },
+    {
+      "id": "6976c6acf9030500047d2b4d",
+      "richText": {
+        "root": {
+          "type": "root",
+          "format": "",
+          "indent": 0,
+          "version": 1,
+          "children": [
+            {
+              "tag": "h3",
+              "type": "heading",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Interested in This Product?",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Contact us for samples, specifications, or partnership inquiries.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textFormat": 0
+            }
+          ],
+          "direction": "ltr"
+        }
+      },
+      "blockName": "CTA",
+      "links": [
+        {
+          "id": "6976c6acf9030500047d2b4c",
+          "link": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/contact",
+            "label": "Request Information",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "cta"
+    }
+  ],
+  "meta": {
+    "title": "Eggshell Membrane | Chinyi Eggs Technology",
+    "image": null,
+    "description": "Natural dried eggshell membrane containing collagen, elastin, and glycosaminoglycans. Suitable for supplements and cosmetic formulations."
+  }
+}

@@ -1,0 +1,762 @@
+{
+  "slug": "about",
+  "title": "About Chinyi",
+  "hero": {
+    "type": "none",
+    "richText": null,
+    "links": [],
+    "media": null
+  },
+  "layout": [
+    {
+      "id": "6976c67af9030500047d2a22",
+      "label": "Company",
+      "title": "About Chinyi",
+      "subtitle": "Taiwan's Most Trusted Leading Egg Products Brand",
+      "titleFont": "serif",
+      "backgroundImage": 54,
+      "backgroundImageUrl": "",
+      "size": "small",
+      "showDivider": true,
+      "overlayOpacity": 70,
+      "blockName": "Hero",
+      "blockType": "japaneseHero"
+    },
+    {
+      "id": "6976c67af9030500047d2a27",
+      "groupId": "company",
+      "style": "tabs",
+      "alignment": "center",
+      "blockName": "Company Navigation",
+      "items": [
+        {
+          "id": "6976c67af9030500047d2a23",
+          "label": "About",
+          "isActive": true,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/about",
+            "label": "About",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c67af9030500047d2a24",
+          "label": "Milestones",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/milestones",
+            "label": "Milestones",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c67af9030500047d2a25",
+          "label": "Quality Control",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/quality-control",
+            "label": "Quality Control",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c67af9030500047d2a26",
+          "label": "Factory Tour",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/factory-tour",
+            "label": "Factory Tour",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "pageNav"
+    },
+    {
+      "id": "6976c67af9030500047d2a28",
+      "variant": "quote",
+      "content": {
+        "root": {
+          "type": "root",
+          "format": "",
+          "indent": 0,
+          "version": 1,
+          "children": [
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Chinyi's dedication comes from a belief in progressing with the times, and a promise to provide Taiwanese consumers with healthier, higher-quality egg products.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 2,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textFormat": 0
+            }
+          ],
+          "direction": "ltr"
+        }
+      },
+      "author": null,
+      "blockName": "Introduction Quote",
+      "blockType": "highlightBox"
+    },
+    {
+      "id": "6976c67af9030500047d2a2a",
+      "blockName": "Our Beginning Part 1",
+      "columns": [
+        {
+          "id": "6976c67af9030500047d2a29",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Our Beginning",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "In the 1980s, as Taiwan's economy took off and incomes rose, consumer industries blossomed—bakeries needed eggs, food processors needed eggs, the restaurant industry needed eggs—and the market demand for egg products surged. Chicken farms could be built one after another, but whether the level of egg processing could keep pace with the market was not a given.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c67af9030500047d2a2b",
+      "media": null,
+      "imageUrl": "https://images.unsplash.com/photo-1569288052389-dac9b01c9c05?w=800&q=80",
+      "alt": "Fresh eggs representing quality beginnings",
+      "width": 100,
+      "offsetX": 0,
+      "blockName": "Fresh Eggs Image",
+      "blockType": "mediaBlock"
+    },
+    {
+      "id": "6976c67af9030500047d2a2d",
+      "blockName": "Our Beginning Part 2",
+      "columns": [
+        {
+          "id": "6976c67af9030500047d2a2c",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "To meet market demand and raise the standard of Taiwan's egg industry, Co-Founder & Chairman Ku Rong-Hai and Co-Founder Ku Hong-Lin established Chinyi Egg Products on ",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    },
+                    {
+                      "mode": "normal",
+                      "text": "October 25, 1981",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 1,
+                      "version": 1
+                    },
+                    {
+                      "mode": "normal",
+                      "text": " as Taiwan's first specialized liquid egg company.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c67af9030500047d2a2f",
+      "blockName": "Remarkable Achievement Part 1",
+      "columns": [
+        {
+          "id": "6976c67af9030500047d2a2e",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Remarkable Achievement",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "With the support of many customers and consumers, Chinyi has grown to be outstanding in its development.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 2,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Today, Chinyi is Taiwan's egg products company with the largest production capacity and the broadest service coverage. With over 80 company vehicles, delivery spans from Yilan in the north to Pingtung in the south. Our professional logistics capability leads the industry. We hold a high market share in Taiwan's liquid egg market. Many large-scale food manufacturers, bakery businesses, five-star hotels, airline catering services, chain restaurants, and institutional meal providers are among our clients.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c67af9030500047d2a30",
+      "media": 37,
+      "imageUrl": "",
+      "alt": "Modern food production facility",
+      "width": 100,
+      "offsetX": 0,
+      "blockName": "Production Facility Image",
+      "blockType": "mediaBlock"
+    },
+    {
+      "id": "6976c67af9030500047d2a32",
+      "blockName": "Remarkable Achievement Part 2",
+      "columns": [
+        {
+          "id": "6976c67af9030500047d2a31",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Our production facilities are located in Chiayi, close to the main egg-producing regions (most egg farms in Taiwan are south of Changhua), enabling \"local production, fresh delivery,\" ensuring high product quality.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c67af9030500047d2a36",
+      "backgroundColor": "kinari",
+      "columns": "3",
+      "blockName": "Company Stats",
+      "items": [
+        {
+          "id": "6976c67af9030500047d2a33",
+          "number": "46+",
+          "label": "Years of Excellence",
+          "suffix": null
+        },
+        {
+          "id": "6976c67af9030500047d2a34",
+          "number": "80+",
+          "label": "Delivery Vehicles",
+          "suffix": null
+        },
+        {
+          "id": "6976c67af9030500047d2a35",
+          "number": "#1",
+          "label": "Market Share",
+          "suffix": null
+        }
+      ],
+      "blockType": "statsGrid"
+    },
+    {
+      "id": "6976c67af9030500047d2a38",
+      "blockName": "Dedication & Compassion Part 1",
+      "columns": [
+        {
+          "id": "6976c67af9030500047d2a37",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Dedication & Compassion",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Enhancing the quality of Taiwan's egg industry and serving more consumers, Chinyi continues to move forward.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 2,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "As Taiwan's leading egg products company, Chinyi feels the responsibility to elevate the country's egg industry standards, and thus continues to innovate. We upgraded from regular liquid eggs to pasteurized liquid egg products, committed to refrigerated transport and fresh preservation. Integrity and passion are at the core of everything we do, hoping to lead by example and uplift the industry.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c67af9030500047d2a39",
+      "media": null,
+      "imageUrl": "",
+      "alt": "Modern chicken farm",
+      "width": 100,
+      "offsetX": 0,
+      "blockName": "Chicken Farm Image",
+      "blockType": "mediaBlock"
+    },
+    {
+      "id": "6976c67af9030500047d2a3b",
+      "blockName": "Dedication & Compassion Part 2",
+      "columns": [
+        {
+          "id": "6976c67af9030500047d2a3a",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Beyond egg processing and transportation, Chinyi has expanded into egg-laying chicken farming, based in the pristine Chiayi region. We have built several large modern chicken farms under high standards to produce premium Chinyi eggs.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c67af9030500047d2a3c",
+      "variant": "info",
+      "content": {
+        "root": {
+          "type": "root",
+          "format": "",
+          "indent": 0,
+          "version": 1,
+          "children": [
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Chinyi has become a vertically integrated enterprise",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 1,
+                  "version": 1
+                },
+                {
+                  "mode": "normal",
+                  "text": "—from chicken farming, to egg product processing, to final logistics and delivery—adhering to our company belief ",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                },
+                {
+                  "mode": "normal",
+                  "text": "\"Cherishing Everyone. Treasuring Taiwan\"",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 1,
+                  "version": 1
+                },
+                {
+                  "mode": "normal",
+                  "text": " and following the development direction of ",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                },
+                {
+                  "mode": "normal",
+                  "text": "\"Most Natural. Most Technological\"",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 1,
+                  "version": 1
+                },
+                {
+                  "mode": "normal",
+                  "text": " to provide the people of Taiwan with even higher-quality egg products. We press on toward the future.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textFormat": 0
+            }
+          ],
+          "direction": "ltr"
+        }
+      },
+      "author": null,
+      "blockName": "Vertical Integration",
+      "blockType": "highlightBox"
+    },
+    {
+      "id": "6976c67af9030500047d2a3e",
+      "richText": {
+        "root": {
+          "type": "root",
+          "format": "",
+          "indent": 0,
+          "version": 1,
+          "children": [
+            {
+              "tag": "h3",
+              "type": "heading",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Explore Our Journey",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "See how we've grown over the past four decades.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textFormat": 0
+            }
+          ],
+          "direction": "ltr"
+        }
+      },
+      "blockName": "CTA",
+      "links": [
+        {
+          "id": "6976c67af9030500047d2a3d",
+          "link": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/milestones",
+            "label": "View Milestones →",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "cta"
+    }
+  ],
+  "meta": {
+    "title": "About Chinyi | Chinyi Eggs Technology",
+    "image": null,
+    "description": "Chinyi - Taiwan's Most Trusted Leading Egg Products Brand. Established in 1981, we are Taiwan's first specialized liquid egg company."
+  }
+}

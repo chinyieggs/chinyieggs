@@ -13,11 +13,10 @@ import {
  *
  * 使用方式：
  * GET /api/seed-chinyi                     - 顯示使用說明
- * GET /api/seed-chinyi?page=home           - 單獨建立首頁
- * GET /api/seed-chinyi?page=about          - 單獨建立 About 頁面
- * GET /api/seed-chinyi?all=true            - 建立所有頁面（不清除）
- * GET /api/seed-chinyi?all=true&clear=true - 清除並建立所有頁面
- * GET /api/seed-chinyi?globals=true        - 更新 Header/Footer
+ * GET /api/seed-chinyi?upsert=true         - 同步所有資料（頁面+表單+Header/Footer）
+ * GET /api/seed-chinyi?clear=true          - 清除所有頁面和表單
+ * GET /api/seed-chinyi?page=home           - 單獨建立首頁（開發用）
+ * GET /api/seed-chinyi?globals=true        - 只更新 Header/Footer（開發用）
  */
 export async function GET(request: Request): Promise<Response> {
   try {
@@ -34,27 +33,38 @@ export async function GET(request: Request): Promise<Response> {
     }
 
     const url = new URL(request.url)
-    const page = url.searchParams.get('page')
-    const all = url.searchParams.get('all') === 'true'
+    const upsert = url.searchParams.get('upsert') === 'true'
     const clear = url.searchParams.get('clear') === 'true'
+    const page = url.searchParams.get('page')
     const globals = url.searchParams.get('globals') === 'true'
 
-    // 顯示使用說明
-    if (!page && !all && !globals) {
-      const availablePages = getAvailablePageSlugs()
+    // 同步所有資料（upsert 頁面+表單+Header/Footer）
+    if (upsert) {
+      await seedAllChinyiPages(payload, { clearFirst: false })
+      await seedChinyiGlobals(payload)
       return Response.json({
-        message: 'Chinyi Pages Seed API',
-        usage: {
-          '單獨建立頁面': '/api/seed-chinyi?page=home',
-          '建立所有頁面': '/api/seed-chinyi?all=true',
-          '清除並建立所有': '/api/seed-chinyi?all=true&clear=true',
-          '更新 Header/Footer': '/api/seed-chinyi?globals=true',
-        },
-        availablePages,
+        success: true,
+        message: 'All pages, forms, header and footer synced.',
       })
     }
 
-    // 單獨建立某個頁面
+    // 清除所有頁面和表單（不重建）
+    if (clear) {
+      const allPages = await payload.find({ collection: 'pages', limit: 1000 })
+      for (const p of allPages.docs) {
+        await payload.delete({ collection: 'pages', id: p.id })
+      }
+      const allForms = await payload.find({ collection: 'forms', limit: 1000 })
+      for (const f of allForms.docs) {
+        await payload.delete({ collection: 'forms', id: f.id })
+      }
+      return Response.json({
+        success: true,
+        message: `Cleared ${allPages.docs.length} pages and ${allForms.docs.length} forms.`,
+      })
+    }
+
+    // 單獨建立某個頁面（開發用）
     if (page) {
       await upsertPage(payload, page)
       return Response.json({
@@ -63,18 +73,7 @@ export async function GET(request: Request): Promise<Response> {
       })
     }
 
-    // 建立所有頁面
-    if (all) {
-      await seedAllChinyiPages(payload, { clearFirst: clear })
-      return Response.json({
-        success: true,
-        message: clear
-          ? 'All pages cleared and recreated.'
-          : 'All pages created/updated.',
-      })
-    }
-
-    // 更新 Header/Footer
+    // 更新 Header/Footer（開發用）
     if (globals) {
       await seedChinyiGlobals(payload)
       return Response.json({
@@ -83,7 +82,18 @@ export async function GET(request: Request): Promise<Response> {
       })
     }
 
-    return Response.json({ error: 'Invalid request' }, { status: 400 })
+    // 顯示使用說明
+    const availablePages = getAvailablePageSlugs()
+    return Response.json({
+      message: 'Chinyi Pages Seed API',
+      usage: {
+        '同步所有資料': '/api/seed-chinyi?upsert=true',
+        '清除所有資料': '/api/seed-chinyi?clear=true',
+        '單獨建立頁面': '/api/seed-chinyi?page=home',
+        '更新 Header/Footer': '/api/seed-chinyi?globals=true',
+      },
+      availablePages,
+    })
   } catch (error) {
     console.error('Seed error:', error)
     return Response.json(

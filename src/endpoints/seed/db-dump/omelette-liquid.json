@@ -1,0 +1,522 @@
+{
+  "slug": "omelette-liquid",
+  "title": "Omelette Preparation Liquid Base",
+  "hero": {
+    "type": "none",
+    "richText": null,
+    "links": [],
+    "media": null
+  },
+  "layout": [
+    {
+      "id": "6976c6a0f9030500047d2af4",
+      "label": "Prepared Egg Liquid",
+      "title": "Omelette Preparation Liquid Base",
+      "subtitle": "Optimized liquid egg for efficient omelette cooking",
+      "titleFont": "serif",
+      "backgroundImage": null,
+      "backgroundImageUrl": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=1920&q=80",
+      "size": "small",
+      "showDivider": true,
+      "overlayOpacity": 80,
+      "blockName": "Hero",
+      "blockType": "japaneseHero"
+    },
+    {
+      "id": "6976c6a0f9030500047d2af9",
+      "groupId": "prepared-liquid",
+      "style": "tabs",
+      "alignment": "center",
+      "blockName": "Product Navigation",
+      "items": [
+        {
+          "id": "6976c6a0f9030500047d2af5",
+          "label": "Egg Tart",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/egg-tart-liquid",
+            "label": "Egg Tart",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c6a0f9030500047d2af6",
+          "label": "Chawanmushi",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/chawanmushi-liquid",
+            "label": "Chawanmushi",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c6a0f9030500047d2af7",
+          "label": "Pudding",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/pudding-liquid",
+            "label": "Pudding",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c6a0f9030500047d2af8",
+          "label": "Omelette",
+          "isActive": true,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/omelette-liquid",
+            "label": "Omelette",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "pageNav"
+    },
+    {
+      "id": "6976c6a0f9030500047d2afb",
+      "blockName": "Series Overview",
+      "columns": [
+        {
+          "id": "6976c6a0f9030500047d2afa",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Customized Prepared Egg Liquid Series",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Our Customized Prepared Egg Liquid Series is developed to meet the specific needs of foodservice operators, dessert manufacturers, and OEM partners.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c6a0f9030500047d2afc",
+      "media": null,
+      "imageUrl": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=800&q=80",
+      "alt": "Omelette dish",
+      "width": 100,
+      "offsetX": 0,
+      "blockName": "Series Image",
+      "blockType": "mediaBlock"
+    },
+    {
+      "id": "6976c6a0f9030500047d2afe",
+      "blockName": "Series Overview Continued",
+      "columns": [
+        {
+          "id": "6976c6a0f9030500047d2afd",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "We provide tailor-made formulations, allowing customers to create consistent, high-quality egg-based products while improving production efficiency and reducing labor.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Through our advanced pasteurization process, strict quality control, and HACCP/ISO22000-certified facilities, each product offers safety, stability, and excellent performance for large-scale production.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c6a0f9030500047d2b04",
+      "title": "Key Features",
+      "icon": "check",
+      "columns": "1",
+      "blockName": "Key Features",
+      "items": [
+        {
+          "id": "6976c6a0f9030500047d2aff",
+          "text": "Customized formulation based on flavor, texture, sweetness, and viscosity requirements"
+        },
+        {
+          "id": "6976c6a0f9030500047d2b00",
+          "text": "Ready-to-use liquid base, simplifying preparation and ensuring consistent results"
+        },
+        {
+          "id": "6976c6a0f9030500047d2b01",
+          "text": "Pasteurized and food-safe, suitable for commercial kitchens and industrial production"
+        },
+        {
+          "id": "6976c6a0f9030500047d2b02",
+          "text": "Stable quality, ideal for frozen storage and long-distance distribution"
+        },
+        {
+          "id": "6976c6a0f9030500047d2b03",
+          "text": "Applicable for OEM/ODM development"
+        }
+      ],
+      "blockType": "checkList"
+    },
+    {
+      "id": "6976c6a0f9030500047d2b06",
+      "blockName": "Product Details",
+      "columns": [
+        {
+          "id": "6976c6a0f9030500047d2b05",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Omelette Preparation Liquid Base",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "A liquid egg formulation optimized for omelette preparation.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Provides rich flavor, soft texture, and efficient cooking results.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Ideal for: Breakfast chains, hotels, and institutional kitchens.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c6a0f9030500047d2b0a",
+      "sectionLabel": "Applications",
+      "sectionTitle": "Application Examples",
+      "columns": "3",
+      "cardStyle": "imageTop",
+      "backgroundColor": "kinari",
+      "blockName": "Applications",
+      "items": [
+        {
+          "id": "6976c6a0f9030500047d2b07",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=400&q=80",
+          "title": "Omelettes",
+          "description": "Western-style and Japanese-style omelettes"
+        },
+        {
+          "id": "6976c6a0f9030500047d2b08",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80",
+          "title": "Hotel Breakfast",
+          "description": "High-volume breakfast buffet operations"
+        },
+        {
+          "id": "6976c6a0f9030500047d2b09",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&q=80",
+          "title": "OEM/ODM",
+          "description": "Private-label production partnerships"
+        }
+      ],
+      "blockType": "featureGrid"
+    },
+    {
+      "id": "6976c6a0f9030500047d2b0f",
+      "sectionLabel": "Advantages",
+      "sectionTitle": "Why Choose Chinyi Eggs?",
+      "columns": "4",
+      "cardStyle": "imageTop",
+      "backgroundColor": "shiro",
+      "blockName": "Why Choose Us",
+      "items": [
+        {
+          "id": "6976c6a0f9030500047d2b0b",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&q=80",
+          "title": "46 Years of Expertise",
+          "description": "Egg-processing expertise since 1981"
+        },
+        {
+          "id": "6976c6a0f9030500047d2b0c",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&q=80",
+          "title": "Certified Manufacturing",
+          "description": "HACCP & ISO 22000 certified"
+        },
+        {
+          "id": "6976c6a0f9030500047d2b0d",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&q=80",
+          "title": "Advanced Equipment",
+          "description": "Advanced pasteurization and automatic processing"
+        },
+        {
+          "id": "6976c6a0f9030500047d2b0e",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&q=80",
+          "title": "Strong R&D",
+          "description": "Strong R&D capability for new product development"
+        }
+      ],
+      "blockType": "featureGrid"
+    },
+    {
+      "id": "6976c6a0f9030500047d2b11",
+      "richText": {
+        "root": {
+          "type": "root",
+          "format": "",
+          "indent": 0,
+          "version": 1,
+          "children": [
+            {
+              "tag": "h3",
+              "type": "heading",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Interested in This Product?",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Contact us for samples, pricing, or custom formulation inquiries.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textFormat": 0
+            }
+          ],
+          "direction": "ltr"
+        }
+      },
+      "blockName": "CTA",
+      "links": [
+        {
+          "id": "6976c6a0f9030500047d2b10",
+          "link": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/contact",
+            "label": "Request Information →",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "cta"
+    }
+  ],
+  "meta": {
+    "title": "Omelette Preparation Liquid Base | Chinyi Eggs Technology",
+    "image": null,
+    "description": "Liquid egg formulation optimized for omelette preparation. Provides rich flavor, soft texture, and efficient cooking results."
+  }
+}

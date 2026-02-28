@@ -1,0 +1,377 @@
+{
+  "slug": "calcined-eggshell-powder",
+  "title": "Calcined Eggshell Powder",
+  "hero": {
+    "type": "none",
+    "richText": null,
+    "links": [],
+    "media": null
+  },
+  "layout": [
+    {
+      "id": "6976c6b8f9030500047d2b6b",
+      "label": "Biotech Ingredients",
+      "title": "Calcined Eggshell Powder",
+      "subtitle": "High-temperature treated calcium oxide powder",
+      "titleFont": "serif",
+      "backgroundImage": null,
+      "backgroundImageUrl": "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=1920&q=80",
+      "size": "small",
+      "showDivider": true,
+      "overlayOpacity": 70,
+      "blockName": "Hero",
+      "blockType": "japaneseHero"
+    },
+    {
+      "id": "6976c6b8f9030500047d2b71",
+      "groupId": "biotech",
+      "style": "tabs",
+      "alignment": "center",
+      "blockName": "Product Navigation",
+      "items": [
+        {
+          "id": "6976c6b8f9030500047d2b6c",
+          "label": "Hydrolyzed Membrane",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/hydrolyzed-eggshell-membrane",
+            "label": "Hydrolyzed Membrane",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c6b8f9030500047d2b6d",
+          "label": "Eggshell Membrane",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/eggshell-membrane",
+            "label": "Eggshell Membrane",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c6b8f9030500047d2b6e",
+          "label": "Calcium Powder",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/eggshell-calcium-powder",
+            "label": "Calcium Powder",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c6b8f9030500047d2b6f",
+          "label": "Calcined Powder",
+          "isActive": true,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/calcined-eggshell-powder",
+            "label": "Calcined Powder",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c6b8f9030500047d2b70",
+          "label": "Egg Oil",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/egg-oil",
+            "label": "Egg Oil",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "pageNav"
+    },
+    {
+      "id": "6976c6b8f9030500047d2b73",
+      "blockName": "Product Details",
+      "columns": [
+        {
+          "id": "6976c6b8f9030500047d2b72",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Calcined Eggshell Powder",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "A high-temperature treated eggshell powder converted to calcium oxide (CaO).",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Used in industrial and agricultural applications requiring high reactivity.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c6b8f9030500047d2b74",
+      "media": null,
+      "imageUrl": "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=800&q=80",
+      "alt": "Agricultural application",
+      "width": 100,
+      "offsetX": 0,
+      "blockName": "Product Image",
+      "blockType": "mediaBlock"
+    },
+    {
+      "id": "6976c6b8f9030500047d2b7a",
+      "title": "Key Characteristics",
+      "icon": "check",
+      "columns": "1",
+      "blockName": "Key Characteristics",
+      "items": [
+        {
+          "id": "6976c6b8f9030500047d2b75",
+          "text": "High-purity calcium oxide (CaO)"
+        },
+        {
+          "id": "6976c6b8f9030500047d2b76",
+          "text": "High reactivity"
+        },
+        {
+          "id": "6976c6b8f9030500047d2b77",
+          "text": "Alkaline pH properties"
+        },
+        {
+          "id": "6976c6b8f9030500047d2b78",
+          "text": "Fine particle size"
+        },
+        {
+          "id": "6976c6b8f9030500047d2b79",
+          "text": "Sustainable source material"
+        }
+      ],
+      "blockType": "checkList"
+    },
+    {
+      "id": "6976c6b8f9030500047d2b7f",
+      "sectionLabel": "Applications",
+      "sectionTitle": "Application Examples",
+      "columns": "4",
+      "cardStyle": "imageTop",
+      "backgroundColor": "kinari",
+      "blockName": "Applications",
+      "items": [
+        {
+          "id": "6976c6b8f9030500047d2b7b",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=400&q=80",
+          "title": "Soil Amendment",
+          "description": "pH adjustment and calcium supplementation for agriculture"
+        },
+        {
+          "id": "6976c6b8f9030500047d2b7c",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&q=80",
+          "title": "Industrial",
+          "description": "Water treatment and chemical processing"
+        },
+        {
+          "id": "6976c6b8f9030500047d2b7d",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=400&q=80",
+          "title": "Poultry Feed",
+          "description": "Calcium source for layer hen diets"
+        },
+        {
+          "id": "6976c6b8f9030500047d2b7e",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&q=80",
+          "title": "Chemical Industry",
+          "description": "Reactant and neutralizing agent"
+        }
+      ],
+      "blockType": "featureGrid"
+    },
+    {
+      "id": "6976c6b8f9030500047d2b85",
+      "title": "Product Specifications",
+      "showHeaders": false,
+      "style": "striped",
+      "blockName": "Specifications",
+      "rows": [
+        {
+          "id": "6976c6b8f9030500047d2b80",
+          "label": "Form",
+          "value": "Fine powder"
+        },
+        {
+          "id": "6976c6b8f9030500047d2b81",
+          "label": "Color",
+          "value": "White"
+        },
+        {
+          "id": "6976c6b8f9030500047d2b82",
+          "label": "Main Component",
+          "value": "Calcium oxide (CaO)"
+        },
+        {
+          "id": "6976c6b8f9030500047d2b83",
+          "label": "Processing",
+          "value": "High-temperature calcination"
+        },
+        {
+          "id": "6976c6b8f9030500047d2b84",
+          "label": "Storage",
+          "value": "Sealed container, dry conditions"
+        }
+      ],
+      "blockType": "specTable",
+      "columnHeaders": {
+        "labelHeader": "Item",
+        "valueHeader": "Specification"
+      }
+    },
+    {
+      "id": "6976c6b8f9030500047d2b87",
+      "richText": {
+        "root": {
+          "type": "root",
+          "format": "",
+          "indent": 0,
+          "version": 1,
+          "children": [
+            {
+              "tag": "h3",
+              "type": "heading",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Interested in This Product?",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Contact us for samples, specifications, or partnership inquiries.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textFormat": 0
+            }
+          ],
+          "direction": "ltr"
+        }
+      },
+      "blockName": "CTA",
+      "links": [
+        {
+          "id": "6976c6b8f9030500047d2b86",
+          "link": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/contact",
+            "label": "Request Information",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "cta"
+    }
+  ],
+  "meta": {
+    "title": "Calcined Eggshell Powder | Chinyi Eggs Technology",
+    "image": null,
+    "description": "High-temperature treated eggshell powder converted to calcium oxide. Used in industrial and agricultural applications."
+  }
+}

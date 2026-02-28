@@ -1,0 +1,669 @@
+{
+  "slug": "milestones",
+  "title": "Corporate Milestones",
+  "hero": {
+    "type": "none",
+    "richText": null,
+    "links": [],
+    "media": null
+  },
+  "layout": [
+    {
+      "id": "6976c67ff9030500047d2a3f",
+      "label": "Company",
+      "title": "Corporate Milestones",
+      "subtitle": "Step by step, through hardships and perseverance",
+      "titleFont": "serif",
+      "backgroundImage": 23,
+      "backgroundImageUrl": "",
+      "size": "small",
+      "showDivider": true,
+      "overlayOpacity": 70,
+      "blockName": "Hero",
+      "blockType": "japaneseHero"
+    },
+    {
+      "id": "6976c67ff9030500047d2a44",
+      "groupId": "company",
+      "style": "tabs",
+      "alignment": "center",
+      "blockName": "Company Navigation",
+      "items": [
+        {
+          "id": "6976c67ff9030500047d2a40",
+          "label": "About",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/about",
+            "label": "About",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c67ff9030500047d2a41",
+          "label": "Milestones",
+          "isActive": true,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/milestones",
+            "label": "Milestones",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c67ff9030500047d2a42",
+          "label": "Quality Control",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/quality-control",
+            "label": "Quality Control",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c67ff9030500047d2a43",
+          "label": "Factory Tour",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/factory-tour",
+            "label": "Factory Tour",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "pageNav"
+    },
+    {
+      "id": "6976c67ff9030500047d2a53",
+      "sectionLabel": "History",
+      "sectionTitle": "Our Journey",
+      "layout": "alternating",
+      "blockName": "Company Timeline",
+      "items": [
+        {
+          "id": "6976c67ff9030500047d2a45",
+          "year": "1981",
+          "title": "October — Company Founded",
+          "description": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Chinyi Egg Products Co., Ltd. officially established.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "image": null
+        },
+        {
+          "id": "6976c67ff9030500047d2a46",
+          "year": "1990",
+          "title": "New Factory Completed",
+          "description": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Modern production facility in Chiayi goes operational.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "image": null
+        },
+        {
+          "id": "6976c67ff9030500047d2a47",
+          "year": "1995",
+          "title": "Danish Equipment Introduced",
+          "description": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Imported Taiwan's first continuous pasteurization system from Denmark.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "image": null
+        },
+        {
+          "id": "6976c67ff9030500047d2a48",
+          "year": "2000",
+          "title": "HACCP Certified",
+          "description": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Received HACCP certification for food safety management.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "image": null
+        },
+        {
+          "id": "6976c67ff9030500047d2a49",
+          "year": "2003",
+          "title": "CAS Certification",
+          "description": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Achieved CAS (Certified Agricultural Standards) certification.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "image": null
+        },
+        {
+          "id": "6976c67ff9030500047d2a4a",
+          "year": "2005",
+          "title": "ISO 22000 Certified",
+          "description": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Received ISO 22000 international food safety management certification.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "image": null
+        },
+        {
+          "id": "6976c67ff9030500047d2a4b",
+          "year": "2008",
+          "title": "Biotech Division Launched",
+          "description": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Started R&D and production of eggshell membrane and biotech ingredients.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "image": null
+        },
+        {
+          "id": "6976c67ff9030500047d2a4c",
+          "year": "2010",
+          "title": "Vertical Integration",
+          "description": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Established own chicken farms for complete supply chain control.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "image": null
+        },
+        {
+          "id": "6976c67ff9030500047d2a4d",
+          "year": "2012",
+          "title": "HALAL Certification",
+          "description": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Achieved HALAL certification for international market expansion.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "image": null
+        },
+        {
+          "id": "6976c67ff9030500047d2a4e",
+          "year": "2015",
+          "title": "100,000-Class Cleanroom",
+          "description": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Upgraded core production area to cleanroom specifications.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "image": null
+        },
+        {
+          "id": "6976c67ff9030500047d2a4f",
+          "year": "2018",
+          "title": "Egg White Products Launch",
+          "description": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Introduced high-protein egg white bar and cube products.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "image": null
+        },
+        {
+          "id": "6976c67ff9030500047d2a50",
+          "year": "2020",
+          "title": "Capacity Expansion",
+          "description": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Major expansion of production capacity and fleet to 80+ vehicles.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "image": null
+        },
+        {
+          "id": "6976c67ff9030500047d2a51",
+          "year": "2023",
+          "title": "Brand Renewal",
+          "description": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Renamed to Chinyi Eggs Technology Co., Ltd. reflecting expanded capabilities.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "image": null
+        },
+        {
+          "id": "6976c67ff9030500047d2a52",
+          "year": "2025",
+          "title": "September — International Expansion",
+          "description": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Launched new English website for global market outreach.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "image": null
+        }
+      ],
+      "blockType": "timeline"
+    },
+    {
+      "id": "6976c67ff9030500047d2a55",
+      "richText": {
+        "root": {
+          "type": "root",
+          "format": "",
+          "indent": 0,
+          "version": 1,
+          "children": [
+            {
+              "tag": "h3",
+              "type": "heading",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "See Our Facilities",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Take a virtual tour of our state-of-the-art factory.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textFormat": 0
+            }
+          ],
+          "direction": "ltr"
+        }
+      },
+      "blockName": "CTA",
+      "links": [
+        {
+          "id": "6976c67ff9030500047d2a54",
+          "link": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/factory-tour",
+            "label": "Factory Tour →",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "cta"
+    }
+  ],
+  "meta": {
+    "title": "Corporate Milestones | Chinyi Eggs Technology",
+    "image": null,
+    "description": "Step by step, through hardships and perseverance. Explore Chinyi's corporate milestones from 1981 to present."
+  }
+}

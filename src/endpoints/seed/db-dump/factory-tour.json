@@ -1,0 +1,631 @@
+{
+  "slug": "factory-tour",
+  "title": "Factory Tour",
+  "hero": {
+    "type": "none",
+    "richText": null,
+    "links": [],
+    "media": null
+  },
+  "layout": [
+    {
+      "id": "697e1a97a6eca85bd738dfcc",
+      "label": "Company",
+      "title": "Factory Tour",
+      "subtitle": "First-Hand Experience — See Chinyi's Expertise With Your Own Eyes",
+      "titleFont": "serif",
+      "backgroundImage": null,
+      "backgroundImageUrl": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&q=80",
+      "size": "small",
+      "showDivider": true,
+      "overlayOpacity": 70,
+      "blockName": "Hero",
+      "blockType": "japaneseHero"
+    },
+    {
+      "id": "697e1a97a6eca85bd738dfd1",
+      "groupId": "company",
+      "style": "tabs",
+      "alignment": "center",
+      "blockName": "Company Navigation",
+      "items": [
+        {
+          "id": "697e1a97a6eca85bd738dfcd",
+          "label": "About",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/about",
+            "label": "About",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "697e1a97a6eca85bd738dfce",
+          "label": "Milestones",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/milestones",
+            "label": "Milestones",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "697e1a97a6eca85bd738dfcf",
+          "label": "Quality Control",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/quality-control",
+            "label": "Quality Control",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "697e1a97a6eca85bd738dfd0",
+          "label": "Factory Tour",
+          "isActive": true,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/factory-tour",
+            "label": "Factory Tour",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "pageNav"
+    },
+    {
+      "id": "697e1a97a6eca85bd738dfd3",
+      "blockName": "Taiwan Reality",
+      "columns": [
+        {
+          "id": "697e1a97a6eca85bd738dfd2",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Taiwan's Egg Industry Reality",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "For many people in Taiwan, knowledge about egg products is generally limited—so one often sees ungraded eggs with chicken droppings, or egg carts without refrigeration driving around under the sun. Enter an ordinary egg factory, and you'll find low automation: much of the work is still done by hand, including separating yolk from white, and hygienic standards tend to be poor.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "697e1a97a6eca85bd738dfd4",
+      "media": null,
+      "imageUrl": "https://images.unsplash.com/photo-1569288052389-dac9b01c9c05?w=800&q=80",
+      "alt": "Traditional egg production",
+      "width": 100,
+      "offsetX": 0,
+      "blockName": "Traditional Production Image",
+      "blockType": "mediaBlock"
+    },
+    {
+      "id": "697e1a97a6eca85bd738dfd6",
+      "blockName": "Chinyi Difference",
+      "columns": [
+        {
+          "id": "697e1a97a6eca85bd738dfd5",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "The Chinyi Difference",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Chinyi has specialized in Taiwan's egg industry for over 40 years. We insist on moving forward with the times, learning from advanced countries in Europe and the U.S., and continuously advancing Taiwan's egg-product standards.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "697e1a97a6eca85bd738dfd7",
+      "variant": "info",
+      "content": {
+        "root": {
+          "type": "root",
+          "format": "",
+          "indent": 0,
+          "version": 1,
+          "children": [
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Our factory is highly automated. The core manufacturing area is a cleanroom meeting ",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                },
+                {
+                  "mode": "normal",
+                  "text": "100,000-class specifications",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 1,
+                  "version": 1
+                },
+                {
+                  "mode": "normal",
+                  "text": ". Entrances and exits for personnel are separated. Air is independently circulated. Pipelines are elevated overhead. Visitors entering Chinyi's factory for the first time often feel as though they've stepped into a wafer fab in a science park.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textFormat": 0
+            }
+          ],
+          "direction": "ltr"
+        }
+      },
+      "author": null,
+      "blockName": "Cleanroom",
+      "blockType": "highlightBox"
+    },
+    {
+      "id": "697e1a97a6eca85bd738dfd9",
+      "blockName": "Open Doors",
+      "columns": [
+        {
+          "id": "697e1a97a6eca85bd738dfd8",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Built on integrity, Chinyi opens its doors wide: all production lines are visible to the public. From home, you can feel like you're on a guided tour—witness Chinyi's professionalism firsthand.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "697e1a97a6eca85bd738dfdb",
+      "blockName": "Pasteurized Production",
+      "columns": [
+        {
+          "id": "697e1a97a6eca85bd738dfda",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Pasteurized Liquid Egg Production",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "We've introduced Taiwan's newest and largest continuous sterilization equipment from Denmark, combining \"Fresh House\" packaging and automatic pouch filling technologies. From washing, cracking eggs, sterilization, to packaging, the entire process is automated—bringing Taiwanese liquid egg standards into the league of the world's most advanced nations.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "697e1a97a6eca85bd738dfdc",
+      "media": 32,
+      "imageUrl": "",
+      "alt": "Modern food production line",
+      "width": 100,
+      "offsetX": 0,
+      "blockName": "Production Line Image",
+      "blockType": "mediaBlock"
+    },
+    {
+      "id": "697e1a97a6eca85bd738dfdd",
+      "variant": "info",
+      "content": {
+        "root": {
+          "type": "root",
+          "format": "",
+          "indent": 0,
+          "version": 1,
+          "children": [
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Using internationally recognized Pasteur low-temperature sterilization. Through a plate heat exchanger (preheat → heating for sterilization → cooling → chilling), we eliminate Salmonella, E. coli, and various harmful microbes and spoilage bacteria. The entire sterilization process is conducted through elevated, sealed piping systems—thoroughly isolating the process from external contamination.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textFormat": 0
+            }
+          ],
+          "direction": "ltr"
+        }
+      },
+      "author": null,
+      "blockName": "Pasteurization Process",
+      "blockType": "highlightBox"
+    },
+    {
+      "id": "697e1a97a6eca85bd738dfe3",
+      "autoplay": true,
+      "autoplayInterval": "5",
+      "pauseOnHover": true,
+      "showThumbnails": true,
+      "blockName": "Factory Gallery",
+      "images": [
+        {
+          "id": "697e1a97a6eca85bd738dfde",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&q=80",
+          "caption": "100K Class Cleanroom Production Area"
+        },
+        {
+          "id": "697e1a97a6eca85bd738dfdf",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1200&q=80",
+          "caption": "Automated Production Line"
+        },
+        {
+          "id": "697e1a97a6eca85bd738dfe0",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&q=80",
+          "caption": "Danish Continuous Sterilization Equipment"
+        },
+        {
+          "id": "697e1a97a6eca85bd738dfe1",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=80",
+          "caption": "Sealed Piping Systems"
+        },
+        {
+          "id": "697e1a97a6eca85bd738dfe2",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1579003593419-98f949b9398f?w=1200&q=80",
+          "caption": "Quality Control Laboratory"
+        }
+      ],
+      "blockType": "imageCarousel"
+    },
+    {
+      "id": "697e1a97a6eca85bd738dfea",
+      "sectionLabel": "Features",
+      "sectionTitle": "Factory Highlights",
+      "columns": "3",
+      "cardStyle": "imageTop",
+      "backgroundColor": "kinari",
+      "blockName": "Factory Highlights",
+      "items": [
+        {
+          "id": "697e1a97a6eca85bd738dfe4",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&q=80",
+          "title": "100K Class Cleanroom",
+          "description": "Core production area meets international cleanroom standards comparable to semiconductor facilities."
+        },
+        {
+          "id": "697e1a97a6eca85bd738dfe5",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80",
+          "title": "Full Automation",
+          "description": "From washing to packaging, the entire process is automated with minimal human contact."
+        },
+        {
+          "id": "697e1a97a6eca85bd738dfe6",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=400&q=80",
+          "title": "Danish Equipment",
+          "description": "Taiwan's largest continuous sterilization equipment imported from Denmark."
+        },
+        {
+          "id": "697e1a97a6eca85bd738dfe7",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&q=80",
+          "title": "Sealed Systems",
+          "description": "Elevated piping systems completely isolate the process from external contamination."
+        },
+        {
+          "id": "697e1a97a6eca85bd738dfe8",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1579003593419-98f949b9398f?w=400&q=80",
+          "title": "Pasteurization",
+          "description": "Internationally recognized low-temperature pasteurization eliminates harmful pathogens."
+        },
+        {
+          "id": "697e1a97a6eca85bd738dfe9",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&q=80",
+          "title": "Transparent",
+          "description": "All production lines are visible to the public, demonstrating our commitment to quality."
+        }
+      ],
+      "blockType": "featureGrid"
+    },
+    {
+      "id": "697e1a97a6eca85bd738dfec",
+      "richText": {
+        "root": {
+          "type": "root",
+          "format": "",
+          "indent": 0,
+          "version": 1,
+          "children": [
+            {
+              "tag": "h3",
+              "type": "heading",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Visit Our Facility",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Interested in visiting our factory or learning more about our production capabilities?",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textFormat": 0
+            }
+          ],
+          "direction": "ltr"
+        }
+      },
+      "blockName": "CTA",
+      "links": [
+        {
+          "id": "697e1a97a6eca85bd738dfeb",
+          "link": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/contact",
+            "label": "Contact Us →",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "cta"
+    }
+  ],
+  "meta": {
+    "title": "Factory Tour | Chinyi Eggs Technology",
+    "image": null,
+    "description": "First-Hand Experience - See Chinyi's Expertise With Your Own Eyes. Tour our highly automated factory with 100,000-class cleanroom specifications."
+  }
+}

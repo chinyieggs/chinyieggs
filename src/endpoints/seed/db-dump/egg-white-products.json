@@ -1,0 +1,531 @@
+{
+  "slug": "egg-white-products",
+  "title": "Egg White Products",
+  "hero": {
+    "type": "none",
+    "richText": null,
+    "links": [],
+    "media": null
+  },
+  "layout": [
+    {
+      "id": "6976c6c5f9030500047d2ba5",
+      "label": "High-Protein Foods",
+      "title": "Egg White Products",
+      "subtitle": "Premium protein from pure egg whites",
+      "titleFont": "serif",
+      "backgroundImage": 23,
+      "backgroundImageUrl": "",
+      "size": "small",
+      "showDivider": true,
+      "overlayOpacity": 70,
+      "blockName": "Hero",
+      "blockType": "japaneseHero"
+    },
+    {
+      "id": "6976c6c5f9030500047d2ba7",
+      "blockName": "Series Overview",
+      "columns": [
+        {
+          "id": "6976c6c5f9030500047d2ba6",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "High-Protein Food Series",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Our High-Protein Food Series delivers the exceptional nutritional value of egg whites in convenient, ready-to-eat formats.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Egg whites are nature's perfect protein source - high in protein, low in fat, and easily digestible. We transform this premium ingredient into accessible products for health-conscious consumers and fitness enthusiasts.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "All products are manufactured using our egg white expertise with strict quality standards.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c6c5f9030500047d2ba9",
+      "blockName": "Egg White Protein Bar",
+      "columns": [
+        {
+          "id": "6976c6c5f9030500047d2ba8",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Egg White Protein Bar",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "A convenient high-protein snack made from pure egg whites.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textStyle": "",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Perfect for athletes, fitness enthusiasts, and anyone seeking a clean protein source on the go.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textStyle": "",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c6c5f9030500047d2baf",
+      "title": "Product Features",
+      "icon": "check",
+      "columns": "1",
+      "blockName": "Bar Features",
+      "items": [
+        {
+          "id": "6976c6c5f9030500047d2baa",
+          "text": "High protein content per serving"
+        },
+        {
+          "id": "6976c6c5f9030500047d2bab",
+          "text": "Low fat, low carbohydrate"
+        },
+        {
+          "id": "6976c6c5f9030500047d2bac",
+          "text": "No artificial preservatives"
+        },
+        {
+          "id": "6976c6c5f9030500047d2bad",
+          "text": "Convenient portable format"
+        },
+        {
+          "id": "6976c6c5f9030500047d2bae",
+          "text": "Clean ingredient list"
+        }
+      ],
+      "blockType": "checkList"
+    },
+    {
+      "id": "6976c6c5f9030500047d2bb1",
+      "blockName": "Egg White Protein Cube",
+      "columns": [
+        {
+          "id": "6976c6c5f9030500047d2bb0",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Egg White Protein Cube",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Bite-sized egg white protein cubes for easy portion control.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "A versatile high-protein snack that can be enjoyed anytime, anywhere.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c6c5f9030500047d2bb7",
+      "title": "Product Features",
+      "icon": "check",
+      "columns": "1",
+      "blockName": "Cube Features",
+      "items": [
+        {
+          "id": "6976c6c5f9030500047d2bb2",
+          "text": "Compact cube format"
+        },
+        {
+          "id": "6976c6c5f9030500047d2bb3",
+          "text": "Easy portion control"
+        },
+        {
+          "id": "6976c6c5f9030500047d2bb4",
+          "text": "Soft, pleasant texture"
+        },
+        {
+          "id": "6976c6c5f9030500047d2bb5",
+          "text": "Multiple flavor options"
+        },
+        {
+          "id": "6976c6c5f9030500047d2bb6",
+          "text": "Resealable packaging"
+        }
+      ],
+      "blockType": "checkList"
+    },
+    {
+      "id": "6976c6c5f9030500047d2bbc",
+      "sectionLabel": "Benefits",
+      "sectionTitle": "Why Egg White Protein?",
+      "columns": "4",
+      "cardStyle": "imageTop",
+      "backgroundColor": "kinari",
+      "blockName": "Why Egg White Protein",
+      "items": [
+        {
+          "id": "6976c6c5f9030500047d2bb8",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&q=80",
+          "title": "Complete Protein",
+          "description": "Contains all essential amino acids for muscle building"
+        },
+        {
+          "id": "6976c6c5f9030500047d2bb9",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1518709414768-a88981a4515d?w=400&q=80",
+          "title": "Low Fat",
+          "description": "Virtually fat-free, ideal for lean diets"
+        },
+        {
+          "id": "6976c6c5f9030500047d2bba",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400&q=80",
+          "title": "High Absorption",
+          "description": "Excellent bioavailability for efficient nutrition"
+        },
+        {
+          "id": "6976c6c5f9030500047d2bbb",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=400&q=80",
+          "title": "Natural Source",
+          "description": "Clean, whole-food protein without additives"
+        }
+      ],
+      "blockType": "featureGrid"
+    },
+    {
+      "id": "6976c6c5f9030500047d2bc1",
+      "sectionLabel": "Target Market",
+      "sectionTitle": "Ideal For",
+      "columns": "4",
+      "cardStyle": "imageTop",
+      "backgroundColor": "shiro",
+      "blockName": "Target Consumers",
+      "items": [
+        {
+          "id": "6976c6c5f9030500047d2bbd",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&q=80",
+          "title": "Fitness Enthusiasts",
+          "description": "Post-workout recovery and muscle support"
+        },
+        {
+          "id": "6976c6c5f9030500047d2bbe",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=400&q=80",
+          "title": "Busy Professionals",
+          "description": "Quick, nutritious snacks between meetings"
+        },
+        {
+          "id": "6976c6c5f9030500047d2bbf",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1447069387593-a5de0862481e?w=400&q=80",
+          "title": "Active Seniors",
+          "description": "Easy-to-digest protein for healthy aging"
+        },
+        {
+          "id": "6976c6c5f9030500047d2bc0",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=400&q=80",
+          "title": "Students",
+          "description": "Healthy energy for studying and activities"
+        }
+      ],
+      "blockType": "featureGrid"
+    },
+    {
+      "id": "6976c6c5f9030500047d2bc3",
+      "richText": {
+        "root": {
+          "type": "root",
+          "format": "",
+          "indent": 0,
+          "version": 1,
+          "children": [
+            {
+              "tag": "h3",
+              "type": "heading",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Interested in Our Products?",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Contact us for product samples, distribution inquiries, or partnership opportunities.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textFormat": 0
+            }
+          ],
+          "direction": "ltr"
+        }
+      },
+      "blockName": "CTA",
+      "links": [
+        {
+          "id": "6976c6c5f9030500047d2bc2",
+          "link": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/contact",
+            "label": "Request Information",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "cta"
+    }
+  ],
+  "meta": {
+    "title": "Egg White Products | Chinyi Eggs Technology",
+    "image": null,
+    "description": "High-protein egg white products including protein bars and cubes. Convenient, high-quality protein from egg whites for fitness and health."
+  }
+}

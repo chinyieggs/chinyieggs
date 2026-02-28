@@ -1,0 +1,120 @@
+{
+  "id": 1,
+  "style": "japanese",
+  "logoText": "CHINYI EGGS",
+  "logo": 49,
+  "navItems": [
+    {
+      "id": "697f0dfca6eca85bd738dff1",
+      "featuredImage": null,
+      "submenu": [
+        {
+          "id": "697f0dfca6eca85bd738dfed",
+          "link": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/about",
+            "label": "About Chinyi",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "697f0dfca6eca85bd738dfee",
+          "link": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/milestones",
+            "label": "Corporate Milestones",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "697f0dfca6eca85bd738dfef",
+          "link": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/quality-control",
+            "label": "Quality Control",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "697f0dfca6eca85bd738dff0",
+          "link": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/factory-tour",
+            "label": "Factory Tour",
+            "appearance": "default"
+          }
+        }
+      ],
+      "link": {
+        "type": "custom",
+        "newTab": null,
+        "url": "/about",
+        "label": "Company"
+      }
+    },
+    {
+      "id": "697f0dfca6eca85bd738dff5",
+      "featuredImage": null,
+      "submenu": [
+        {
+          "id": "697f0dfca6eca85bd738dff2",
+          "link": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/egg-tart-liquid",
+            "label": "Prepared Egg Liquid",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "697f0dfca6eca85bd738dff3",
+          "link": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/hydrolyzed-eggshell-membrane",
+            "label": "Biotech Ingredients",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "697f0dfca6eca85bd738dff4",
+          "link": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/egg-white-products",
+            "label": "High-Protein Foods",
+            "appearance": "default"
+          }
+        }
+      ],
+      "link": {
+        "type": "custom",
+        "newTab": null,
+        "url": "/egg-tart-liquid",
+        "label": "Products"
+      }
+    },
+    {
+      "id": "697f0dfca6eca85bd738dff6",
+      "featuredImage": null,
+      "submenu": [],
+      "link": {
+        "type": "reference",
+        "newTab": null,
+        "reference": {
+          "relationTo": "pages",
+          "value": 39
+        },
+        "url": null,
+        "label": "Contact"
+      }
+    }
+  ],
+  "updatedAt": "2026-02-27T16:23:10.997Z",
+  "createdAt": "2026-01-26T01:45:41.144Z",
+  "globalType": "header"
+}

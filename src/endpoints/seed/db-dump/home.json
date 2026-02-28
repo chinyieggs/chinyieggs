@@ -1,0 +1,298 @@
+{
+  "slug": "home",
+  "title": "Home",
+  "hero": {
+    "type": "none",
+    "richText": null,
+    "links": [],
+    "media": null
+  },
+  "layout": [
+    {
+      "id": "69a172ec7ec7250004f086c3",
+      "label": "",
+      "title": "",
+      "subtitle": "",
+      "titleFont": "sans",
+      "backgroundImage": 31,
+      "backgroundImageUrl": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=80",
+      "size": "medium",
+      "showDivider": false,
+      "overlayOpacity": 0,
+      "blockName": "Hero Section",
+      "blockType": "japaneseHero"
+    },
+    {
+      "id": "69a172ec7ec7250004f086c4",
+      "label": "About",
+      "title": "A Legacy of Excellence",
+      "content": {
+        "root": {
+          "type": "root",
+          "format": "",
+          "indent": 0,
+          "version": 1,
+          "children": [
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "In the 1980s, as Taiwan's economy took off and incomes rose, consumer industries blossomed—bakeries needed eggs, food processors needed eggs, the restaurant industry needed eggs—and the market demand for egg products surged.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textFormat": 0
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "To meet market demand and raise the standard of Taiwan's egg industry, Co-Founder & Chairman Ku Rong-Hai and Co-Founder Ku Hong-Lin established Chinyi Egg Products on ",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                },
+                {
+                  "mode": "normal",
+                  "text": "October 25, 1981",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 1,
+                  "version": 1
+                },
+                {
+                  "mode": "normal",
+                  "text": " as Taiwan's first specialized liquid egg company.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textFormat": 0
+            }
+          ],
+          "direction": "ltr"
+        }
+      },
+      "showDivider": true,
+      "ctaLabel": "Learn More →",
+      "ctaLink": "/about",
+      "textAlign": "center",
+      "blockName": "About Section",
+      "blockType": "sectionIntro"
+    },
+    {
+      "id": "69a172ec7ec7250004f086c9",
+      "backgroundColor": "kinari",
+      "columns": "4",
+      "blockName": "Company Stats",
+      "items": [
+        {
+          "id": "69a172ec7ec7250004f086c5",
+          "number": "46+",
+          "label": "Years",
+          "suffix": null
+        },
+        {
+          "id": "69a172ec7ec7250004f086c6",
+          "number": "80+",
+          "label": "Vehicles",
+          "suffix": null
+        },
+        {
+          "id": "69a172ec7ec7250004f086c7",
+          "number": "#1",
+          "label": "Market Share",
+          "suffix": null
+        },
+        {
+          "id": "69a172ec7ec7250004f086c8",
+          "number": "100K",
+          "label": "Class Cleanroom",
+          "suffix": null
+        }
+      ],
+      "blockType": "statsGrid"
+    },
+    {
+      "id": "69a172ec7ec7250004f086cd",
+      "sectionLabel": "Products",
+      "sectionTitle": "Our Product Lines",
+      "columns": "3",
+      "blockName": "Product Lines",
+      "items": [
+        {
+          "id": "69a172ec7ec7250004f086ca",
+          "image": null,
+          "imageUrl": "",
+          "title": "Prepared Egg Liquid",
+          "subtitle": "",
+          "description": "Customized ready-to-use liquid bases for egg tarts, chawanmushi, pudding, and omelettes.",
+          "productLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/egg-tart-liquid",
+            "label": "View Products →",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "69a172ec7ec7250004f086cb",
+          "image": null,
+          "imageUrl": "",
+          "title": "Biotech Ingredients",
+          "subtitle": "",
+          "description": "High-value functional ingredients from eggshells and membranes for supplements and cosmetics.",
+          "productLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/hydrolyzed-eggshell-membrane",
+            "label": "View Products →",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "69a172ec7ec7250004f086cc",
+          "image": null,
+          "imageUrl": "",
+          "title": "High-Protein Foods",
+          "subtitle": "",
+          "description": "Convenient egg white bars and cubes for fitness enthusiasts and foodservice operations.",
+          "productLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/egg-white-products",
+            "label": "View Products →",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "productGrid"
+    },
+    {
+      "id": "69a172ec7ec7250004f086d2",
+      "sectionLabel": "Quality",
+      "sectionTitle": "Certified Excellence",
+      "description": "Our production facilities are HACCP and ISO 22000 certified, featuring a 100,000-class cleanroom and advanced pasteurization equipment imported from Denmark.",
+      "backgroundColor": "kinari",
+      "blockName": "Quality Certifications",
+      "items": [
+        {
+          "id": "69a172ec7ec7250004f086ce",
+          "name": "HACCP",
+          "description": null,
+          "icon": null
+        },
+        {
+          "id": "69a172ec7ec7250004f086cf",
+          "name": "ISO 22000",
+          "description": null,
+          "icon": null
+        },
+        {
+          "id": "69a172ec7ec7250004f086d0",
+          "name": "CAS",
+          "description": null,
+          "icon": null
+        },
+        {
+          "id": "69a172ec7ec7250004f086d1",
+          "name": "HALAL",
+          "description": null,
+          "icon": null
+        }
+      ],
+      "blockType": "certificationGrid"
+    },
+    {
+      "id": "69a172ec7ec7250004f086d4",
+      "richText": {
+        "root": {
+          "type": "root",
+          "format": "",
+          "indent": 0,
+          "version": 1,
+          "children": [
+            {
+              "tag": "h3",
+              "type": "heading",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Interested in Our Products?",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Contact us for samples, pricing, or partnership opportunities.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textFormat": 0
+            }
+          ],
+          "direction": "ltr"
+        }
+      },
+      "blockName": "Contact CTA",
+      "links": [
+        {
+          "id": "69a172ec7ec7250004f086d3",
+          "link": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/contact",
+            "label": "Get in Touch →",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "cta"
+    }
+  ],
+  "meta": {
+    "title": "Chinyi Eggs Technology | Taiwan's Leading Egg Products Brand",
+    "image": null,
+    "description": "Chinyi Eggs - Taiwan's most trusted egg products company since 1981. Specializing in pasteurized liquid eggs, biotech ingredients, and high-protein foods."
+  }
+}

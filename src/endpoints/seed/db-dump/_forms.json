@@ -1,0 +1,373 @@
+[
+  {
+    "id": 3,
+    "title": "Contact Form",
+    "fields": [
+      {
+        "id": "6976c673f9030500047d29e4",
+        "name": "firstName",
+        "label": "First Name",
+        "width": 50,
+        "defaultValue": null,
+        "required": true,
+        "blockName": "firstName",
+        "blockType": "text"
+      },
+      {
+        "id": "6976c673f9030500047d29e5",
+        "name": "lastName",
+        "label": "Last Name",
+        "width": 50,
+        "defaultValue": null,
+        "required": true,
+        "blockName": "lastName",
+        "blockType": "text"
+      },
+      {
+        "id": "6976c673f9030500047d29e6",
+        "name": "email",
+        "label": "Email",
+        "width": 50,
+        "required": true,
+        "blockName": "email",
+        "blockType": "email"
+      },
+      {
+        "id": "6976c673f9030500047d29e7",
+        "name": "phone",
+        "label": "Phone",
+        "width": 50,
+        "defaultValue": null,
+        "required": false,
+        "blockName": "phone",
+        "blockType": "text"
+      },
+      {
+        "id": "6976c673f9030500047d29e8",
+        "name": "company",
+        "label": "Company Name",
+        "width": 100,
+        "defaultValue": null,
+        "required": false,
+        "blockName": "company",
+        "blockType": "text"
+      },
+      {
+        "id": "6976c673f9030500047d29fc",
+        "name": "country",
+        "label": "Country / Region",
+        "width": 100,
+        "defaultValue": null,
+        "placeholder": null,
+        "required": false,
+        "blockName": "country",
+        "options": [
+          {
+            "id": "6976c673f9030500047d29e9",
+            "label": "Taiwan",
+            "value": "TW"
+          },
+          {
+            "id": "6976c673f9030500047d29ea",
+            "label": "Japan",
+            "value": "JP"
+          },
+          {
+            "id": "6976c673f9030500047d29eb",
+            "label": "China",
+            "value": "CN"
+          },
+          {
+            "id": "6976c673f9030500047d29ec",
+            "label": "Hong Kong",
+            "value": "HK"
+          },
+          {
+            "id": "6976c673f9030500047d29ed",
+            "label": "South Korea",
+            "value": "KR"
+          },
+          {
+            "id": "6976c673f9030500047d29ee",
+            "label": "Singapore",
+            "value": "SG"
+          },
+          {
+            "id": "6976c673f9030500047d29ef",
+            "label": "Malaysia",
+            "value": "MY"
+          },
+          {
+            "id": "6976c673f9030500047d29f0",
+            "label": "Thailand",
+            "value": "TH"
+          },
+          {
+            "id": "6976c673f9030500047d29f1",
+            "label": "Vietnam",
+            "value": "VN"
+          },
+          {
+            "id": "6976c673f9030500047d29f2",
+            "label": "Indonesia",
+            "value": "ID"
+          },
+          {
+            "id": "6976c673f9030500047d29f3",
+            "label": "Philippines",
+            "value": "PH"
+          },
+          {
+            "id": "6976c673f9030500047d29f4",
+            "label": "Australia",
+            "value": "AU"
+          },
+          {
+            "id": "6976c673f9030500047d29f5",
+            "label": "New Zealand",
+            "value": "NZ"
+          },
+          {
+            "id": "6976c673f9030500047d29f6",
+            "label": "United States",
+            "value": "US"
+          },
+          {
+            "id": "6976c673f9030500047d29f7",
+            "label": "Canada",
+            "value": "CA"
+          },
+          {
+            "id": "6976c673f9030500047d29f8",
+            "label": "United Kingdom",
+            "value": "UK"
+          },
+          {
+            "id": "6976c673f9030500047d29f9",
+            "label": "Germany",
+            "value": "DE"
+          },
+          {
+            "id": "6976c673f9030500047d29fa",
+            "label": "France",
+            "value": "FR"
+          },
+          {
+            "id": "6976c673f9030500047d29fb",
+            "label": "Other",
+            "value": "OTHER"
+          }
+        ],
+        "blockType": "select"
+      },
+      {
+        "id": "6976c673f9030500047d2a04",
+        "name": "inquiry",
+        "label": "Inquiry Type",
+        "width": 100,
+        "defaultValue": null,
+        "placeholder": null,
+        "required": true,
+        "blockName": "inquiry",
+        "options": [
+          {
+            "id": "6976c673f9030500047d29fd",
+            "label": "Product Information",
+            "value": "product"
+          },
+          {
+            "id": "6976c673f9030500047d29fe",
+            "label": "Sample Request",
+            "value": "sample"
+          },
+          {
+            "id": "6976c673f9030500047d29ff",
+            "label": "Price Quote",
+            "value": "quote"
+          },
+          {
+            "id": "6976c673f9030500047d2a00",
+            "label": "OEM/ODM Inquiry",
+            "value": "oem"
+          },
+          {
+            "id": "6976c673f9030500047d2a01",
+            "label": "Distribution Partnership",
+            "value": "distribution"
+          },
+          {
+            "id": "6976c673f9030500047d2a02",
+            "label": "Technical Support",
+            "value": "technical"
+          },
+          {
+            "id": "6976c673f9030500047d2a03",
+            "label": "Other",
+            "value": "other"
+          }
+        ],
+        "blockType": "select"
+      },
+      {
+        "id": "6976c673f9030500047d2a0d",
+        "name": "products",
+        "label": "Products of Interest",
+        "width": 100,
+        "defaultValue": null,
+        "placeholder": null,
+        "required": false,
+        "blockName": "products",
+        "options": [
+          {
+            "id": "6976c673f9030500047d2a05",
+            "label": "Prepared Egg Liquid Series",
+            "value": "liquid"
+          },
+          {
+            "id": "6976c673f9030500047d2a06",
+            "label": "Hydrolyzed Eggshell Membrane",
+            "value": "membrane"
+          },
+          {
+            "id": "6976c673f9030500047d2a07",
+            "label": "Eggshell Membrane",
+            "value": "eggshell"
+          },
+          {
+            "id": "6976c673f9030500047d2a08",
+            "label": "Eggshell Calcium Powder",
+            "value": "calcium"
+          },
+          {
+            "id": "6976c673f9030500047d2a09",
+            "label": "Calcined Eggshell Powder",
+            "value": "calcined"
+          },
+          {
+            "id": "6976c673f9030500047d2a0a",
+            "label": "Egg Oil",
+            "value": "oil"
+          },
+          {
+            "id": "6976c673f9030500047d2a0b",
+            "label": "High-Protein Egg White Products",
+            "value": "protein"
+          },
+          {
+            "id": "6976c673f9030500047d2a0c",
+            "label": "Multiple Products",
+            "value": "multiple"
+          }
+        ],
+        "blockType": "select"
+      },
+      {
+        "id": "6976c673f9030500047d2a0e",
+        "name": "message",
+        "label": "Message",
+        "width": 100,
+        "defaultValue": null,
+        "required": true,
+        "blockName": "message",
+        "blockType": "textarea"
+      }
+    ],
+    "submitButtonLabel": "Submit Inquiry",
+    "confirmationType": "message",
+    "confirmationMessage": {
+      "root": {
+        "type": "root",
+        "format": "",
+        "indent": 0,
+        "version": 1,
+        "children": [
+          {
+            "tag": "h2",
+            "type": "heading",
+            "format": "",
+            "indent": 0,
+            "version": 1,
+            "children": [
+              {
+                "mode": "normal",
+                "text": "Thank you for contacting us!",
+                "type": "text",
+                "style": "",
+                "detail": 0,
+                "format": 0,
+                "version": 1
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "format": "",
+            "indent": 0,
+            "version": 1,
+            "children": [
+              {
+                "mode": "normal",
+                "text": "Your inquiry has been submitted successfully. Our team will respond within 1-2 business days.",
+                "type": "text",
+                "style": "",
+                "detail": 0,
+                "format": 0,
+                "version": 1
+              }
+            ],
+            "direction": "ltr",
+            "textFormat": 0
+          }
+        ],
+        "direction": "ltr"
+      }
+    },
+    "redirect": {
+      "url": null
+    },
+    "emails": [
+      {
+        "id": "6976c673f9030500047d2a0f",
+        "emailTo": "{{email}}",
+        "cc": null,
+        "bcc": null,
+        "replyTo": null,
+        "emailFrom": "\"Chinyi Eggs Technology\" <info@chinyieggs.com>",
+        "subject": "Thank you for contacting Chinyi Eggs Technology",
+        "message": {
+          "root": {
+            "type": "root",
+            "format": "",
+            "indent": 0,
+            "version": 1,
+            "children": [
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Thank you for contacting Chinyi Eggs Technology. Your inquiry has been received and our team will respond within 1-2 business days.",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "textFormat": 0
+              }
+            ],
+            "direction": "ltr"
+          }
+        }
+      }
+    ],
+    "updatedAt": "2023-01-12T21:47:41.374Z",
+    "createdAt": "2023-01-12T21:47:41.374Z"
+  }
+]

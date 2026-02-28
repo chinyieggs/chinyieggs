@@ -1,0 +1,531 @@
+{
+  "slug": "egg-tart-liquid",
+  "title": "Egg Tart Filling Liquid Base",
+  "hero": {
+    "type": "none",
+    "richText": null,
+    "links": [],
+    "media": null
+  },
+  "layout": [
+    {
+      "id": "6976c68ff9030500047d2a9a",
+      "label": "Prepared Egg Liquid",
+      "title": "Egg Tart Filling Liquid Base",
+      "subtitle": "Ready-to-use custard liquid for professional egg tart production",
+      "titleFont": "serif",
+      "backgroundImage": 24,
+      "backgroundImageUrl": "",
+      "size": "small",
+      "showDivider": true,
+      "overlayOpacity": 70,
+      "blockName": "Hero",
+      "blockType": "japaneseHero"
+    },
+    {
+      "id": "6976c68ff9030500047d2a9f",
+      "groupId": "prepared-liquid",
+      "style": "tabs",
+      "alignment": "center",
+      "blockName": "Product Navigation",
+      "items": [
+        {
+          "id": "6976c68ff9030500047d2a9b",
+          "label": "Egg Tart",
+          "isActive": true,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/egg-tart-liquid",
+            "label": "Egg Tart",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c68ff9030500047d2a9c",
+          "label": "Chawanmushi",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/chawanmushi-liquid",
+            "label": "Chawanmushi",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c68ff9030500047d2a9d",
+          "label": "Pudding",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/pudding-liquid",
+            "label": "Pudding",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c68ff9030500047d2a9e",
+          "label": "Omelette",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/omelette-liquid",
+            "label": "Omelette",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "pageNav"
+    },
+    {
+      "id": "6976c68ff9030500047d2aa1",
+      "blockName": "Series Overview",
+      "columns": [
+        {
+          "id": "6976c68ff9030500047d2aa0",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Customized Prepared Egg Liquid Series",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Our Customized Prepared Egg Liquid Series is developed to meet the specific needs of foodservice operators, dessert manufacturers, and OEM partners.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c68ff9030500047d2aa2",
+      "media": null,
+      "imageUrl": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800&q=80",
+      "alt": "Egg tart desserts",
+      "width": 100,
+      "offsetX": 0,
+      "blockName": "Series Image",
+      "blockType": "mediaBlock"
+    },
+    {
+      "id": "6976c68ff9030500047d2aa4",
+      "blockName": "Series Overview Continued",
+      "columns": [
+        {
+          "id": "6976c68ff9030500047d2aa3",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "We provide tailor-made formulations, allowing customers to create consistent, high-quality egg-based products while improving production efficiency and reducing labor.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Through our advanced pasteurization process, strict quality control, and HACCP/ISO22000-certified facilities, each product offers safety, stability, and excellent performance for large-scale production.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c68ff9030500047d2aaa",
+      "title": "Key Features",
+      "icon": "check",
+      "columns": "1",
+      "blockName": "Key Features",
+      "items": [
+        {
+          "id": "6976c68ff9030500047d2aa5",
+          "text": "Customized formulation based on flavor, texture, sweetness, and viscosity requirements"
+        },
+        {
+          "id": "6976c68ff9030500047d2aa6",
+          "text": "Ready-to-use liquid base, simplifying preparation and ensuring consistent results"
+        },
+        {
+          "id": "6976c68ff9030500047d2aa7",
+          "text": "Pasteurized and food-safe, suitable for commercial kitchens and industrial production"
+        },
+        {
+          "id": "6976c68ff9030500047d2aa8",
+          "text": "Stable quality, ideal for frozen storage and long-distance distribution"
+        },
+        {
+          "id": "6976c68ff9030500047d2aa9",
+          "text": "Applicable for OEM/ODM development"
+        }
+      ],
+      "blockType": "checkList"
+    },
+    {
+      "id": "6976c68ff9030500047d2aac",
+      "blockName": "Product Details",
+      "columns": [
+        {
+          "id": "6976c68ff9030500047d2aab",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Egg Tart Filling Liquid Base",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "A ready-to-use custard liquid designed for egg tart production.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Provides smooth texture, stable baking performance, and consistent color.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Ideal for:",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 1,
+                      "version": 1
+                    },
+                    {
+                      "mode": "normal",
+                      "text": " Bakeries, cafés, and frozen dessert manufacturers.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c68ff9030500047d2ab0",
+      "sectionLabel": "Applications",
+      "sectionTitle": "Application Examples",
+      "columns": "3",
+      "cardStyle": "imageTop",
+      "backgroundColor": "kinari",
+      "blockName": "Applications",
+      "items": [
+        {
+          "id": "6976c68ff9030500047d2aad",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&q=80",
+          "title": "Egg Tart Desserts",
+          "description": "Portuguese-style and Hong Kong-style egg tarts"
+        },
+        {
+          "id": "6976c68ff9030500047d2aae",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80",
+          "title": "Ready-to-eat Meals",
+          "description": "Pre-packaged and frozen meal applications"
+        },
+        {
+          "id": "6976c68ff9030500047d2aaf",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&q=80",
+          "title": "OEM/ODM",
+          "description": "Private-label production partnerships"
+        }
+      ],
+      "blockType": "featureGrid"
+    },
+    {
+      "id": "6976c68ff9030500047d2ab5",
+      "sectionLabel": "Advantages",
+      "sectionTitle": "Why Choose Chinyi Eggs?",
+      "columns": "4",
+      "cardStyle": "imageTop",
+      "backgroundColor": "shiro",
+      "blockName": "Why Choose Us",
+      "items": [
+        {
+          "id": "6976c68ff9030500047d2ab1",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&q=80",
+          "title": "46 Years of Expertise",
+          "description": "Egg-processing expertise since 1981"
+        },
+        {
+          "id": "6976c68ff9030500047d2ab2",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&q=80",
+          "title": "Certified Manufacturing",
+          "description": "HACCP & ISO 22000 certified"
+        },
+        {
+          "id": "6976c68ff9030500047d2ab3",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&q=80",
+          "title": "Advanced Equipment",
+          "description": "Advanced pasteurization and automatic processing"
+        },
+        {
+          "id": "6976c68ff9030500047d2ab4",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&q=80",
+          "title": "Strong R&D",
+          "description": "Strong R&D capability for new product development"
+        }
+      ],
+      "blockType": "featureGrid"
+    },
+    {
+      "id": "6976c68ff9030500047d2ab7",
+      "richText": {
+        "root": {
+          "type": "root",
+          "format": "",
+          "indent": 0,
+          "version": 1,
+          "children": [
+            {
+              "tag": "h3",
+              "type": "heading",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Interested in This Product?",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Contact us for samples, pricing, or custom formulation inquiries.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textFormat": 0
+            }
+          ],
+          "direction": "ltr"
+        }
+      },
+      "blockName": "CTA",
+      "links": [
+        {
+          "id": "6976c68ff9030500047d2ab6",
+          "link": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/contact",
+            "label": "Request Information →",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "cta"
+    }
+  ],
+  "meta": {
+    "title": "Egg Tart Filling Liquid Base | Chinyi Eggs Technology",
+    "image": null,
+    "description": "Ready-to-use custard liquid designed for egg tart production. Provides smooth texture, stable baking performance, and consistent color."
+  }
+}

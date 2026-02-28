@@ -1,0 +1,510 @@
+{
+  "slug": "hydrolyzed-eggshell-membrane",
+  "title": "Hydrolyzed Eggshell Membrane",
+  "hero": {
+    "type": "none",
+    "richText": null,
+    "links": [],
+    "media": null
+  },
+  "layout": [
+    {
+      "id": "6976c6a6f9030500047d2b12",
+      "label": "Biotech Ingredients",
+      "title": "Hydrolyzed Eggshell Membrane",
+      "subtitle": "Water-soluble powder rich in collagen and elastin",
+      "titleFont": "serif",
+      "backgroundImage": null,
+      "backgroundImageUrl": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1920&q=80",
+      "size": "small",
+      "showDivider": true,
+      "overlayOpacity": 80,
+      "blockName": "Hero",
+      "blockType": "japaneseHero"
+    },
+    {
+      "id": "6976c6a6f9030500047d2b18",
+      "groupId": "biotech",
+      "style": "tabs",
+      "alignment": "center",
+      "blockName": "Product Navigation",
+      "items": [
+        {
+          "id": "6976c6a6f9030500047d2b13",
+          "label": "Hydrolyzed Membrane",
+          "isActive": true,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/hydrolyzed-eggshell-membrane",
+            "label": "Hydrolyzed Membrane",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c6a6f9030500047d2b14",
+          "label": "Eggshell Membrane",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/eggshell-membrane",
+            "label": "Eggshell Membrane",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c6a6f9030500047d2b15",
+          "label": "Calcium Powder",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/eggshell-calcium-powder",
+            "label": "Calcium Powder",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c6a6f9030500047d2b16",
+          "label": "Calcined Powder",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/calcined-eggshell-powder",
+            "label": "Calcined Powder",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c6a6f9030500047d2b17",
+          "label": "Egg Oil",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/egg-oil",
+            "label": "Egg Oil",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "pageNav"
+    },
+    {
+      "id": "6976c6a6f9030500047d2b1a",
+      "blockName": "Series Overview",
+      "columns": [
+        {
+          "id": "6976c6a6f9030500047d2b19",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Biotech Ingredient Application Series",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Our Biotech Ingredient Application Series transforms egg by-products into high-value functional ingredients for use in health supplements, cosmetics, and food enrichment.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "By applying advanced bioprocessing techniques, we extract and refine active components from eggshells and eggshell membranes, creating sustainable, naturally derived materials with strong market potential.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "All biotech products are manufactured in certified facilities with full traceability and strict quality control.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c6a6f9030500047d2b1c",
+      "blockName": "Product Details",
+      "columns": [
+        {
+          "id": "6976c6a6f9030500047d2b1b",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Hydrolyzed Eggshell Membrane",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "A water-soluble eggshell membrane powder produced through enzymatic hydrolysis.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Rich in collagen, elastin, and glycosaminoglycans (including hyaluronic acid, chondroitin sulfate, and glucosamine).",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Supports joint health, skin elasticity, and connective tissue.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c6a6f9030500047d2b22",
+      "title": "Key Components",
+      "icon": "check",
+      "columns": "2",
+      "blockName": "Key Components",
+      "items": [
+        {
+          "id": "6976c6a6f9030500047d2b1d",
+          "text": "Collagen (Type I, V, X)"
+        },
+        {
+          "id": "6976c6a6f9030500047d2b1e",
+          "text": "Elastin"
+        },
+        {
+          "id": "6976c6a6f9030500047d2b1f",
+          "text": "Hyaluronic Acid"
+        },
+        {
+          "id": "6976c6a6f9030500047d2b20",
+          "text": "Chondroitin Sulfate"
+        },
+        {
+          "id": "6976c6a6f9030500047d2b21",
+          "text": "Glucosamine"
+        }
+      ],
+      "blockType": "checkList"
+    },
+    {
+      "id": "6976c6a6f9030500047d2b29",
+      "sectionLabel": "Applications",
+      "sectionTitle": "Application Examples",
+      "columns": "3",
+      "cardStyle": "imageTop",
+      "backgroundColor": "kinari",
+      "blockName": "Applications",
+      "items": [
+        {
+          "id": "6976c6a6f9030500047d2b23",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&q=80",
+          "title": "Joint Health",
+          "description": "Tablets, capsules, and powder formulations for joint support"
+        },
+        {
+          "id": "6976c6a6f9030500047d2b24",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=400&q=80",
+          "title": "Beauty Supplements",
+          "description": "Skin elasticity and anti-aging formulations"
+        },
+        {
+          "id": "6976c6a6f9030500047d2b25",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=400&q=80",
+          "title": "Cosmetics",
+          "description": "Skincare products with collagen and elastin"
+        },
+        {
+          "id": "6976c6a6f9030500047d2b26",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400&q=80",
+          "title": "Functional Beverages",
+          "description": "Collagen drinks and health beverages"
+        },
+        {
+          "id": "6976c6a6f9030500047d2b27",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&q=80",
+          "title": "Pet Nutrition",
+          "description": "Joint support supplements for pets"
+        },
+        {
+          "id": "6976c6a6f9030500047d2b28",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&q=80",
+          "title": "OEM/ODM",
+          "description": "Private-label development services"
+        }
+      ],
+      "blockType": "featureGrid"
+    },
+    {
+      "id": "6976c6a6f9030500047d2b2f",
+      "title": "Product Specifications",
+      "showHeaders": false,
+      "style": "striped",
+      "blockName": "Specifications",
+      "rows": [
+        {
+          "id": "6976c6a6f9030500047d2b2a",
+          "label": "Form",
+          "value": "Water-soluble powder"
+        },
+        {
+          "id": "6976c6a6f9030500047d2b2b",
+          "label": "Color",
+          "value": "Light yellow to off-white"
+        },
+        {
+          "id": "6976c6a6f9030500047d2b2c",
+          "label": "Solubility",
+          "value": "Highly soluble in water"
+        },
+        {
+          "id": "6976c6a6f9030500047d2b2d",
+          "label": "Processing",
+          "value": "Enzymatic hydrolysis"
+        },
+        {
+          "id": "6976c6a6f9030500047d2b2e",
+          "label": "Storage",
+          "value": "Cool, dry place away from light"
+        }
+      ],
+      "blockType": "specTable",
+      "columnHeaders": {
+        "labelHeader": "Item",
+        "valueHeader": "Specification"
+      }
+    },
+    {
+      "id": "6976c6a6f9030500047d2b31",
+      "richText": {
+        "root": {
+          "type": "root",
+          "format": "",
+          "indent": 0,
+          "version": 1,
+          "children": [
+            {
+              "tag": "h3",
+              "type": "heading",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Interested in This Product?",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Contact us for samples, specifications, or partnership inquiries.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textFormat": 0
+            }
+          ],
+          "direction": "ltr"
+        }
+      },
+      "blockName": "CTA",
+      "links": [
+        {
+          "id": "6976c6a6f9030500047d2b30",
+          "link": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/contact",
+            "label": "Request Information",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "cta"
+    }
+  ],
+  "meta": {
+    "title": "Hydrolyzed Eggshell Membrane | Chinyi Eggs Technology",
+    "image": null,
+    "description": "Water-soluble eggshell membrane powder rich in collagen, elastin, and glycosaminoglycans. Supports joint health, skin elasticity, and connective tissue."
+  }
+}

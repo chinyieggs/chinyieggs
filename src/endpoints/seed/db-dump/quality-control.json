@@ -1,0 +1,867 @@
+{
+  "slug": "quality-control",
+  "title": "Technology & Quality Control",
+  "hero": {
+    "type": "none",
+    "richText": null,
+    "links": [],
+    "media": null
+  },
+  "layout": [
+    {
+      "id": "6976c683f9030500047d2a56",
+      "label": "Company",
+      "title": "Technology & Quality Control",
+      "subtitle": "Industrialized Quality Assurance — We Do It First",
+      "titleFont": "serif",
+      "backgroundImage": 24,
+      "backgroundImageUrl": "",
+      "size": "small",
+      "showDivider": true,
+      "overlayOpacity": 70,
+      "blockName": "Hero",
+      "blockType": "japaneseHero"
+    },
+    {
+      "id": "6976c683f9030500047d2a5b",
+      "groupId": "company",
+      "style": "tabs",
+      "alignment": "center",
+      "blockName": "Company Navigation",
+      "items": [
+        {
+          "id": "6976c683f9030500047d2a57",
+          "label": "About",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/about",
+            "label": "About",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c683f9030500047d2a58",
+          "label": "Milestones",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/milestones",
+            "label": "Milestones",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c683f9030500047d2a59",
+          "label": "Quality Control",
+          "isActive": true,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/quality-control",
+            "label": "Quality Control",
+            "appearance": "default"
+          }
+        },
+        {
+          "id": "6976c683f9030500047d2a5a",
+          "label": "Factory Tour",
+          "isActive": false,
+          "navLink": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/factory-tour",
+            "label": "Factory Tour",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "pageNav"
+    },
+    {
+      "id": "6976c683f9030500047d2a5d",
+      "blockName": "Introduction",
+      "columns": [
+        {
+          "id": "6976c683f9030500047d2a5c",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Eggs are complex organic products, prone to contamination by pathogens like Salmonella or E. coli, which can cause quality degradation. In addition, drug residues in eggs are a serious concern for consumers. Because many poultry farms lack the technology or capacity to enforce strict controls at the source, the responsibility of quality control naturally falls to the egg-product companies.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c683f9030500047d2a5e",
+      "variant": "info",
+      "content": {
+        "root": {
+          "type": "root",
+          "format": "",
+          "indent": 0,
+          "version": 1,
+          "children": [
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Chinyi upholds the corporate belief of ",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                },
+                {
+                  "mode": "normal",
+                  "text": "\"Cherishing Everyone. Treasuring Taiwan.\"",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 1,
+                  "version": 1
+                },
+                {
+                  "mode": "normal",
+                  "text": " We are always mindful of consumer safety and health. We lead the industry with a state-of-the-art quality assurance laboratory in our factory. Using operating standards in line with international requirements, we strictly oversee the production of every batch of egg products.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textFormat": 0
+            }
+          ],
+          "direction": "ltr"
+        }
+      },
+      "author": null,
+      "blockName": "Quality Philosophy",
+      "blockType": "highlightBox"
+    },
+    {
+      "id": "6976c683f9030500047d2a60",
+      "blockName": "Testing Process",
+      "columns": [
+        {
+          "id": "6976c683f9030500047d2a5f",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Testing Before and After",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Professional QA staff and high-tech testing equipment ensure perfect quality control.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 2,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c683f9030500047d2a61",
+      "media": null,
+      "imageUrl": "https://images.unsplash.com/photo-1579154204601-01588f351e67?w=800&q=80",
+      "alt": "Quality control laboratory",
+      "width": 100,
+      "offsetX": 0,
+      "blockName": "QC Lab Image",
+      "blockType": "mediaBlock"
+    },
+    {
+      "id": "6976c683f9030500047d2a63",
+      "blockName": "Testing Process Continued",
+      "columns": [
+        {
+          "id": "6976c683f9030500047d2a62",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Because egg products are closely linked to consumers' daily health, Chinyi attaches special importance to and demands rigor in quality assurance — implemented through daily routines:",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c683f9030500047d2a67",
+      "title": null,
+      "icon": "check",
+      "columns": "1",
+      "blockName": "Testing Steps",
+      "items": [
+        {
+          "id": "6976c683f9030500047d2a64",
+          "text": "When fresh eggs arrive at the factory, we immediately take random samples and discard any substandard raw eggs."
+        },
+        {
+          "id": "6976c683f9030500047d2a65",
+          "text": "Throughout processing, high-technology equipment ensures safety and stability of quality."
+        },
+        {
+          "id": "6976c683f9030500047d2a66",
+          "text": "After production is complete, we again sample the finished products."
+        }
+      ],
+      "blockType": "checkList"
+    },
+    {
+      "id": "6976c683f9030500047d2a69",
+      "blockName": "Multiple Checkpoints",
+      "columns": [
+        {
+          "id": "6976c683f9030500047d2a68",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Through multiple checkpoints, we build strong confidence among customers and the public in Chinyi's egg products.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c683f9030500047d2a6b",
+      "blockName": "Fresh Egg Quality Inspection",
+      "columns": [
+        {
+          "id": "6976c683f9030500047d2a6a",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Fresh Egg Quality Inspection",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Keeping pace with technology and saying goodbye to traditional visual inspections, Chinyi owns one of Taiwan's rare Fresh Egg Quality Measuring Devices that rapidly determines weight, white vs. yolk height, yolk color, etc., to automatically assess freshness. We use the internationally recognized Haugh unit method to distinguish good eggs from poor ones.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c683f9030500047d2a6c",
+      "media": null,
+      "imageUrl": "https://images.unsplash.com/photo-1498654077810-12c21d4d6dc3?w=800&q=80",
+      "alt": "Egg quality inspection",
+      "width": 100,
+      "offsetX": 0,
+      "blockName": "Egg Quality Inspection Image",
+      "blockType": "mediaBlock"
+    },
+    {
+      "id": "6976c683f9030500047d2a71",
+      "title": null,
+      "showHeaders": true,
+      "style": "striped",
+      "blockName": "Freshness Grading",
+      "rows": [
+        {
+          "id": "6976c683f9030500047d2a6d",
+          "label": "AA Grade",
+          "value": "72 and above"
+        },
+        {
+          "id": "6976c683f9030500047d2a6e",
+          "label": "A Grade",
+          "value": "60–72"
+        },
+        {
+          "id": "6976c683f9030500047d2a6f",
+          "label": "B Grade",
+          "value": "31–60"
+        },
+        {
+          "id": "6976c683f9030500047d2a70",
+          "label": "C Grade",
+          "value": "Below 31"
+        }
+      ],
+      "blockType": "specTable",
+      "columnHeaders": {
+        "labelHeader": "Freshness Grade",
+        "valueHeader": "Haugh Unit Value"
+      }
+    },
+    {
+      "id": "6976c683f9030500047d2a73",
+      "blockName": "Physical Property Testing Intro",
+      "columns": [
+        {
+          "id": "6976c683f9030500047d2a72",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Physical Property Testing",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Besides ensuring quality, we also focus on the product's functional use. Through repeated product-property tests and continuous improvements, Chinyi's products deliver greater utility to you.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c683f9030500047d2a77",
+      "sectionLabel": null,
+      "sectionTitle": null,
+      "columns": "3",
+      "cardStyle": "imageTop",
+      "backgroundColor": "shiro",
+      "blockName": "Physical Property Testing Features",
+      "items": [
+        {
+          "id": "6976c683f9030500047d2a74",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1582169296194-e4d644c48063?w=400&q=80",
+          "title": "Egg White Foaming",
+          "description": "Our pasteurized egg whites can be whipped quickly and completely. Compared to ordinary untreated whites, using pasteurized egg white in pastries yields a texture that is silkier, more elastic, and tastier."
+        },
+        {
+          "id": "6976c683f9030500047d2a75",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&q=80",
+          "title": "Baking Color",
+          "description": "Our pasteurized egg yolk liquid can be used without filtration; it can be brushed on surfaces for baking with excellent adhesion and a beautiful golden color."
+        },
+        {
+          "id": "6976c683f9030500047d2a76",
+          "image": null,
+          "imageUrl": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=400&q=80",
+          "title": "Cooking Test",
+          "description": "Our pasteurized whole-egg liquid is suitable for simple cooking like scrambled eggs, steamed eggs, baked eggs, etc. We lead the industry in technology."
+        }
+      ],
+      "blockType": "featureGrid"
+    },
+    {
+      "id": "6976c683f9030500047d2a79",
+      "blockName": "Comprehensive Testing Heading",
+      "columns": [
+        {
+          "id": "6976c683f9030500047d2a78",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Comprehensive Testing",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c683f9030500047d2a7a",
+      "media": 47,
+      "imageUrl": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80",
+      "alt": "Laboratory testing equipment",
+      "width": 100,
+      "offsetX": 0,
+      "blockName": "Lab Testing Equipment Image",
+      "blockType": "mediaBlock"
+    },
+    {
+      "id": "6976c683f9030500047d2a7c",
+      "blockName": "Comprehensive Testing Content",
+      "columns": [
+        {
+          "id": "6976c683f9030500047d2a7b",
+          "size": "full",
+          "contentType": "text",
+          "media": null,
+          "mediaWidth": 100,
+          "mediaPosition": "above",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Solid Content and pH Measurement",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 1,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Using infrared moisture analyzers and electronic pH meters, we measure solid content and pH levels to assess freshness and detect any quality deterioration in liquid egg products.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Microbiological and Drug Residue Testing",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 1,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "We test for microbial loads including total plate count, Salmonella, E. coli, coliform bacteria, molds, and also check for residues of drugs or antibiotics. We ensure all indicators meet food safety and hygiene standards. In addition to internal testing, Chinyi commissions external professional labs for further verification, and publishes inspection reports online.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "enableLink": null,
+          "link": {
+            "type": "reference",
+            "newTab": null,
+            "url": null,
+            "label": null,
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "content"
+    },
+    {
+      "id": "6976c683f9030500047d2a7e",
+      "richText": {
+        "root": {
+          "type": "root",
+          "format": "",
+          "indent": 0,
+          "version": 1,
+          "children": [
+            {
+              "tag": "h3",
+              "type": "heading",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "See It For Yourself",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Take a virtual tour of our production facilities.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textFormat": 0
+            }
+          ],
+          "direction": "ltr"
+        }
+      },
+      "blockName": "CTA",
+      "links": [
+        {
+          "id": "6976c683f9030500047d2a7d",
+          "link": {
+            "type": "custom",
+            "newTab": null,
+            "url": "/factory-tour",
+            "label": "Factory Tour →",
+            "appearance": "default"
+          }
+        }
+      ],
+      "blockType": "cta"
+    }
+  ],
+  "meta": {
+    "title": "Technology & Quality Control | Chinyi Eggs Technology",
+    "image": null,
+    "description": "Industrialized Quality Assurance - We Do It First. Learn about Chinyi's state-of-the-art quality control laboratory and testing procedures."
+  }
+}

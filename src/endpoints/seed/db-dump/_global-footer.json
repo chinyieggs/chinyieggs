@@ -1,0 +1,65 @@
+{
+  "id": 1,
+  "style": "japanese",
+  "companyName": "CHINYI EGGS TECHNOLOGY",
+  "contactInfo": {
+    "address": "No. 37, Xinmin Road, Chiayi City, Taiwan",
+    "phone": "05-2354049",
+    "fax": null
+  },
+  "certifications": [
+    {
+      "id": "6976c745f9030500047d2bd5",
+      "name": "HACCP"
+    },
+    {
+      "id": "6976c745f9030500047d2bd6",
+      "name": "ISO 22000"
+    },
+    {
+      "id": "6976c745f9030500047d2bd7",
+      "name": "CAS"
+    },
+    {
+      "id": "6976c745f9030500047d2bd8",
+      "name": "HALAL"
+    }
+  ],
+  "copyright": null,
+  "navItems": [
+    {
+      "id": "697f0dfca6eca85bd738dff7",
+      "link": {
+        "type": "custom",
+        "newTab": null,
+        "url": "/about",
+        "label": "Company"
+      }
+    },
+    {
+      "id": "697f0dfca6eca85bd738dff8",
+      "link": {
+        "type": "custom",
+        "newTab": null,
+        "url": "/egg-tart-liquid",
+        "label": "Products"
+      }
+    },
+    {
+      "id": "697f0dfca6eca85bd738dff9",
+      "link": {
+        "type": "reference",
+        "newTab": null,
+        "reference": {
+          "relationTo": "pages",
+          "value": 39
+        },
+        "url": null,
+        "label": "Contact"
+      }
+    }
+  ],
+  "updatedAt": "2026-02-01T08:25:32.639Z",
+  "createdAt": "2026-01-26T01:45:42.082Z",
+  "globalType": "footer"
+}
