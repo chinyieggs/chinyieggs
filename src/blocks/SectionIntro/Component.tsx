@@ -28,62 +28,69 @@ export const SectionIntroBlock: React.FC<Props> = ({
           <div
             className={cn('mb-12', isCenter && 'text-center')}
           >
-            {/* Label - 0.75rem, letter-spacing 0.3em, uppercase, aka color */}
+            {/* Label - small caps, tracking wide */}
             {label && (
               <p
-                className="text-aka uppercase"
+                className="text-hai uppercase"
                 style={{
-                  fontSize: '0.75rem',
-                  letterSpacing: '0.3em',
-                  marginBottom: '1rem',
+                  fontFamily: "'Inter', sans-serif",
+                  fontSize: '0.6875rem',
+                  letterSpacing: '0.2em',
+                  marginBottom: '1.25rem',
                 }}
               >
                 {label}
               </p>
             )}
 
-            {/* Title - serif font, clamp size */}
+            {/* Title - serif italic, Hermès style */}
             {title && (
               <h2
-                className="text-sumi"
                 style={{
                   fontFamily: "'Cormorant Garamond', 'Noto Serif', 'Noto Serif TC', serif",
                   fontSize: 'clamp(1.75rem, 4vw, 2.5rem)',
-                  fontWeight: 600,
-                  marginBottom: '1rem',
+                  fontWeight: 700,
+                  fontStyle: 'italic',
+                  color: 'hsl(0 0% 8%)',
+                  lineHeight: 1.3,
+                  marginBottom: '1.25rem',
                 }}
               >
                 {title}
               </h2>
             )}
 
-            {/* Divider - 40px, 1px, aka color */}
+            {/* Divider - thin, subtle */}
             {showDivider && (
               <div
                 style={{
                   width: '40px',
                   height: '1px',
-                  background: '#E8380D',
-                  marginTop: '2rem',
+                  background: '#E5E2DB',
+                  marginTop: '1.5rem',
                   ...(isCenter ? { marginLeft: 'auto', marginRight: 'auto' } : {}),
                 }}
               />
             )}
           </div>
 
-          {/* Content */}
+          {/* Content — serif body text */}
           {content && (
             <div className={cn(isCenter && 'text-center')}>
               <RichText data={content} enableGutter={false} />
             </div>
           )}
 
-          {/* CTA Button */}
+          {/* CTA Button — Hermès underline link style */}
           {ctaLabel && ctaLink && (
-            <div className={cn('mt-8', isCenter && 'text-center')}>
+            <div className={cn('mt-10', isCenter && 'text-center')}>
               <Link
                 href={ctaLink}
-                className="inline-flex items-center px-8 py-3.5 border border-sumi text-sumi text-sm tracking-[0.08em] hover:bg-sumi hover:text-shiro transition-all"
+                className="inline-block uppercase tracking-[0.15em] text-sumi border-b border-sumi pb-0.5 hover:text-aka hover:border-aka transition-colors"
+                style={{
+                  fontFamily: "'Inter', sans-serif",
+                  fontSize: '0.75rem',
+                }}
               >
                 {ctaLabel}
               </Link>

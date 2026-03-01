@@ -140,11 +140,50 @@ const config = {
         DEFAULT: {
           css: [
             {
-              '--tw-prose-body': 'var(--text)',
-              '--tw-prose-headings': 'var(--text)',
+              '--tw-prose-body': 'hsl(0 0% 42%)',
+              '--tw-prose-headings': 'hsl(0 0% 8%)',
+              p: {
+                fontFamily: "'Noto Serif', 'Noto Serif TC', Georgia, serif",
+                fontSize: '1.0625rem',
+                lineHeight: '1.9',
+                letterSpacing: '0.01em',
+              },
+              li: {
+                fontFamily: "'Noto Serif', 'Noto Serif TC', Georgia, serif",
+                fontSize: '1.0625rem',
+                lineHeight: '1.9',
+              },
               h1: {
                 fontWeight: 'normal',
                 marginBottom: '0.25em',
+              },
+              h2: {
+                fontFamily: "'Cormorant Garamond', 'Noto Serif', 'Noto Serif TC', serif",
+                fontWeight: '700',
+                fontStyle: 'italic',
+                letterSpacing: '0.02em',
+                color: 'hsl(0 0% 8%)',
+              },
+              h3: {
+                fontFamily: "'Cormorant Garamond', 'Noto Serif', 'Noto Serif TC', serif",
+                fontWeight: '700',
+                fontStyle: 'italic',
+                letterSpacing: '0.02em',
+                color: 'hsl(0 0% 8%)',
+              },
+              h4: {
+                fontFamily: "'Cormorant Garamond', 'Noto Serif', 'Noto Serif TC', serif",
+                fontWeight: '600',
+                letterSpacing: '0.02em',
+                color: 'hsl(0 0% 8%)',
+              },
+              strong: {
+                fontWeight: '600',
+                color: 'hsl(0 0% 24%)',
+              },
+              blockquote: {
+                fontFamily: "'Noto Serif', 'Noto Serif TC', Georgia, serif",
+                fontStyle: 'italic',
               },
             },
           ],
@@ -156,8 +195,10 @@ const config = {
                 fontSize: '2.5rem',
               },
               h2: {
-                fontSize: '1.25rem',
-                fontWeight: 600,
+                fontSize: '1.75rem',
+              },
+              h3: {
+                fontSize: '1.375rem',
               },
             },
           ],
@@ -169,6 +210,9 @@ const config = {
                 fontSize: '3.5rem',
               },
               h2: {
+                fontSize: '2rem',
+              },
+              h3: {
                 fontSize: '1.5rem',
               },
             },

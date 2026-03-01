@@ -10,8 +10,8 @@ export const ContentBlock: React.FC<ContentBlockProps> = (props) => {
 
   return (
     <div className="max-w-[1200px] mx-auto px-8" style={{ marginTop: '4rem' }}>
-      {/* content-narrow: max-width 800px */}
-      <div className="max-w-[800px] mx-auto">
+      {/* content-narrow: max-width 800px, centered text */}
+      <div className="max-w-[800px] mx-auto text-center">
         {columns &&
           columns.length > 0 &&
           columns.map((col, index) => {
@@ -37,8 +37,7 @@ export const ContentBlock: React.FC<ContentBlockProps> = (props) => {
               <div
                 style={{
                   width: '100%',
-                  margin: '2rem 0',
-                  borderRadius: '4px',
+                  margin: '2.5rem 0',
                   overflow: 'hidden',
                 }}
               >
@@ -77,22 +76,29 @@ export const ContentBlock: React.FC<ContentBlockProps> = (props) => {
       <style dangerouslySetInnerHTML={{ __html: `
         .content-richtext h3 {
           font-family: 'Cormorant Garamond', 'Noto Serif', 'Noto Serif TC', serif;
-          font-size: 1.5rem;
-          margin-bottom: 2rem;
-          display: flex;
-          align-items: center;
-          gap: 1rem;
+          font-size: 1.75rem;
+          font-weight: 700;
+          font-style: italic;
+          color: hsl(0 0% 8%);
+          margin-bottom: 1.5rem;
+          margin-top: 3rem;
         }
-        .content-richtext h3::after {
-          content: '';
-          flex: 1;
-          height: 1px;
-          background: #E5E2DB;
-          max-width: 100px;
+        .content-richtext h2 {
+          font-family: 'Cormorant Garamond', 'Noto Serif', 'Noto Serif TC', serif;
+          font-size: clamp(1.75rem, 4vw, 2.25rem);
+          font-weight: 700;
+          font-style: italic;
+          color: hsl(0 0% 8%);
+          margin-bottom: 1.5rem;
+          margin-top: 3rem;
         }
         .content-richtext p {
+          font-family: 'Noto Serif', 'Noto Serif TC', Georgia, serif;
+          font-size: 1.0625rem;
+          line-height: 1.9;
+          letter-spacing: 0.01em;
+          color: hsl(0 0% 42%);
           margin-bottom: 1.5em;
-          line-height: 1.8;
         }
         .content-richtext p:last-child {
           margin-bottom: 0;
