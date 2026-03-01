@@ -7,12 +7,12 @@ type Props = JapaneseHeroBlockType & {
   className?: string
 }
 
-// Minimum heights as fallback when no image is present
-const sizeClasses = {
-  small: 'md:min-h-[45vh]',
-  medium: 'md:min-h-[55vh]',
-  large: 'md:min-h-[75vh]',
-  full: 'md:min-h-screen',
+// Responsive height range: clamp(min, preferred, max)
+const sizeHeight = {
+  small: 'clamp(280px, 45vh, 500px)',
+  medium: 'clamp(350px, 55vh, 650px)',
+  large: 'clamp(420px, 75vh, 850px)',
+  full: 'clamp(500px, 100vh, 100vh)',
 }
 
 export const JapaneseHeroBlock: React.FC<Props> = ({
@@ -38,25 +38,25 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
 
   return (
     <section
-      className={cn(
-        'relative',
-        !imageUrl && sizeClasses[size as keyof typeof sizeClasses],
-        className,
-      )}
+      className={cn('relative overflow-hidden', className)}
+      style={!imageUrl ? { minHeight: sizeHeight[size as keyof typeof sizeHeight] } : undefined}
     >
       {/* Background Image: natural flow */}
       {imageUrl && (
         <>
-          <div className="w-full">
+          <div
+            className="w-full overflow-hidden"
+            style={{ height: sizeHeight[size as keyof typeof sizeHeight] }}
+          >
             {bgImage ? (
               <Media
-                className="w-full"
+                className="w-full h-full"
                 resource={bgImage}
-                imgClassName="w-full h-auto block"
+                imgClassName="w-full h-full object-cover"
                 priority
               />
             ) : (
-              <img src={imageUrl} alt="" className="w-full h-auto block" />
+              <img src={imageUrl} alt="" className="w-full h-full object-cover" />
             )}
           </div>
           {/* Overlay - using kinari color like original HTML */}

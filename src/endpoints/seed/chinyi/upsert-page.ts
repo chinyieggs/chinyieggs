@@ -1,25 +1,19 @@
-import type { Payload } from 'payload'
+import type { Payload, RequiredDataFromCollectionSlug } from 'payload'
 
-// Home
+// Code-based page definitions (fallback)
 import { homePage } from '../pages/home-page'
-
-// Company Pages
 import {
   aboutPage,
   milestonesPage,
   qualityControlPage,
   factoryTourPage,
 } from '../pages/company-pages'
-
-// Prepared Liquid Product Pages
 import {
   eggTartLiquidPage,
   chawanmushiLiquidPage,
   puddingLiquidPage,
   omeletteLiquidPage,
 } from '../pages/prepared-liquid-pages'
-
-// Biotech Product Pages
 import {
   hydrolyzedEggshellMembranePage,
   eggshellMembranePage,
@@ -27,44 +21,65 @@ import {
   calcinedEggshellPowderPage,
   eggOilPage,
 } from '../pages/biotech-pages'
-
-// High-Protein Food Page
 import { eggWhiteProductsPage } from '../pages/egg-white-page'
-
-// Contact Page
 import { contactPage } from '../pages/contact-page'
-
-// Contact Form
 import { contactForm } from '../contact-form'
 
-// 頁面資料對照表 (excluding contact which needs special handling)
-const pageDataMap: Record<string, () => ReturnType<typeof homePage>> = {
-  // Home
-  home: homePage,
+// db-dump JSON（含 media ID 的完整頁面資料）
+import dumpHome from '../db-dump/home.json'
+import dumpAbout from '../db-dump/about.json'
+import dumpMilestones from '../db-dump/milestones.json'
+import dumpQualityControl from '../db-dump/quality-control.json'
+import dumpFactoryTour from '../db-dump/factory-tour.json'
+import dumpEggTartLiquid from '../db-dump/egg-tart-liquid.json'
+import dumpChawanmushiLiquid from '../db-dump/chawanmushi-liquid.json'
+import dumpPuddingLiquid from '../db-dump/pudding-liquid.json'
+import dumpOmeletteLiquid from '../db-dump/omelette-liquid.json'
+import dumpHydrolyzedEggshellMembrane from '../db-dump/hydrolyzed-eggshell-membrane.json'
+import dumpEggshellMembrane from '../db-dump/eggshell-membrane.json'
+import dumpEggshellCalciumPowder from '../db-dump/eggshell-calcium-powder.json'
+import dumpCalcinedEggshellPowder from '../db-dump/calcined-eggshell-powder.json'
+import dumpEggOil from '../db-dump/egg-oil.json'
+import dumpEggWhiteProducts from '../db-dump/egg-white-products.json'
+import dumpContact from '../db-dump/contact.json'
 
-  // Company Pages
+// db-dump 資料對照表（優先使用，含 media ID）
+const dumpDataMap: Record<string, Record<string, unknown>> = {
+  home: dumpHome,
+  about: dumpAbout,
+  milestones: dumpMilestones,
+  'quality-control': dumpQualityControl,
+  'factory-tour': dumpFactoryTour,
+  'egg-tart-liquid': dumpEggTartLiquid,
+  'chawanmushi-liquid': dumpChawanmushiLiquid,
+  'pudding-liquid': dumpPuddingLiquid,
+  'omelette-liquid': dumpOmeletteLiquid,
+  'hydrolyzed-eggshell-membrane': dumpHydrolyzedEggshellMembrane,
+  'eggshell-membrane': dumpEggshellMembrane,
+  'eggshell-calcium-powder': dumpEggshellCalciumPowder,
+  'calcined-eggshell-powder': dumpCalcinedEggshellPowder,
+  'egg-oil': dumpEggOil,
+  'egg-white-products': dumpEggWhiteProducts,
+  contact: dumpContact,
+}
+
+// Fallback 頁面資料對照表（程式碼定義，不含 media ID）
+const codeDataMap: Record<string, () => ReturnType<typeof homePage>> = {
+  home: homePage,
   about: aboutPage,
   milestones: milestonesPage,
   'quality-control': qualityControlPage,
   'factory-tour': factoryTourPage,
-
-  // Prepared Liquid Products
   'egg-tart-liquid': eggTartLiquidPage,
   'chawanmushi-liquid': chawanmushiLiquidPage,
   'pudding-liquid': puddingLiquidPage,
   'omelette-liquid': omeletteLiquidPage,
-
-  // Biotech Products
   'hydrolyzed-eggshell-membrane': hydrolyzedEggshellMembranePage,
   'eggshell-membrane': eggshellMembranePage,
   'eggshell-calcium-powder': eggshellCalciumPowderPage,
   'calcined-eggshell-powder': calcinedEggshellPowderPage,
   'egg-oil': eggOilPage,
-
-  // High-Protein Foods
   'egg-white-products': eggWhiteProductsPage,
-
-  // Contact - handled specially in upsertPage
   contact: () => contactPage(),
 }
 
@@ -101,55 +116,35 @@ const ensureContactForm = async (payload: Payload): Promise<number | string> => 
 
 /**
  * 單獨建立或更新一個頁面（不清除其他資料）
- * @param payload - Payload instance
- * @param pageSlug - 頁面 slug（例如 'home', 'about'）
+ * 優先使用 db-dump JSON（保留 media ID），找不到才用程式碼定義
  */
 export const upsertPage = async (payload: Payload, pageSlug: string): Promise<void> => {
-  // Special handling for contact page - need to create form first
+  // Contact 頁面需要先建立 form
   if (pageSlug === 'contact') {
-    const formId = await ensureContactForm(payload)
-    const pageData = contactPage(formId)
+    await ensureContactForm(payload)
+  }
 
-    payload.logger.info(`— Upserting page: ${pageSlug}...`)
+  // 1. 優先從 db-dump 讀取（含 media 關聯）
+  const dumpData = dumpDataMap[pageSlug]
 
-    // 檢查頁面是否已存在
-    const existing = await payload.find({
-      collection: 'pages',
-      where: {
-        slug: { equals: pageSlug },
-      },
-      limit: 1,
-    })
+  let pageData: RequiredDataFromCollectionSlug<'pages'>
+  let source: string
 
-    if (existing.docs.length > 0) {
-      await payload.update({
-        collection: 'pages',
-        id: existing.docs[0].id,
-        data: pageData,
-        context: { disableRevalidate: true },
-      })
-      payload.logger.info(`  ✓ Updated existing page: ${pageSlug}`)
-    } else {
-      await payload.create({
-        collection: 'pages',
-        data: pageData,
-        context: { disableRevalidate: true },
-      })
-      payload.logger.info(`  ✓ Created new page: ${pageSlug}`)
+  if (dumpData) {
+    pageData = { ...dumpData, _status: 'published' } as RequiredDataFromCollectionSlug<'pages'>
+    source = 'db-dump'
+  } else {
+    // 2. Fallback 到程式碼定義
+    const getPageData = codeDataMap[pageSlug]
+    if (!getPageData) {
+      const availablePages = Object.keys(codeDataMap).join(', ')
+      throw new Error(`Unknown page: "${pageSlug}". Available pages: ${availablePages}`)
     }
-    return
+    pageData = getPageData()
+    source = 'code'
   }
 
-  const getPageData = pageDataMap[pageSlug]
-
-  if (!getPageData) {
-    const availablePages = Object.keys(pageDataMap).join(', ')
-    throw new Error(`Unknown page: "${pageSlug}". Available pages: ${availablePages}`)
-  }
-
-  const pageData = getPageData()
-
-  payload.logger.info(`— Upserting page: ${pageSlug}...`)
+  payload.logger.info(`— Upserting page: ${pageSlug} (source: ${source})...`)
 
   // 檢查頁面是否已存在
   const existing = await payload.find({
@@ -161,7 +156,6 @@ export const upsertPage = async (payload: Payload, pageSlug: string): Promise<vo
   })
 
   if (existing.docs.length > 0) {
-    // 更新現有頁面
     await payload.update({
       collection: 'pages',
       id: existing.docs[0].id,
@@ -170,7 +164,6 @@ export const upsertPage = async (payload: Payload, pageSlug: string): Promise<vo
     })
     payload.logger.info(`  ✓ Updated existing page: ${pageSlug}`)
   } else {
-    // 建立新頁面
     await payload.create({
       collection: 'pages',
       data: pageData,
@@ -184,5 +177,6 @@ export const upsertPage = async (payload: Payload, pageSlug: string): Promise<vo
  * 取得所有可用的頁面 slug 列表
  */
 export const getAvailablePageSlugs = (): string[] => {
-  return Object.keys(pageDataMap)
+  const allSlugs = new Set([...Object.keys(dumpDataMap), ...Object.keys(codeDataMap)])
+  return Array.from(allSlugs)
 }

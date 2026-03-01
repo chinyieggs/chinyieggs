@@ -57,13 +57,14 @@ export const ImageCarouselBlock: React.FC<Props> = ({
   useEffect(() => {
     if (!hasInteracted) return
     if (showThumbnails && thumbnailsRef.current) {
-      const thumbnailElement = thumbnailsRef.current.children[currentIndex] as HTMLElement
+      const container = thumbnailsRef.current
+      const thumbnailElement = container.children[currentIndex] as HTMLElement
       if (thumbnailElement) {
-        thumbnailElement.scrollIntoView({
-          behavior: 'smooth',
-          block: 'nearest',
-          inline: 'center',
-        })
+        const scrollLeft =
+          thumbnailElement.offsetLeft -
+          container.offsetWidth / 2 +
+          thumbnailElement.offsetWidth / 2
+        container.scrollTo({ left: scrollLeft, behavior: 'smooth' })
       }
     }
   }, [currentIndex, showThumbnails, hasInteracted])
