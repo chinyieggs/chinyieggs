@@ -45,7 +45,8 @@ export const hydrolyzedEggshellMembranePage = (): RequiredDataFromCollectionSlug
       titleFont: 'serif',
       backgroundImageUrl: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1920&q=80',
       size: 'small',
-      overlayOpacity: 40,
+      overlayOpacity: 80,
+      showDivider: true,
     },
     // Page Nav
     biotechPageNav('hydrolyzed-eggshell-membrane'),
@@ -181,7 +182,8 @@ export const eggshellMembranePage = (): RequiredDataFromCollectionSlug<'pages'> 
       titleFont: 'serif',
       backgroundImageUrl: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=1920&q=80',
       size: 'small',
-      overlayOpacity: 40,
+      overlayOpacity: 70,
+      showDivider: true,
     },
     // Page Nav
     biotechPageNav('eggshell-membrane'),
@@ -296,6 +298,7 @@ export const eggshellCalciumPowderPage = (): RequiredDataFromCollectionSlug<'pag
       backgroundImageUrl: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1920&q=80',
       size: 'small',
       overlayOpacity: 40,
+      showDivider: true,
     },
     // Page Nav
     biotechPageNav('eggshell-calcium-powder'),
@@ -410,7 +413,8 @@ export const calcinedEggshellPowderPage = (): RequiredDataFromCollectionSlug<'pa
       titleFont: 'serif',
       backgroundImageUrl: 'https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=1920&q=80',
       size: 'small',
-      overlayOpacity: 40,
+      overlayOpacity: 70,
+      showDivider: true,
     },
     // Page Nav
     biotechPageNav('calcined-eggshell-powder'),
@@ -523,9 +527,10 @@ export const eggOilPage = (): RequiredDataFromCollectionSlug<'pages'> => ({
       title: 'Egg Oil',
       subtitle: 'Lipid-rich oil extracted from egg yolks',
       titleFont: 'serif',
-      backgroundImageUrl: 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1920&q=80',
+      backgroundImageUrl: '',
       size: 'small',
-      overlayOpacity: 40,
+      overlayOpacity: 70,
+      showDivider: true,
     },
     // Page Nav
     biotechPageNav('egg-oil'),

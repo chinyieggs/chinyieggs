@@ -99,13 +99,13 @@ export const CertificationGridBlock: React.FC<Props> = ({
             })}
           </div>
 
-          {/* CTA Button */}
+          {/* CTA Link */}
           <div className="text-center mt-10">
             <Link
               href="/quality-control"
-              className="inline-flex items-center px-8 py-3.5 border border-sumi text-sumi text-sm tracking-[0.08em] hover:bg-sumi hover:text-shiro transition-all"
+              className="inline-block uppercase tracking-[0.12em] text-sm text-sumi border-b border-sumi pb-0.5 hover:text-aka hover:border-aka transition-colors"
             >
-              Quality Control →
+              Quality Control
             </Link>
           </div>
         </div>

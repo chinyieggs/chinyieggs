@@ -17,13 +17,14 @@ export const homePage = (): RequiredDataFromCollectionSlug<'pages'> => {
       {
         blockType: 'japaneseHero',
         blockName: 'Hero Section',
-        label: "Taiwan's Most Trusted",
-        title: 'CHINYI EGGS',
-        subtitle: 'Cherishing Everyone. Treasuring Taiwan.',
+        label: '',
+        title: '',
+        subtitle: '',
         titleFont: 'sans',
         backgroundImageUrl: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=80',
-        size: 'small',
-        overlayOpacity: 40,
+        size: 'medium',
+        overlayOpacity: 0,
+        showDivider: false,
       },
       // About Section - SectionIntro Block
       {
@@ -65,9 +66,9 @@ export const homePage = (): RequiredDataFromCollectionSlug<'pages'> => {
         sectionTitle: 'Our Product Lines',
         items: [
           {
-            imageUrl: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80',
+            imageUrl: '',
             title: 'Prepared Egg Liquid',
-            subtitle: '客製調理液系列',
+            subtitle: '',
             description: 'Customized ready-to-use liquid bases for egg tarts, chawanmushi, pudding, and omelettes.',
             productLink: {
               type: 'custom',
@@ -76,9 +77,9 @@ export const homePage = (): RequiredDataFromCollectionSlug<'pages'> => {
             },
           },
           {
-            imageUrl: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=600&q=80',
+            imageUrl: '',
             title: 'Biotech Ingredients',
-            subtitle: '生技原料應用系列',
+            subtitle: '',
             description: 'High-value functional ingredients from eggshells and membranes for supplements and cosmetics.',
             productLink: {
               type: 'custom',
@@ -87,9 +88,9 @@ export const homePage = (): RequiredDataFromCollectionSlug<'pages'> => {
             },
           },
           {
-            imageUrl: 'https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=600&q=80',
+            imageUrl: '',
             title: 'High-Protein Foods',
-            subtitle: '高蛋白蛋食品系列',
+            subtitle: '',
             description: 'Convenient egg white bars and cubes for fitness enthusiasts and foodservice operations.',
             productLink: {
               type: 'custom',

@@ -69,10 +69,9 @@ const pageDataMap: Record<string, () => ReturnType<typeof homePage>> = {
 }
 
 /**
- * 確保 Contact Form 存在並返回其 ID
+ * 確保 Contact Form 存在並與 seed 資料同步
  */
 const ensureContactForm = async (payload: Payload): Promise<number | string> => {
-  // 檢查 contact form 是否已存在
   const existing = await payload.find({
     collection: 'forms',
     where: {
@@ -82,11 +81,15 @@ const ensureContactForm = async (payload: Payload): Promise<number | string> => 
   })
 
   if (existing.docs.length > 0) {
-    payload.logger.info('  — Contact Form already exists')
+    await payload.update({
+      collection: 'forms',
+      id: existing.docs[0].id,
+      data: contactForm,
+    })
+    payload.logger.info('  ✓ Updated Contact Form')
     return existing.docs[0].id
   }
 
-  // 建立新的 contact form
   const newForm = await payload.create({
     collection: 'forms',
     data: contactForm,

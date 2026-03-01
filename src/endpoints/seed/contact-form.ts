@@ -88,6 +88,98 @@ export const contactForm: RequiredDataFromCollectionSlug<'forms'> = {
       },
       subject: "Thank you for contacting Chinyi Eggs Technology",
     },
+    {
+      emailFrom: '"Chinyi Eggs Technology" \u003Cinfo@chinyieggs.com.tw\u003E',
+      emailTo: 'sales@chinyieggs.com.tw',
+      replyTo: '{{email}}',
+      message: {
+        root: {
+          type: 'root',
+          children: [
+            {
+              type: 'paragraph',
+              children: [
+                {
+                  type: 'text',
+                  detail: 0,
+                  format: 1,
+                  mode: 'normal',
+                  style: '',
+                  text: '收到一筆新的網站詢問，詳細資訊如下：',
+                  version: 1,
+                },
+              ],
+              direction: 'ltr',
+              format: '',
+              indent: 0,
+              textFormat: 0,
+              version: 1,
+            },
+            {
+              type: 'paragraph',
+              children: [
+                { type: 'text', detail: 0, format: 0, mode: 'normal', style: '', text: '姓名：{{firstName}} {{lastName}}', version: 1 },
+              ],
+              direction: 'ltr', format: '', indent: 0, textFormat: 0, version: 1,
+            },
+            {
+              type: 'paragraph',
+              children: [
+                { type: 'text', detail: 0, format: 0, mode: 'normal', style: '', text: 'Email：{{email}}', version: 1 },
+              ],
+              direction: 'ltr', format: '', indent: 0, textFormat: 0, version: 1,
+            },
+            {
+              type: 'paragraph',
+              children: [
+                { type: 'text', detail: 0, format: 0, mode: 'normal', style: '', text: '電話：{{phone}}', version: 1 },
+              ],
+              direction: 'ltr', format: '', indent: 0, textFormat: 0, version: 1,
+            },
+            {
+              type: 'paragraph',
+              children: [
+                { type: 'text', detail: 0, format: 0, mode: 'normal', style: '', text: '公司：{{company}}', version: 1 },
+              ],
+              direction: 'ltr', format: '', indent: 0, textFormat: 0, version: 1,
+            },
+            {
+              type: 'paragraph',
+              children: [
+                { type: 'text', detail: 0, format: 0, mode: 'normal', style: '', text: '國家/地區：{{country}}', version: 1 },
+              ],
+              direction: 'ltr', format: '', indent: 0, textFormat: 0, version: 1,
+            },
+            {
+              type: 'paragraph',
+              children: [
+                { type: 'text', detail: 0, format: 0, mode: 'normal', style: '', text: '詢問類型：{{inquiry}}', version: 1 },
+              ],
+              direction: 'ltr', format: '', indent: 0, textFormat: 0, version: 1,
+            },
+            {
+              type: 'paragraph',
+              children: [
+                { type: 'text', detail: 0, format: 0, mode: 'normal', style: '', text: '感興趣產品：{{products}}', version: 1 },
+              ],
+              direction: 'ltr', format: '', indent: 0, textFormat: 0, version: 1,
+            },
+            {
+              type: 'paragraph',
+              children: [
+                { type: 'text', detail: 0, format: 0, mode: 'normal', style: '', text: '訊息內容：{{message}}', version: 1 },
+              ],
+              direction: 'ltr', format: '', indent: 0, textFormat: 0, version: 1,
+            },
+          ],
+          direction: 'ltr',
+          format: '',
+          indent: 0,
+          version: 1,
+        },
+      },
+      subject: '【網站詢問】{{firstName}} {{lastName}} - {{inquiry}}',
+    },
   ],
   fields: [
     // First Name

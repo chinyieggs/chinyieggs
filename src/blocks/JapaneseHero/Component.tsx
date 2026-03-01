@@ -75,7 +75,7 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
           {/* Label */}
           {label && (
             <p
-              className="text-aka uppercase"
+              className="text-hai uppercase"
               style={{
                 fontSize: 'clamp(0.5rem, 1.8vw, 0.75rem)',
                 letterSpacing: '0.3em',
@@ -93,8 +93,8 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
               style={{
                 fontFamily: titleFontFamily,
                 fontSize: 'clamp(1.5rem, 5vw, 4rem)',
-                fontWeight: 600,
-                letterSpacing: '0.02em',
+                fontWeight: 400,
+                letterSpacing: '0.04em',
                 marginBottom: 'clamp(0.5rem, 1.5vw, 1rem)',
               }}
             >
@@ -108,7 +108,7 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
               style={{
                 width: 'clamp(30px, 8vw, 60px)',
                 height: '1px',
-                background: '#E8380D',
+                background: '#E5E2DB',
                 margin: 'clamp(0.5rem, 2.5vw, 2rem) auto',
               }}
             />

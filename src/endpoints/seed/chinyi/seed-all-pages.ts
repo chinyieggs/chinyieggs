@@ -70,8 +70,8 @@ export const seedAllChinyiPages = async (
     payload.logger.info('  ✓ Cleared all existing pages and forms')
   }
 
-  // 建立聯絡表單（如果不存在）
-  payload.logger.info('— Creating contact form...')
+  // 建立或更新聯絡表單（upsert）
+  payload.logger.info('— Upserting contact form...')
   const existingForm = await payload.find({
     collection: 'forms',
     where: { title: { equals: 'Contact Form' } },
@@ -88,7 +88,12 @@ export const seedAllChinyiPages = async (
     payload.logger.info('  ✓ Contact form created')
   } else {
     contactFormId = existingForm.docs[0].id
-    payload.logger.info('  ✓ Contact form already exists')
+    await payload.update({
+      collection: 'forms',
+      id: contactFormId,
+      data: contactFormData,
+    })
+    payload.logger.info('  ✓ Contact form updated')
   }
 
   // 建立所有頁面
@@ -115,12 +120,21 @@ export const seedChinyiGlobals = async (payload: Payload): Promise<void> => {
   })
   const contactPageId = contactPage.docs[0]?.id
 
+  // 取得 logo 圖片的 ID（如果存在）
+  const logoMedia = await payload.find({
+    collection: 'media',
+    where: { filename: { equals: 'logo-1.png' } },
+    limit: 1,
+  })
+  const logoId = logoMedia.docs[0]?.id
+
   await Promise.all([
     payload.updateGlobal({
       slug: 'header',
       data: {
         style: 'japanese',
         logoText: 'CHINYI EGGS',
+        ...(logoId ? { logo: logoId } : {}),
         navItems: [
           {
             link: { type: 'custom', label: 'Company', url: '/about' },
@@ -156,6 +170,12 @@ export const seedChinyiGlobals = async (payload: Payload): Promise<void> => {
           address: 'No. 37, Xinmin Road, Chiayi City, Taiwan',
           phone: '05-2354049',
         },
+        certifications: [
+          { name: 'HACCP' },
+          { name: 'ISO 22000' },
+          { name: 'CAS' },
+          { name: 'HALAL' },
+        ],
         navItems: [
           { link: { type: 'custom', label: 'Company', url: '/about' } },
           { link: { type: 'custom', label: 'Products', url: '/egg-tart-liquid' } },

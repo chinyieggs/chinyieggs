@@ -19,7 +19,8 @@ export const contactPage = (formId?: number | string): RequiredDataFromCollectio
       titleFont: 'serif',
       backgroundImageUrl: 'https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&q=80',
       size: 'small',
-      overlayOpacity: 40,
+      overlayOpacity: 70,
+      showDivider: true,
     },
     // Contact Introduction
     {

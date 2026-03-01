@@ -16,9 +16,10 @@ export const eggWhiteProductsPage = (): RequiredDataFromCollectionSlug<'pages'> 
       title: 'Egg White Products',
       subtitle: 'Premium protein from pure egg whites',
       titleFont: 'serif',
-      backgroundImageUrl: 'https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=1920&q=80',
+      backgroundImageUrl: '',
       size: 'small',
-      overlayOpacity: 40,
+      overlayOpacity: 70,
+      showDivider: true,
     },
     // Series Overview
     {

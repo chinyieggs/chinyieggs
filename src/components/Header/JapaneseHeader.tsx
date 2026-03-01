@@ -4,14 +4,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useCallback, useEffect, useRef, useState } from 'react'
-import { Globe, ChevronDown } from 'lucide-react'
+import { Globe } from 'lucide-react'
 import { cn } from '@/utilities/ui'
 import { getMediaUrl } from '@/utilities/getMediaUrl'
 import type { Header, Media } from '@/payload-types'
 
+const navFont = "'Inter', sans-serif"
+
 interface NavSection {
   title: string
   items: { label: string; href: string }[]
+  featuredImage?: Media | null
 }
 
 interface JapaneseHeaderProps {
@@ -35,10 +38,11 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
   const dropdownTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const pathname = usePathname()
 
-  // Handle scroll effect
+  // Handle scroll effect — also close mega menu on scroll
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
+      setActiveDropdown(null)
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
@@ -91,6 +95,14 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
     }, 150)
   }, [])
 
+  // Cancel close timer when hovering mega panel
+  const handleMegaPanelEnter = useCallback(() => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current)
+      dropdownTimeoutRef.current = null
+    }
+  }, [])
+
   useEffect(() => {
     return () => {
       if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current)
@@ -132,7 +144,13 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
         })
       }
 
-      return { title, items }
+      // Parse featuredImage
+      const featuredImage =
+        navItem.featuredImage && typeof navItem.featuredImage === 'object'
+          ? (navItem.featuredImage as Media)
+          : null
+
+      return { title, items, featuredImage }
     })
   }
 
@@ -167,171 +185,107 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
     return section.items.some((item) => pathname === item.href)
   }
 
+  // Get contact section for the top-right text link
+  const contactSection = sections.find((s) => s.title?.toLowerCase() === 'contact')
+  const contactHref = contactSection?.items[0]?.href || '/contact'
+
+  // Nav sections excluding Contact (rendered separately)
+  const navOnlySections = sections.filter((s) => s.title?.toLowerCase() !== 'contact')
+
+  // The active section for mega menu
+  const activeMegaSection = activeDropdown !== null ? navOnlySections[activeDropdown] : null
+
   return (
     <>
-      {/* Fixed Header */}
+      {/* Fixed Header — Hermès-style dual row */}
       <header
         className={cn(
-          'fixed top-0 left-0 right-0 z-[1000] h-20 transition-all duration-300 border-b',
+          'fixed top-0 left-0 right-0 z-[1000] transition-all duration-300 border-b',
           isScrolled
-            ? 'bg-shiro/95 backdrop-blur-sm border-border shadow-sm'
+            ? 'bg-shiro/95 backdrop-blur-sm border-border'
             : 'bg-shiro border-border',
         )}
       >
-        <div className="flex items-center justify-between h-full max-w-[1200px] mx-auto px-4 md:px-8">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group shrink-0">
+        {/* ── Top Row: Language | Logo (center) | Contact ── */}
+        <div className="relative flex items-center justify-between h-[56px] max-w-[1200px] mx-auto px-4 md:px-8">
+          {/* Left — Language Switcher */}
+          <div className="flex items-center shrink-0" ref={langRef}>
+            <button
+              className="flex items-center gap-1.5 text-sumi hover:text-aka transition-colors"
+              onClick={() => setLangOpen(!langOpen)}
+              aria-label="Switch language"
+            >
+              <Globe className="w-4 h-4" />
+              <span
+                className="hidden md:inline text-xs tracking-[0.08em] uppercase"
+                style={{ fontFamily: navFont }}
+              >
+                EN
+              </span>
+            </button>
+            {langOpen && (
+              <div className="absolute left-0 top-full mt-1 bg-white border-t border-border py-2 min-w-[140px] z-[1002]">
+                <button
+                  className="w-full text-left px-4 py-2 text-sm text-sumi hover:bg-kinari flex items-center gap-2 transition-colors"
+                  style={{ fontFamily: navFont }}
+                  onClick={() => setLangOpen(false)}
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-aka" />
+                  English
+                </button>
+                <button
+                  className="w-full text-left px-4 py-2 text-sm text-sumi hover:bg-kinari flex items-center gap-2 transition-colors"
+                  style={{ fontFamily: navFont }}
+                  onClick={() => { window.location.href = 'https://tw.chinyieggs.com' }}
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-transparent" />
+                  繁體中文
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* Center — Logo (absolute center) */}
+          <Link
+            href="/"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-2.5 group"
+          >
             {logo && typeof logo === 'object' && logo.url ? (
               <Image
                 src={getMediaUrl(logo.url)}
                 alt={logo.alt || logoText}
-                width={32}
-                height={40}
-                className="w-8 h-10 object-contain"
+                width={28}
+                height={34}
+                className="w-7 h-[34px] object-contain"
               />
             ) : (
-              <div className="w-8 h-10 text-aka">
+              <div className="w-7 h-[34px] text-aka">
                 <svg viewBox="0 0 32 40" className="w-full h-full fill-current">
                   <ellipse cx="16" cy="22" rx="12" ry="15" />
                 </svg>
               </div>
             )}
             <span
-              className="text-lg tracking-[0.15em] text-sumi"
+              className="text-base tracking-[0.2em] text-sumi"
               style={{ fontFamily: "'Source Sans Pro', -apple-system, sans-serif" }}
             >
               {logoText}
             </span>
           </Link>
 
-          {/* Desktop Navigation - hidden on mobile */}
-          <nav className="hidden md:flex items-center gap-1 ml-8">
-            {sections.map((section, sectionIndex) => {
-              const hasSubmenu = section.items.length > 1
-              const singleHref = section.items.length === 1 ? section.items[0].href : section.items[0]?.href
-              const isContact = section.title?.toLowerCase() === 'contact'
-
-              // Contact rendered separately as CTA
-              if (isContact) return null
-
-              if (!hasSubmenu) {
-                return (
-                  <Link
-                    key={section.title || `nav-${sectionIndex}`}
-                    href={singleHref || '/'}
-                    className={cn(
-                      'px-4 py-2 text-sm tracking-[0.08em] transition-colors',
-                      isSectionActive(section)
-                        ? 'text-aka'
-                        : 'text-sumi hover:text-aka',
-                    )}
-                  >
-                    {section.title}
-                  </Link>
-                )
-              }
-
-              // Dropdown menu
-              return (
-                <div
-                  key={section.title || `nav-${sectionIndex}`}
-                  className="relative"
-                  onMouseEnter={() => handleDropdownEnter(sectionIndex)}
-                  onMouseLeave={handleDropdownLeave}
-                >
-                  <button
-                    className={cn(
-                      'flex items-center gap-1 px-4 py-2 text-sm tracking-[0.08em] transition-colors',
-                      isSectionActive(section) || activeDropdown === sectionIndex
-                        ? 'text-aka'
-                        : 'text-sumi hover:text-aka',
-                    )}
-                  >
-                    {section.title}
-                    <ChevronDown className={cn(
-                      'w-3.5 h-3.5 transition-transform duration-200',
-                      activeDropdown === sectionIndex && 'rotate-180',
-                    )} />
-                  </button>
-
-                  {/* Dropdown Panel */}
-                  <div
-                    className={cn(
-                      'absolute top-full left-0 pt-2 transition-all duration-200',
-                      activeDropdown === sectionIndex
-                        ? 'opacity-100 visible translate-y-0'
-                        : 'opacity-0 invisible -translate-y-1',
-                    )}
-                  >
-                    <div className="bg-white rounded-md shadow-lg border border-border py-2 min-w-[200px]">
-                      {section.items.map((item, itemIndex) => (
-                        <Link
-                          key={item.href || `dropdown-${sectionIndex}-${itemIndex}`}
-                          href={item.href || '/'}
-                          className={cn(
-                            'block px-4 py-2.5 text-sm transition-colors',
-                            pathname === item.href
-                              ? 'text-aka bg-aka-pale'
-                              : 'text-sumi hover:text-aka hover:bg-kinari',
-                          )}
-                        >
-                          {item.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              )
-            })}
-          </nav>
-
-          {/* Right Controls */}
-          <div className="flex items-center gap-2 md:gap-4 shrink-0">
-            {/* Language Switcher */}
-            <div className="relative" ref={langRef}>
-              <button
-                className="w-10 h-10 flex items-center justify-center text-sumi hover:text-aka transition-colors"
-                onClick={() => setLangOpen(!langOpen)}
-                aria-label="Switch language"
+          {/* Right — Contact text link (desktop) + Hamburger (mobile) */}
+          <div className="flex items-center gap-3 shrink-0">
+            {contactSection && (
+              <Link
+                href={contactHref}
+                className="hidden md:inline-block text-sm tracking-[0.15em] uppercase text-sumi hover:text-aka transition-colors"
+                style={{ fontFamily: navFont, fontSize: '0.6875rem' }}
               >
-                <Globe className="w-5 h-5" />
-              </button>
-              {langOpen && (
-                <div className="absolute right-0 top-full mt-2 bg-white rounded-md shadow-lg border border-border py-1 min-w-[140px] z-[1002]">
-                  <button
-                    className="w-full text-left px-4 py-2 text-sm text-sumi hover:bg-kinari flex items-center gap-2 transition-colors"
-                    onClick={() => setLangOpen(false)}
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-aka" />
-                    English
-                  </button>
-                  <button
-                    className="w-full text-left px-4 py-2 text-sm text-sumi hover:bg-kinari flex items-center gap-2 transition-colors"
-                    onClick={() => { window.location.href = 'https://tw.chinyieggs.com' }}
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-transparent" />
-                    繁體中文
-                  </button>
-                </div>
-              )}
-            </div>
+                Contact
+              </Link>
+            )}
 
-            {/* Contact CTA - desktop only, rightmost */}
-            {(() => {
-              const contactSection = sections.find((s) => s.title?.toLowerCase() === 'contact')
-              if (!contactSection) return null
-              const contactHref = contactSection.items[0]?.href || '/contact'
-              return (
-                <Link
-                  href={contactHref}
-                  className="hidden md:inline-flex items-center px-5 py-2 bg-aka text-white text-sm tracking-[0.08em] hover:bg-aka-dark transition-colors"
-                >
-                  Contact
-                </Link>
-              )
-            })()}
-
-            {/* Mobile Menu Toggle - visible only on mobile */}
+            {/* Mobile Menu Toggle */}
             <button
               className={cn(
                 'relative w-12 h-12 flex flex-col justify-center items-center md:hidden',
@@ -365,6 +319,146 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
             </button>
           </div>
         </div>
+
+        {/* ── Bottom Row: Navigation (desktop only) — no dropdowns inside ── */}
+        <nav className="hidden md:flex items-center justify-center h-[40px] max-w-[1200px] mx-auto px-8 gap-8">
+          {navOnlySections.map((section, sectionIndex) => {
+            const hasSubmenu = section.items.length > 1
+            const singleHref = section.items[0]?.href
+
+            if (!hasSubmenu) {
+              return (
+                <Link
+                  key={section.title || `nav-${sectionIndex}`}
+                  href={singleHref || '/'}
+                  className={cn(
+                    'relative py-2 text-sumi transition-colors',
+                    isSectionActive(section) && 'border-b-2 border-sumi',
+                  )}
+                  style={{
+                    fontFamily: navFont,
+                    fontSize: '0.6875rem',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                  }}
+                >
+                  {section.title}
+                </Link>
+              )
+            }
+
+            return (
+              <div
+                key={section.title || `nav-${sectionIndex}`}
+                onMouseEnter={() => handleDropdownEnter(sectionIndex)}
+                onMouseLeave={handleDropdownLeave}
+              >
+                <button
+                  className={cn(
+                    'relative py-2 text-sumi transition-colors',
+                    (isSectionActive(section) || activeDropdown === sectionIndex)
+                      && 'border-b-2 border-sumi',
+                  )}
+                  style={{
+                    fontFamily: navFont,
+                    fontSize: '0.6875rem',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                  }}
+                >
+                  {section.title}
+                </button>
+              </div>
+            )
+          })}
+        </nav>
+
+        {/* ── Mega Menu Panel (full-width, below header) ── */}
+        <div
+          className={cn(
+            'absolute left-0 right-0 top-full bg-white border-t border-border transition-all duration-200 hidden md:block',
+            activeDropdown !== null
+              ? 'opacity-100 visible translate-y-0'
+              : 'opacity-0 invisible -translate-y-1 pointer-events-none',
+          )}
+          onMouseEnter={handleMegaPanelEnter}
+          onMouseLeave={handleDropdownLeave}
+        >
+          {activeMegaSection && (
+            <div className="max-w-[1200px] mx-auto px-8 py-10 flex gap-12">
+              {/* Left — Featured Image */}
+              <div className="w-[280px] shrink-0">
+                {activeMegaSection.featuredImage &&
+                  typeof activeMegaSection.featuredImage === 'object' &&
+                  activeMegaSection.featuredImage.url ? (
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={getMediaUrl(activeMegaSection.featuredImage.url)}
+                      alt={activeMegaSection.featuredImage.alt || activeMegaSection.title}
+                      fill
+                      className="object-cover"
+                    />
+                    {/* Bottom gradient caption */}
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/50 to-transparent p-4">
+                      <span
+                        className="text-white text-xs tracking-[0.15em] uppercase"
+                        style={{ fontFamily: navFont }}
+                      >
+                        {activeMegaSection.title}
+                      </span>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="aspect-[4/3] bg-kinari flex items-center justify-center">
+                    <span
+                      className="text-hai text-xs tracking-[0.2em] uppercase"
+                      style={{ fontFamily: navFont }}
+                    >
+                      {activeMegaSection.title}
+                    </span>
+                  </div>
+                )}
+              </div>
+
+              {/* Right — Section title + link grid */}
+              <div className="flex-1">
+                <h4
+                  className="mb-6 text-hai"
+                  style={{
+                    fontFamily: navFont,
+                    fontSize: '0.75rem',
+                    letterSpacing: '0.2em',
+                    textTransform: 'uppercase',
+                    fontWeight: 400,
+                    fontStyle: 'normal',
+                  }}
+                >
+                  {activeMegaSection.title}
+                </h4>
+                <div className="grid grid-cols-2 gap-x-12 gap-y-3">
+                  {activeMegaSection.items.map((item, itemIndex) => (
+                    <Link
+                      key={item.href || `mega-${itemIndex}`}
+                      href={item.href || '/'}
+                      className={cn(
+                        'text-sm transition-colors',
+                        pathname === item.href
+                          ? 'text-sumi border-b border-sumi inline-block'
+                          : 'text-hai hover:text-sumi',
+                      )}
+                      style={{
+                        fontFamily: navFont,
+                        letterSpacing: '0.04em',
+                      }}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
       </header>
 
       {/* Full Screen Navigation Overlay - Mobile only */}
@@ -378,16 +472,14 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
         {/* Close Button */}
         <button
           onClick={() => setIsOpen(false)}
-          className="absolute top-8 right-8 text-xs tracking-[0.15em] text-hai hover:text-aka transition-colors py-2 px-4 z-10"
-          style={{ fontFamily: "'Noto Sans JP', 'Noto Sans TC', sans-serif" }}
+          className="absolute top-8 right-8 text-xs tracking-[0.15em] text-hai hover:text-aka transition-colors py-2 px-4 z-10 uppercase"
+          style={{ fontFamily: navFont }}
         >
           CLOSE ✕
         </button>
 
         {/* Nav Content */}
-        <div
-          className="flex flex-col gap-8 px-8 w-full max-w-sm"
-        >
+        <div className="flex flex-col gap-8 px-8 w-full max-w-sm">
           {sections.map((section, sectionIndex) => (
             <div key={section.title || `section-${sectionIndex}`} className="text-center">
               <h3
@@ -407,11 +499,12 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
                     <Link
                       href={item.href || '/'}
                       className={cn(
-                        'text-hai hover:text-aka inline-block transition-colors',
-                        pathname === item.href && 'text-aka',
+                        'text-hai hover:text-sumi inline-block transition-colors uppercase tracking-[0.08em]',
+                        pathname === item.href && 'text-sumi border-b border-sumi',
                       )}
                       style={{
-                        fontSize: '1rem',
+                        fontFamily: navFont,
+                        fontSize: '0.875rem',
                         fontWeight: 400,
                       }}
                       onClick={() => setIsOpen(false)}
@@ -439,7 +532,7 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
       </nav>
 
       {/* Spacer to prevent content from going under fixed header */}
-      <div className="h-20" />
+      <div className="h-24" />
     </>
   )
 }

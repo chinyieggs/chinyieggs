@@ -31,9 +31,10 @@ export const aboutPage = (): RequiredDataFromCollectionSlug<'pages'> => ({
       title: 'About Chinyi',
       subtitle: "Taiwan's Most Trusted Leading Egg Products Brand",
       titleFont: 'serif',
-      backgroundImageUrl: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920&q=80',
+      backgroundImageUrl: '',
       size: 'small',
-      overlayOpacity: 40,
+      overlayOpacity: 70,
+      showDivider: true,
     },
     // Page Nav
     companyPageNav('about'),
@@ -110,7 +111,7 @@ export const aboutPage = (): RequiredDataFromCollectionSlug<'pages'> => ({
     {
       blockType: 'mediaBlock',
       blockName: 'Production Facility Image',
-      imageUrl: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80',
+      imageUrl: '',
       alt: 'Modern food production facility',
     },
     // Content - Remarkable Achievement (Part 2)
@@ -161,7 +162,7 @@ export const aboutPage = (): RequiredDataFromCollectionSlug<'pages'> => ({
     {
       blockType: 'mediaBlock',
       blockName: 'Chicken Farm Image',
-      imageUrl: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=800&q=80',
+      imageUrl: '',
       alt: 'Modern chicken farm',
     },
     // Content - Dedication & Compassion (Part 2)
@@ -226,9 +227,10 @@ export const milestonesPage = (): RequiredDataFromCollectionSlug<'pages'> => ({
       title: 'Corporate Milestones',
       subtitle: 'Step by step, through hardships and perseverance',
       titleFont: 'serif',
-      backgroundImageUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&q=80',
+      backgroundImageUrl: '',
       size: 'small',
-      overlayOpacity: 40,
+      overlayOpacity: 70,
+      showDivider: true,
     },
     // Page Nav
     companyPageNav('milestones'),
@@ -288,9 +290,10 @@ export const qualityControlPage = (): RequiredDataFromCollectionSlug<'pages'> =>
       title: 'Technology & Quality Control',
       subtitle: 'Industrialized Quality Assurance — We Do It First',
       titleFont: 'serif',
-      backgroundImageUrl: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=1920&q=80',
+      backgroundImageUrl: '',
       size: 'small',
-      overlayOpacity: 40,
+      overlayOpacity: 70,
+      showDivider: true,
     },
     // Page Nav
     companyPageNav('quality-control'),
@@ -539,7 +542,8 @@ export const factoryTourPage = (): RequiredDataFromCollectionSlug<'pages'> => ({
       titleFont: 'serif',
       backgroundImageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&q=80',
       size: 'small',
-      overlayOpacity: 40,
+      overlayOpacity: 70,
+      showDivider: true,
     },
     // Page Nav
     companyPageNav('factory-tour'),
@@ -626,7 +630,7 @@ export const factoryTourPage = (): RequiredDataFromCollectionSlug<'pages'> => ({
     {
       blockType: 'mediaBlock',
       blockName: 'Production Line Image',
-      imageUrl: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&q=80',
+      imageUrl: '',
       alt: 'Modern food production line',
     },
     // Highlight - Pasteurization process
@@ -665,7 +669,7 @@ export const factoryTourPage = (): RequiredDataFromCollectionSlug<'pages'> => ({
         },
       ],
       autoplay: true,
-      autoplayInterval: '3',
+      autoplayInterval: '5',
       pauseOnHover: true,
       showThumbnails: true,
     },

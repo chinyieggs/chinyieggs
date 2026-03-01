@@ -131,9 +131,10 @@ export const eggTartLiquidPage = (): RequiredDataFromCollectionSlug<'pages'> => 
       title: 'Egg Tart Filling Liquid Base',
       subtitle: 'Ready-to-use custard liquid for professional egg tart production',
       titleFont: 'serif',
-      backgroundImageUrl: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=1920&q=80',
+      backgroundImageUrl: '',
       size: 'small',
-      overlayOpacity: 40,
+      overlayOpacity: 70,
+      showDivider: true,
     },
     // Page Nav
     preparedLiquidPageNav('egg-tart-liquid'),
@@ -216,7 +217,8 @@ export const chawanmushiLiquidPage = (): RequiredDataFromCollectionSlug<'pages'>
       titleFont: 'serif',
       backgroundImageUrl: 'https://images.unsplash.com/photo-1540648639573-8c848de23f0a?w=1920&q=80',
       size: 'small',
-      overlayOpacity: 40,
+      overlayOpacity: 80,
+      showDivider: true,
     },
     // Page Nav
     preparedLiquidPageNav('chawanmushi-liquid'),
@@ -297,6 +299,7 @@ export const puddingLiquidPage = (): RequiredDataFromCollectionSlug<'pages'> => 
       backgroundImageUrl: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?w=1920&q=80',
       size: 'small',
       overlayOpacity: 40,
+      showDivider: true,
     },
     // Page Nav
     preparedLiquidPageNav('pudding-liquid'),
@@ -375,7 +378,8 @@ export const omeletteLiquidPage = (): RequiredDataFromCollectionSlug<'pages'> =>
       titleFont: 'serif',
       backgroundImageUrl: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=1920&q=80',
       size: 'small',
-      overlayOpacity: 40,
+      overlayOpacity: 80,
+      showDivider: true,
     },
     // Page Nav
     preparedLiquidPageNav('omelette-liquid'),

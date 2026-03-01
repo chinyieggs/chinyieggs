@@ -2089,6 +2089,10 @@ export interface Header {
               id?: string | null;
             }[]
           | null;
+        /**
+         * 選單展開時顯示的特色圖片（可選）
+         */
+        featuredImage?: (number | null) | Media;
         id?: string | null;
       }[]
     | null;
@@ -2183,6 +2187,7 @@ export interface HeaderSelect<T extends boolean = true> {
                   };
               id?: T;
             };
+        featuredImage?: T;
         id?: T;
       };
   updatedAt?: T;

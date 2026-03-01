@@ -57,6 +57,14 @@ export const Header: GlobalConfig = {
             },
           },
         }),
+        {
+          name: 'featuredImage',
+          type: 'upload',
+          relationTo: 'media',
+          admin: {
+            description: '選單展開時顯示的特色圖片（可選）',
+          },
+        },
       ],
       maxRows: 6,
       admin: {
