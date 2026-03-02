@@ -1,6 +1,7 @@
 import { getPayload } from 'payload'
 import config from '@payload-config'
 import { headers } from 'next/headers'
+import { sql } from '@payloadcms/db-vercel-postgres'
 import {
   upsertPage,
   seedAllChinyiPages,
@@ -40,27 +41,18 @@ export async function GET(request: Request): Promise<Response> {
     const globals = url.searchParams.get('globals') === 'true'
     const cleanup = url.searchParams.get('cleanup') === 'true'
 
-    // 清理無標題的孤立頁面
+    // 清理 id 為 NULL 的孤立頁面（原生 SQL，因為 Payload API 無法處理 id IS NULL）
     if (cleanup) {
-      const allPages = await payload.find({
-        collection: 'pages',
-        limit: 1000,
-        draft: true,
-        overrideAccess: true,
-      })
-      const orphans = allPages.docs.filter((p) => !p.title || !p.slug)
-      for (const p of orphans) {
-        await payload.delete({
-          collection: 'pages',
-          id: p.id,
-          overrideAccess: true,
-          context: { disableRevalidate: true },
-        })
-      }
+      const db = payload.db.drizzle
+      // 先刪版本表中 parent_id 為 NULL 的記錄
+      const vResult = await db.execute(sql`DELETE FROM "_pages_v" WHERE "parent_id" IS NULL`)
+      // 再刪主表中 id 為 NULL 的記錄
+      const pResult = await db.execute(sql`DELETE FROM "pages" WHERE "id" IS NULL`)
       return Response.json({
         success: true,
-        message: `Cleaned up ${orphans.length} orphan page(s) without title/slug.`,
-        deleted: orphans.map((p) => ({ id: p.id, title: p.title, slug: p.slug })),
+        message: `Cleaned up NULL-id pages and their versions.`,
+        deletedPages: pResult.rowCount ?? 0,
+        deletedVersions: vResult.rowCount ?? 0,
       })
     }
 

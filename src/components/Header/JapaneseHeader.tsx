@@ -244,7 +244,7 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
             {contactSection && (
               <Link
                 href={contactHref}
-                className="hidden md:inline-block text-sm tracking-[0.15em] uppercase text-sumi hover:text-aka transition-colors"
+                className="hidden md:inline-block text-sm tracking-[0.15em] uppercase text-sumi hover:text-aka transition-colors mr-2"
                 style={{ fontFamily: navFont, fontSize: '0.6875rem' }}
               >
                 Contact
