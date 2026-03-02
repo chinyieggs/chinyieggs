@@ -208,42 +208,8 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
       >
         {/* ── Top Row: Language | Logo (center) | Contact ── */}
         <div className="relative flex items-center justify-between h-[56px] max-w-[1200px] mx-auto px-4 md:px-8">
-          {/* Left — Language Switcher */}
-          <div className="flex items-center shrink-0" ref={langRef}>
-            <button
-              className="flex items-center gap-1.5 text-sumi hover:text-aka transition-colors"
-              onClick={() => setLangOpen(!langOpen)}
-              aria-label="Switch language"
-            >
-              <Globe className="w-4 h-4" />
-              <span
-                className="hidden md:inline text-xs tracking-[0.08em] uppercase"
-                style={{ fontFamily: navFont }}
-              >
-                EN
-              </span>
-            </button>
-            {langOpen && (
-              <div className="absolute left-0 top-full mt-1 bg-white border-t border-border py-2 min-w-[140px] z-[1002]">
-                <button
-                  className="w-full text-left px-4 py-2 text-sm text-sumi hover:bg-kinari flex items-center gap-2 transition-colors"
-                  style={{ fontFamily: navFont }}
-                  onClick={() => setLangOpen(false)}
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-aka" />
-                  English
-                </button>
-                <button
-                  className="w-full text-left px-4 py-2 text-sm text-sumi hover:bg-kinari flex items-center gap-2 transition-colors"
-                  style={{ fontFamily: navFont }}
-                  onClick={() => { window.location.href = 'https://tw.chinyieggs.com' }}
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-transparent" />
-                  繁體中文
-                </button>
-              </div>
-            )}
-          </div>
+          {/* Left — empty spacer for centering */}
+          <div className="shrink-0" />
 
           {/* Center — Logo (absolute center) */}
           <Link
@@ -273,7 +239,7 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
             </span>
           </Link>
 
-          {/* Right — Contact text link (desktop) + Hamburger (mobile) */}
+          {/* Right — Contact text link + Language Switcher (desktop) + Hamburger (mobile) */}
           <div className="flex items-center gap-3 shrink-0">
             {contactSection && (
               <Link
@@ -284,6 +250,43 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
                 Contact
               </Link>
             )}
+
+            {/* Language Switcher */}
+            <div className="relative flex items-center" ref={langRef}>
+              <button
+                className="flex items-center gap-1.5 text-sumi hover:text-aka transition-colors"
+                onClick={() => setLangOpen(!langOpen)}
+                aria-label="Switch language"
+              >
+                <Globe className="w-4 h-4" />
+                <span
+                  className="hidden md:inline text-xs tracking-[0.08em] uppercase"
+                  style={{ fontFamily: navFont }}
+                >
+                  EN
+                </span>
+              </button>
+              {langOpen && (
+                <div className="absolute right-0 top-full mt-1 bg-white border-t border-border py-2 min-w-[140px] z-[1002]">
+                  <button
+                    className="w-full text-left px-4 py-2 text-sm text-sumi hover:bg-kinari flex items-center gap-2 transition-colors"
+                    style={{ fontFamily: navFont }}
+                    onClick={() => setLangOpen(false)}
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-aka" />
+                    English
+                  </button>
+                  <button
+                    className="w-full text-left px-4 py-2 text-sm text-sumi hover:bg-kinari flex items-center gap-2 transition-colors"
+                    style={{ fontFamily: navFont }}
+                    onClick={() => { window.location.href = 'https://tw.chinyieggs.com' }}
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-transparent" />
+                    繁體中文
+                  </button>
+                </div>
+              )}
+            </div>
 
             {/* Mobile Menu Toggle */}
             <button
