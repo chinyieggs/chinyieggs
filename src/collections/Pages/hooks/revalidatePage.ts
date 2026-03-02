@@ -33,8 +33,8 @@ export const revalidatePage: CollectionAfterChangeHook<Page> = ({
 }
 
 export const revalidateDelete: CollectionAfterDeleteHook<Page> = ({ doc, req: { context } }) => {
-  if (!context.disableRevalidate) {
-    const path = doc?.slug === 'home' ? '/' : `/${doc?.slug}`
+  if (!context.disableRevalidate && doc?.slug) {
+    const path = doc.slug === 'home' ? '/' : `/${doc.slug}`
     revalidatePath(path)
     revalidateTag('pages-sitemap')
   }

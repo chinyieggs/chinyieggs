@@ -17,6 +17,7 @@ import {
  * GET /api/seed-chinyi?clear=true          - 清除所有頁面和表單
  * GET /api/seed-chinyi?page=home           - 單獨建立首頁（開發用）
  * GET /api/seed-chinyi?globals=true        - 只更新 Header/Footer（開發用）
+ * GET /api/seed-chinyi?cleanup=true        - 刪除無標題的孤立頁面
  */
 export async function GET(request: Request): Promise<Response> {
   try {
@@ -37,6 +38,31 @@ export async function GET(request: Request): Promise<Response> {
     const clear = url.searchParams.get('clear') === 'true'
     const page = url.searchParams.get('page')
     const globals = url.searchParams.get('globals') === 'true'
+    const cleanup = url.searchParams.get('cleanup') === 'true'
+
+    // 清理無標題的孤立頁面
+    if (cleanup) {
+      const allPages = await payload.find({
+        collection: 'pages',
+        limit: 1000,
+        draft: true,
+        overrideAccess: true,
+      })
+      const orphans = allPages.docs.filter((p) => !p.title || !p.slug)
+      for (const p of orphans) {
+        await payload.delete({
+          collection: 'pages',
+          id: p.id,
+          overrideAccess: true,
+          context: { disableRevalidate: true },
+        })
+      }
+      return Response.json({
+        success: true,
+        message: `Cleaned up ${orphans.length} orphan page(s) without title/slug.`,
+        deleted: orphans.map((p) => ({ id: p.id, title: p.title, slug: p.slug })),
+      })
+    }
 
     // 同步所有資料（upsert 頁面+表單+Header/Footer）
     if (upsert) {
@@ -91,6 +117,7 @@ export async function GET(request: Request): Promise<Response> {
         '清除所有資料': '/api/seed-chinyi?clear=true',
         '單獨建立頁面': '/api/seed-chinyi?page=home',
         '更新 Header/Footer': '/api/seed-chinyi?globals=true',
+        '清理孤立頁面': '/api/seed-chinyi?cleanup=true',
       },
       availablePages,
     })
