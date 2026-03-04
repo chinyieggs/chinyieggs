@@ -15,9 +15,9 @@ const mobileAspect = {
   full:   'aspect-[4/3]',
 }
 const desktopSize = {
-  small:  'md:aspect-auto md:min-h-[280px] md:max-h-[45vh]',
-  medium: 'md:aspect-auto md:min-h-[350px] md:max-h-[55vh]',
-  large:  'md:aspect-auto md:min-h-[420px] md:max-h-[75vh]',
+  small:  'md:aspect-auto md:min-h-[360px] md:max-h-[55vh]',
+  medium: 'md:aspect-auto md:min-h-[450px] md:max-h-[70vh]',
+  large:  'md:aspect-auto md:min-h-[550px] md:max-h-[85vh]',
   full:   'md:aspect-auto md:min-h-screen md:max-h-screen',
 }
 
