@@ -7,18 +7,18 @@ type Props = JapaneseHeroBlockType & {
   className?: string
 }
 
-// Mobile: aspect-ratio for proportional display; Desktop: fixed height range with object-cover crop
-const mobileAspect = {
-  small:  'aspect-[3/1]',
-  medium: 'aspect-[5/2]',
-  large:  'aspect-[16/9]',
-  full:   'aspect-[4/3]',
+// Mobile: max-h cap, image flows naturally; Desktop: fixed height range with object-cover crop
+const mobileMaxH = {
+  small:  'max-h-[30vh]',
+  medium: 'max-h-[50vh]',
+  large:  'max-h-[65vh]',
+  full:   'max-h-[80vh]',
 }
 const desktopSize = {
-  small:  'md:aspect-auto md:min-h-[360px] md:max-h-[55vh]',
-  medium: 'md:aspect-auto md:min-h-[450px] md:max-h-[70vh]',
-  large:  'md:aspect-auto md:min-h-[550px] md:max-h-[85vh]',
-  full:   'md:aspect-auto md:min-h-screen md:max-h-screen',
+  small:  'md:max-h-none md:min-h-[360px] md:!max-h-[55vh]',
+  medium: 'md:max-h-none md:min-h-[450px] md:!max-h-[70vh]',
+  large:  'md:max-h-none md:min-h-[550px] md:!max-h-[85vh]',
+  full:   'md:max-h-none md:min-h-screen md:!max-h-screen',
 }
 
 export const JapaneseHeroBlock: React.FC<Props> = ({
@@ -46,23 +46,23 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
     <section
       className={cn(
         'relative overflow-hidden',
-        mobileAspect[size as keyof typeof mobileAspect] || mobileAspect.medium,
+        mobileMaxH[size as keyof typeof mobileMaxH] || mobileMaxH.medium,
         desktopSize[size as keyof typeof desktopSize] || desktopSize.medium,
         className,
       )}
     >
-      {/* Background Image: object-cover fills container, cropped on desktop, proportional on mobile */}
+      {/* Background Image: natural flow on mobile (no crop), object-cover on desktop */}
       {imageUrl && (
         <>
           {bgImage ? (
             <Media
-              className="absolute inset-0 w-full h-full"
+              className="w-full md:absolute md:inset-0 md:h-full"
               resource={bgImage}
-              imgClassName="w-full h-full object-cover object-center"
+              imgClassName="w-full h-auto block md:h-full md:object-cover md:object-center"
               priority
             />
           ) : (
-            <img src={imageUrl} alt="" className="absolute inset-0 w-full h-full object-cover object-center" />
+            <img src={imageUrl} alt="" className="w-full h-auto block md:absolute md:inset-0 md:h-full md:object-cover md:object-center" />
           )}
           {/* Overlay */}
           <div
