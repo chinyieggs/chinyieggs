@@ -121,7 +121,7 @@ export const FormBlock: React.FC<
   return (
     // Match static HTML: container > content-narrow > contact-form
     <div className="max-w-[1200px] mx-auto px-8">
-      <div className="max-w-[800px] mx-auto">
+      <div className="max-w-[800px] mx-auto contact-form-card">
         {enableIntro && introContent && !hasSubmitted && (
           <RichText className="mb-8" data={introContent} enableGutter={false} />
         )}
@@ -263,19 +263,10 @@ export const FormBlock: React.FC<
                   return rendered
                 })()}
 
-              <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+              <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
                 <button
                   type="submit"
-                  style={{
-                    background: '#E8380D',
-                    color: 'white',
-                    border: 'none',
-                    padding: '1rem 3rem',
-                    fontSize: '0.875rem',
-                    letterSpacing: '0.1em',
-                    cursor: 'pointer',
-                    transition: 'background 0.3s',
-                  }}
+                  className="contact-submit-btn"
                 >
                   {submitButtonLabel}
                 </button>
@@ -285,43 +276,114 @@ export const FormBlock: React.FC<
         </FormProvider>
       </div>
       <style dangerouslySetInnerHTML={{ __html: `
+        /* ── Card wrapper ── */
+        .contact-form-card {
+          background: #FFFFFF;
+          border: 1px solid #E5E2DB;
+          padding: 3rem 2.5rem;
+          box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+        }
+        @media (max-width: 768px) {
+          .contact-form-card { padding: 2rem 1.25rem; }
+        }
+
+        /* ── Labels ── */
         .contact-form .form-group label {
           display: block;
-          font-size: 0.75rem;
-          letter-spacing: 0.15em;
+          font-size: 0.7rem;
+          font-weight: 600;
+          letter-spacing: 0.18em;
           text-transform: uppercase;
-          color: #6B6B6B;
-          margin-bottom: 0.5rem;
+          color: #1A1A1A;
+          margin-bottom: 0.6rem;
         }
+        .contact-form .form-group .required {
+          color: #E8380D;
+          margin-left: 2px;
+        }
+
+        /* ── Inputs, selects, textareas ── */
         .contact-form .form-group input,
-        .contact-form .form-group select,
         .contact-form .form-group textarea {
           width: 100%;
-          padding: 1rem;
-          font-family: 'Noto Sans JP', 'Noto Sans TC', sans-serif;
-          font-size: 1rem;
-          border: 1px solid #E5E2DB;
+          padding: 0.9rem 1rem;
+          font-family: 'Inter', 'Noto Sans JP', 'Noto Sans TC', sans-serif;
+          font-size: 0.9rem;
+          color: #1A1A1A;
+          border: 1.5px solid #D0CEC8;
+          border-radius: 0;
           background: #FAFAF8;
-          transition: border-color 0.3s;
+          transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .contact-form .form-group input::placeholder,
+        .contact-form .form-group textarea::placeholder {
+          color: #B0AEA6;
         }
         .contact-form .form-group input:focus,
-        .contact-form .form-group select:focus,
         .contact-form .form-group textarea:focus {
           outline: none;
           border-color: #E8380D;
+          box-shadow: 0 0 0 3px rgba(232,56,13,0.08);
         }
         .contact-form .form-group textarea {
           resize: vertical;
           min-height: 150px;
         }
-        .contact-form button[type="submit"]:hover {
+
+        /* ── shadcn Select overrides ── */
+        .contact-form .form-group button[role="combobox"] {
+          width: 100%;
+          padding: 0.9rem 1rem;
+          font-family: 'Inter', 'Noto Sans JP', 'Noto Sans TC', sans-serif;
+          font-size: 0.9rem;
+          color: #1A1A1A;
+          border: 1.5px solid #D0CEC8 !important;
+          border-radius: 0 !important;
+          background: #FAFAF8 !important;
+          height: auto;
+          transition: border-color 0.2s, box-shadow 0.2s;
+          box-shadow: none !important;
+        }
+        .contact-form .form-group button[role="combobox"]:focus,
+        .contact-form .form-group button[role="combobox"][data-state="open"] {
+          border-color: #E8380D !important;
+          box-shadow: 0 0 0 3px rgba(232,56,13,0.08) !important;
+          outline: none;
+        }
+        .contact-form .form-group button[role="combobox"] span[style] {
+          color: #B0AEA6;
+        }
+
+        /* ── Submit button ── */
+        .contact-submit-btn {
+          display: inline-block;
+          background: #E8380D;
+          color: #fff;
+          border: none;
+          padding: 1rem 4rem;
+          font-family: 'Inter', sans-serif;
+          font-size: 0.8rem;
+          font-weight: 600;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          cursor: pointer;
+          transition: background 0.3s, transform 0.15s;
+        }
+        .contact-submit-btn:hover {
           background: #C42F0B;
         }
+        .contact-submit-btn:active {
+          transform: scale(0.98);
+        }
+
+        /* ── Row responsive ── */
         @media (max-width: 768px) {
           .contact-form .form-row {
             grid-template-columns: 1fr !important;
           }
         }
+
+        /* ── Spinner ── */
         @keyframes formSpin {
           to { transform: rotate(360deg); }
         }

@@ -41,7 +41,7 @@ export const Select: React.FC<
           return (
             <SelectComponent onValueChange={(val) => onChange(val)} value={controlledValue?.value}>
               <SelectTrigger className="w-full" id={name}>
-                <SelectValue placeholder={label} />
+                <SelectValue placeholder="— Select —" />
               </SelectTrigger>
               <SelectContent>
                 {options.map(({ label, value }) => {
