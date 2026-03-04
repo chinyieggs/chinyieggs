@@ -21,6 +21,7 @@ import { SpecTableBlock } from '@/blocks/SpecTable/Component'
 import { CertificationGridBlock } from '@/blocks/CertificationGrid/Component'
 import { SectionIntroBlock } from '@/blocks/SectionIntro/Component'
 import { ImageCarouselBlock } from '@/blocks/ImageCarousel/Component'
+import { ProductCatalogBlock } from '@/blocks/ProductCatalog/Component'
 
 const blockComponents = {
   // 原有 Blocks
@@ -42,6 +43,7 @@ const blockComponents = {
   certificationGrid: CertificationGridBlock,
   sectionIntro: SectionIntroBlock,
   imageCarousel: ImageCarouselBlock,
+  productCatalog: ProductCatalogBlock,
 }
 
 // 這些區塊不加額外間距（它們自己有 padding/margin）

@@ -207,6 +207,7 @@ export interface Page {
     | CertificationGridBlock
     | SectionIntroBlock
     | ImageCarouselBlock
+    | ProductCatalogBlock
   )[];
   meta?: {
     title?: string | null;
@@ -1029,6 +1030,64 @@ export interface ImageCarouselBlock {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ProductCatalogBlock".
+ */
+export interface ProductCatalogBlock {
+  sectionLabel?: string | null;
+  sectionTitle?: string | null;
+  items?:
+    | {
+        image?: (number | null) | Media;
+        imageUrl?: string | null;
+        title: string;
+        subtitle?: string | null;
+        description?: {
+          root: {
+            type: string;
+            children: {
+              type: any;
+              version: number;
+              [k: string]: unknown;
+            }[];
+            direction: ('ltr' | 'rtl') | null;
+            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+            indent: number;
+            version: number;
+          };
+          [k: string]: unknown;
+        } | null;
+        features?:
+          | {
+              text: string;
+              id?: string | null;
+            }[]
+          | null;
+        specs?:
+          | {
+              label: string;
+              value: string;
+              id?: string | null;
+            }[]
+          | null;
+        applicationImages?:
+          | {
+              image?: (number | null) | Media;
+              imageUrl?: string | null;
+              caption?: string | null;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  columns?: ('2' | '3' | '4') | null;
+  backgroundColor?: ('shiro' | 'kinari') | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'productCatalog';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "users".
  */
 export interface User {
@@ -1324,6 +1383,7 @@ export interface PagesSelect<T extends boolean = true> {
         certificationGrid?: T | CertificationGridBlockSelect<T>;
         sectionIntro?: T | SectionIntroBlockSelect<T>;
         imageCarousel?: T | ImageCarouselBlockSelect<T>;
+        productCatalog?: T | ProductCatalogBlockSelect<T>;
       };
   meta?:
     | T
@@ -1669,6 +1729,49 @@ export interface ImageCarouselBlockSelect<T extends boolean = true> {
   autoplayInterval?: T;
   pauseOnHover?: T;
   showThumbnails?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ProductCatalogBlock_select".
+ */
+export interface ProductCatalogBlockSelect<T extends boolean = true> {
+  sectionLabel?: T;
+  sectionTitle?: T;
+  items?:
+    | T
+    | {
+        image?: T;
+        imageUrl?: T;
+        title?: T;
+        subtitle?: T;
+        description?: T;
+        features?:
+          | T
+          | {
+              text?: T;
+              id?: T;
+            };
+        specs?:
+          | T
+          | {
+              label?: T;
+              value?: T;
+              id?: T;
+            };
+        applicationImages?:
+          | T
+          | {
+              image?: T;
+              imageUrl?: T;
+              caption?: T;
+              id?: T;
+            };
+        id?: T;
+      };
+  columns?: T;
+  backgroundColor?: T;
   id?: T;
   blockName?: T;
 }

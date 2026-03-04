@@ -22,6 +22,7 @@ import {
   eggOilPage,
 } from '../pages/biotech-pages'
 import { eggWhiteProductsPage } from '../pages/egg-white-page'
+import { eggWhiteProductsPageV2 } from '../pages/egg-white-page-v2'
 import { contactPage } from '../pages/contact-page'
 import { contactForm } from '../contact-form'
 
@@ -79,7 +80,7 @@ const codeDataMap: Record<string, () => ReturnType<typeof homePage>> = {
   'eggshell-calcium-powder': eggshellCalciumPowderPage,
   'calcined-eggshell-powder': calcinedEggshellPowderPage,
   'egg-oil': eggOilPage,
-  'egg-white-products': eggWhiteProductsPage,
+  'egg-white-products': eggWhiteProductsPageV2,
   contact: () => contactPage(),
 }
 

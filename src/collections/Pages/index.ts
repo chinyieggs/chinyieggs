@@ -20,6 +20,7 @@ import { SpecTable } from '../../blocks/SpecTable/config'
 import { CertificationGrid } from '../../blocks/CertificationGrid/config'
 import { SectionIntro } from '../../blocks/SectionIntro/config'
 import { ImageCarousel } from '../../blocks/ImageCarousel/config'
+import { ProductCatalog } from '../../blocks/ProductCatalog/config'
 import { hero } from '@/heros/config'
 import { slugField } from 'payload'
 import { populatePublishedAt } from '../../hooks/populatePublishedAt'
@@ -105,6 +106,7 @@ export const Pages: CollectionConfig<'pages'> = {
                 CertificationGrid,
                 SectionIntro,
                 ImageCarousel,
+                ProductCatalog,
               ],
               required: true,
               admin: {
