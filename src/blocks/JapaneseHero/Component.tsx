@@ -7,11 +7,18 @@ type Props = JapaneseHeroBlockType & {
   className?: string
 }
 
-const sizeClasses = {
-  small: 'md:min-h-[45vh]',
-  medium: 'md:min-h-[55vh]',
-  large: 'md:min-h-[75vh]',
-  full: 'md:min-h-screen',
+// Mobile: aspect-ratio for proportional display; Desktop: fixed height range with object-cover crop
+const mobileAspect = {
+  small:  'aspect-[3/1]',
+  medium: 'aspect-[5/2]',
+  large:  'aspect-[16/9]',
+  full:   'aspect-[4/3]',
+}
+const desktopSize = {
+  small:  'md:aspect-auto md:min-h-[280px] md:max-h-[45vh]',
+  medium: 'md:aspect-auto md:min-h-[350px] md:max-h-[55vh]',
+  large:  'md:aspect-auto md:min-h-[420px] md:max-h-[75vh]',
+  full:   'md:aspect-auto md:min-h-screen md:max-h-screen',
 }
 
 export const JapaneseHeroBlock: React.FC<Props> = ({
@@ -38,27 +45,26 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
   return (
     <section
       className={cn(
-        'relative',
-        !imageUrl && sizeClasses[size as keyof typeof sizeClasses],
+        'relative overflow-hidden',
+        mobileAspect[size as keyof typeof mobileAspect] || mobileAspect.medium,
+        desktopSize[size as keyof typeof desktopSize] || desktopSize.medium,
         className,
       )}
     >
-      {/* Background Image: natural flow */}
+      {/* Background Image: object-cover fills container, cropped on desktop, proportional on mobile */}
       {imageUrl && (
         <>
-          <div className="w-full">
-            {bgImage ? (
-              <Media
-                className="w-full"
-                resource={bgImage}
-                imgClassName="w-full h-auto block"
-                priority
-              />
-            ) : (
-              <img src={imageUrl} alt="" className="w-full h-auto block" />
-            )}
-          </div>
-          {/* Overlay - using kinari color like original HTML */}
+          {bgImage ? (
+            <Media
+              className="absolute inset-0 w-full h-full"
+              resource={bgImage}
+              imgClassName="w-full h-full object-cover object-center"
+              priority
+            />
+          ) : (
+            <img src={imageUrl} alt="" className="absolute inset-0 w-full h-full object-cover object-center" />
+          )}
+          {/* Overlay */}
           <div
             className="absolute inset-0"
             style={{
