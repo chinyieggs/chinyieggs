@@ -143,28 +143,25 @@ export const FormBlock: React.FC<
             <form id={formID} onSubmit={handleSubmit(onSubmit)} className="contact-form" style={{ marginTop: '2rem' }}>
               {formFromProps &&
                 formFromProps.fields &&
-                formFromProps.fields?.map((field, index, arr) => {
-                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                  const Field: React.FC<any> = fields?.[field.blockType as keyof typeof fields]
-                  if (Field) {
-                    // Check if this field and next field both have width 50 (form-row)
+                (() => {
+                  const rendered: React.ReactNode[] = []
+                  const allFields = formFromProps.fields
+                  let i = 0
+                  while (i < allFields.length) {
+                    const field = allFields[i]!
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    const Field: React.FC<any> = fields?.[field.blockType as keyof typeof fields]
+                    if (!Field) { i++; continue }
+
                     const currentWidth = (field as { width?: number }).width
-                    const nextField = arr[index + 1] as { width?: number } | undefined
-                    const prevField = arr[index - 1] as { width?: number } | undefined
-                    const isRowStart = currentWidth === 50 && (!prevField || prevField.width !== 50)
-                    const isRowEnd = currentWidth === 50 && (!nextField || nextField.width !== 50)
-                    const isInRow = currentWidth === 50
+                    const nextField = allFields[i + 1] as { width?: number; blockType?: string } | undefined
 
-                    // Skip if this is second item in a row (already rendered)
-                    if (isInRow && prevField?.width === 50 && index > 0) {
-                      return null
-                    }
-
-                    // Render row with two fields
-                    if (isRowStart && nextField?.width === 50) {
-                      const NextField: React.FC<any> = fields?.[arr[index + 1]?.blockType as keyof typeof fields]
-                      return (
-                        <div key={index} className="form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginBottom: '2rem' }}>
+                    // 連續兩個 50% 寬度欄位配成一列
+                    if (currentWidth === 50 && nextField?.width === 50) {
+                      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                      const NextField: React.FC<any> = fields?.[nextField.blockType as keyof typeof fields]
+                      rendered.push(
+                        <div key={i} className="form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginBottom: '2rem' }}>
                           <div className="form-group">
                             <Field
                               form={formFromProps}
@@ -179,7 +176,7 @@ export const FormBlock: React.FC<
                             <div className="form-group">
                               <NextField
                                 form={formFromProps}
-                                {...arr[index + 1]}
+                                {...allFields[i + 1]}
                                 {...formMethods}
                                 control={control}
                                 errors={errors}
@@ -187,13 +184,15 @@ export const FormBlock: React.FC<
                               />
                             </div>
                           )}
-                        </div>
+                        </div>,
                       )
+                      i += 2
+                      continue
                     }
 
-                    // Single full-width field
-                    return (
-                      <div className="form-group" style={{ marginBottom: '2rem' }} key={index}>
+                    // 單欄全寬欄位
+                    rendered.push(
+                      <div className="form-group" style={{ marginBottom: '2rem' }} key={i}>
                         <Field
                           form={formFromProps}
                           {...field}
@@ -202,11 +201,12 @@ export const FormBlock: React.FC<
                           errors={errors}
                           register={register}
                         />
-                      </div>
+                      </div>,
                     )
+                    i++
                   }
-                  return null
-                })}
+                  return rendered
+                })()}
 
               <div style={{ textAlign: 'center', marginTop: '2rem' }}>
                 <button
