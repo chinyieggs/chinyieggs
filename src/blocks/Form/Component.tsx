@@ -54,7 +54,6 @@ export const FormBlock: React.FC<
 
   const onSubmit = useCallback(
     (data: FormFieldBlock[]) => {
-      let loadingTimerID: ReturnType<typeof setTimeout>
       const submitForm = async () => {
         setError(undefined)
 
@@ -63,10 +62,7 @@ export const FormBlock: React.FC<
           value,
         }))
 
-        // delay loading indicator by 1s
-        loadingTimerID = setTimeout(() => {
-          setIsLoading(true)
-        }, 1000)
+        setIsLoading(true)
 
         try {
           const req = await fetch(`${getClientSideURL()}/api/form-submissions`, {
@@ -81,8 +77,6 @@ export const FormBlock: React.FC<
           })
 
           const res = await req.json()
-
-          clearTimeout(loadingTimerID)
 
           if (req.status >= 400) {
             setIsLoading(false)
@@ -135,35 +129,70 @@ export const FormBlock: React.FC<
           {!isLoading && hasSubmitted && confirmationType === 'message' && (
             <div style={{
               textAlign: 'center',
-              padding: '3rem 2rem',
+              padding: '4rem 2.5rem',
               background: '#FAFAF8',
-              border: '1px solid #E5E2DB',
+              border: '2px solid #E5E2DB',
             }}>
               {/* Checkmark icon */}
               <div style={{
-                width: '56px',
-                height: '56px',
+                width: '64px',
+                height: '64px',
                 borderRadius: '50%',
                 background: '#E8380D',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                margin: '0 auto 1.5rem',
+                margin: '0 auto 2rem',
+                boxShadow: '0 4px 16px rgba(232, 56, 13, 0.25)',
               }}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
               </div>
               <RichText data={confirmationMessage} />
+              <p style={{
+                fontSize: '0.8rem',
+                color: '#999',
+                marginTop: '0.5rem',
+                letterSpacing: '0.05em',
+              }}>
+                A confirmation email has been sent to your inbox.
+              </p>
               <div style={{
                 width: '40px',
-                height: '1px',
+                height: '2px',
                 background: '#E8380D',
-                margin: '1.5rem auto 0',
+                margin: '2rem auto 0',
               }} />
             </div>
           )}
-          {isLoading && !hasSubmitted && <p>Loading, please wait...</p>}
+          {isLoading && !hasSubmitted && (
+            <div style={{
+              textAlign: 'center',
+              padding: '4rem 2.5rem',
+              background: '#FAFAF8',
+              border: '2px solid #E5E2DB',
+            }}>
+              {/* Spinner */}
+              <div style={{
+                width: '48px',
+                height: '48px',
+                border: '3px solid #E5E2DB',
+                borderTop: '3px solid #E8380D',
+                borderRadius: '50%',
+                margin: '0 auto 1.5rem',
+                animation: 'formSpin 0.8s linear infinite',
+              }} />
+              <p style={{
+                fontSize: '0.875rem',
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase',
+                color: '#6B6B6B',
+              }}>
+                Submitting your inquiry...
+              </p>
+            </div>
+          )}
           {error && <div style={{ color: '#E8380D' }}>{`${error.status || '500'}: ${error.message || ''}`}</div>}
           {!hasSubmitted && (
             <form id={formID} onSubmit={handleSubmit(onSubmit)} className="contact-form" style={{ marginTop: '2rem' }}>
@@ -292,6 +321,9 @@ export const FormBlock: React.FC<
           .contact-form .form-row {
             grid-template-columns: 1fr !important;
           }
+        }
+        @keyframes formSpin {
+          to { transform: rotate(360deg); }
         }
       ` }} />
     </div>

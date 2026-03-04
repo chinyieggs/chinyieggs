@@ -8,6 +8,7 @@ import { FixedToolbarFeature, HeadingFeature, lexicalEditor } from '@payloadcms/
 
 import { Page } from '@/payload-types'
 import { getServerSideURL } from '@/utilities/getURL'
+import { wrapEmailHtml } from '@/utilities/emailTemplate'
 
 const generateTitle: GenerateTitle<Page> = ({ doc }) => {
   return doc?.title ? `${doc.title} | Chinyi Eggs Technology` : 'Chinyi Eggs Technology'
@@ -47,6 +48,12 @@ export const plugins: Plugin[] = [
     generateURL,
   }),
   formBuilderPlugin({
+    beforeEmail: async (emails) => {
+      return emails.map((email) => ({
+        ...email,
+        html: wrapEmailHtml(email.html, email.subject),
+      }))
+    },
     fields: {
       payment: false,
     },
