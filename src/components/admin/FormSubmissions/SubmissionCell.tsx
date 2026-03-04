@@ -22,17 +22,15 @@ export const NameCell: React.FC<DefaultCellComponentProps> = ({ rowData }) => {
     )
   }
 
-  // Find name and message
-  const nameField = submissionData.find(
-    (item) => item.field === 'full-name' || item.field === 'name',
-  )
-  const emailField = submissionData.find((item) => item.field === 'email')
+  // Find name, company and message
+  const firstName = submissionData.find((item) => item.field === 'firstName')?.value || ''
+  const lastName = submissionData.find((item) => item.field === 'lastName')?.value || ''
+  const company = submissionData.find((item) => item.field === 'company')?.value || ''
   const messageField = submissionData.find((item) => item.field === 'message')
-
-  const name = nameField?.value || '未知'
-  const email = emailField?.value || ''
   const message = messageField?.value || ''
   const truncatedMessage = message.length > 40 ? message.substring(0, 40) + '...' : message
+
+  const name = [firstName, lastName].filter(Boolean).join(' ')
 
   return (
     <Link
@@ -40,8 +38,8 @@ export const NameCell: React.FC<DefaultCellComponentProps> = ({ rowData }) => {
       style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
     >
       <div>
-        <strong>{name}</strong>
-        {email && <span style={{ color: '#666', fontSize: '0.85em', marginLeft: '8px' }}>{email}</span>}
+        <strong>{name || '—'}</strong>
+        {company && <span style={{ color: '#666', fontSize: '0.85em', marginLeft: '8px' }}>{company}</span>}
       </div>
       {truncatedMessage && (
         <div style={{ color: '#888', fontSize: '0.9em' }}>{truncatedMessage}</div>

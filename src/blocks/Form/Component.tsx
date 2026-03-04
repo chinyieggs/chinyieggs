@@ -133,8 +133,34 @@ export const FormBlock: React.FC<
         )}
         <FormProvider {...formMethods}>
           {!isLoading && hasSubmitted && confirmationType === 'message' && (
-            <div style={{ padding: '2rem', background: '#F5F3EE', borderLeft: '2px solid #E8380D' }}>
+            <div style={{
+              textAlign: 'center',
+              padding: '3rem 2rem',
+              background: '#FAFAF8',
+              border: '1px solid #E5E2DB',
+            }}>
+              {/* Checkmark icon */}
+              <div style={{
+                width: '56px',
+                height: '56px',
+                borderRadius: '50%',
+                background: '#E8380D',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 1.5rem',
+              }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
               <RichText data={confirmationMessage} />
+              <div style={{
+                width: '40px',
+                height: '1px',
+                background: '#E8380D',
+                margin: '1.5rem auto 0',
+              }} />
             </div>
           )}
           {isLoading && !hasSubmitted && <p>Loading, please wait...</p>}

@@ -118,7 +118,7 @@ export default buildConfig({
   ],
   globals: [Header, Footer],
   email: resendAdapter({
-    defaultFromAddress: 'info@chinyieggs.com',
+    defaultFromAddress: 'noreply@mail.chinyieggs.com',
     defaultFromName: 'Chinyi Eggs Technology',
     apiKey: process.env.RESEND_API_KEY || '',
   }),

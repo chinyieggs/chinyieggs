@@ -54,7 +54,7 @@ export const contactForm: RequiredDataFromCollectionSlug<'forms'> = {
   createdAt: '2023-01-12T21:47:41.374Z',
   emails: [
     {
-      emailFrom: '"Chinyi Eggs Technology" \u003Cinfo@chinyieggs.com\u003E',
+      emailFrom: '"Chinyi Eggs Technology" \u003Cnoreply@mail.chinyieggs.com\u003E',
       emailTo: '{{email}}',
       message: {
         root: {
@@ -89,7 +89,7 @@ export const contactForm: RequiredDataFromCollectionSlug<'forms'> = {
       subject: "Thank you for contacting Chinyi Eggs Technology",
     },
     {
-      emailFrom: '"Chinyi Eggs Technology" \u003Cinfo@chinyieggs.com.tw\u003E',
+      emailFrom: '"Chinyi Eggs Technology" \u003Cnoreply@mail.chinyieggs.com\u003E',
       emailTo: 'sales@chinyieggs.com.tw',
       replyTo: '{{email}}',
       message: {
