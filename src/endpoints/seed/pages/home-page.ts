@@ -22,7 +22,7 @@ export const homePage = (): RequiredDataFromCollectionSlug<'pages'> => {
         subtitle: '',
         titleFont: 'sans',
         backgroundImageUrl: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=80',
-        size: 'medium',
+        size: 'origin',
         overlayOpacity: 0,
         showDivider: false,
       },

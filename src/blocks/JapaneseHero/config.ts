@@ -64,6 +64,7 @@ export const JapaneseHero: Block = {
       label: 'Hero 高度',
       defaultValue: 'medium',
       options: [
+        { label: '原始', value: 'origin' },
         { label: '小', value: 'small' },
         { label: '中', value: 'medium' },
         { label: '大', value: 'large' },

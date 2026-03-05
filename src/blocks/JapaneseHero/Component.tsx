@@ -9,12 +9,14 @@ type Props = JapaneseHeroBlockType & {
 
 // Mobile: max-h cap, image flows naturally; Desktop: fixed height range with object-cover crop
 const mobileMaxH = {
+  origin: '',
   small:  'max-h-[30vh]',
   medium: 'max-h-[50vh]',
   large:  'max-h-[65vh]',
   full:   'max-h-[80vh]',
 }
 const desktopSize = {
+  origin: '',
   small:  'md:max-h-none md:min-h-[360px] md:!max-h-[55vh]',
   medium: 'md:max-h-none md:min-h-[450px] md:!max-h-[70vh]',
   large:  'md:max-h-none md:min-h-[550px] md:!max-h-[85vh]',
