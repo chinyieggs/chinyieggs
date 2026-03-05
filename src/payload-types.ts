@@ -703,7 +703,7 @@ export interface JapaneseHeroBlock {
    * 如果沒有上傳圖片，可使用外部 URL
    */
   backgroundImageUrl?: string | null;
-  size?: ('small' | 'medium' | 'large' | 'full') | null;
+  size?: ('origin' | 'small' | 'medium' | 'large' | 'full') | null;
   /**
    * 標題與副標題之間的橘色裝飾線
    */
