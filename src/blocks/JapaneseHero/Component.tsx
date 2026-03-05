@@ -44,19 +44,35 @@ export const JapaneseHeroBlock: React.FC<Props> = ({
 
   const hasTextContent = label || title || subtitle
 
+  const isOrigin = size === 'origin'
+
   return (
     <section
       className={cn(
-        'relative overflow-hidden',
-        mobileMaxH[size as keyof typeof mobileMaxH] || mobileMaxH.medium,
-        desktopSize[size as keyof typeof desktopSize] || desktopSize.medium,
+        'relative',
+        !isOrigin && 'overflow-hidden',
+        !isOrigin && (mobileMaxH[size as keyof typeof mobileMaxH] || mobileMaxH.medium),
+        !isOrigin && (desktopSize[size as keyof typeof desktopSize] || desktopSize.medium),
         className,
       )}
     >
-      {/* Background Image: natural flow on mobile (no crop), object-cover on desktop */}
+      {/* Background Image: origin = natural flow (no crop); others = object-cover on desktop */}
       {imageUrl && (
         <>
-          {bgImage ? (
+          {isOrigin ? (
+            <div className="w-full">
+              {bgImage ? (
+                <Media
+                  className="w-full"
+                  resource={bgImage}
+                  imgClassName="w-full h-auto block"
+                  priority
+                />
+              ) : (
+                <img src={imageUrl} alt="" className="w-full h-auto block" />
+              )}
+            </div>
+          ) : bgImage ? (
             <Media
               className="w-full md:absolute md:inset-0 md:h-full"
               resource={bgImage}
