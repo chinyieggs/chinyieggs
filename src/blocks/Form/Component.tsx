@@ -57,10 +57,12 @@ export const FormBlock: React.FC<
       const submitForm = async () => {
         setError(undefined)
 
-        const dataToSend = Object.entries(data).map(([name, value]) => ({
-          field: name,
-          value,
-        }))
+        const dataToSend = Object.entries(data)
+          .filter(([, value]) => value != null && String(value) !== '')
+          .map(([name, value]) => ({
+            field: name,
+            value,
+          }))
 
         setIsLoading(true)
 
@@ -126,71 +128,66 @@ export const FormBlock: React.FC<
           <RichText className="mb-8" data={introContent} enableGutter={false} />
         )}
         <FormProvider {...formMethods}>
-          {!isLoading && hasSubmitted && confirmationType === 'message' && (
-            <div style={{
-              textAlign: 'center',
-              padding: '4rem 2.5rem',
-              background: '#FAFAF8',
-              border: '2px solid #E5E2DB',
-            }}>
-              {/* Checkmark icon */}
-              <div style={{
-                width: '64px',
-                height: '64px',
-                borderRadius: '50%',
-                background: '#E8380D',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                margin: '0 auto 2rem',
-                boxShadow: '0 4px 16px rgba(232, 56, 13, 0.25)',
-              }}>
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
+          {/* Loading overlay modal */}
+          {isLoading && !hasSubmitted && (
+            <div className="form-overlay">
+              <div className="form-modal">
+                <div style={{
+                  width: '48px',
+                  height: '48px',
+                  border: '3px solid #E5E2DB',
+                  borderTop: '3px solid #E8380D',
+                  borderRadius: '50%',
+                  margin: '0 auto 1.5rem',
+                  animation: 'formSpin 0.8s linear infinite',
+                }} />
+                <p style={{
+                  fontSize: '0.875rem',
+                  letterSpacing: '0.1em',
+                  textTransform: 'uppercase',
+                  color: '#6B6B6B',
+                  margin: 0,
+                }}>
+                  Submitting your inquiry...
+                </p>
               </div>
-              <RichText data={confirmationMessage} />
-              <p style={{
-                fontSize: '0.8rem',
-                color: '#999',
-                marginTop: '0.5rem',
-                letterSpacing: '0.05em',
-              }}>
-                A confirmation email has been sent to your inbox.
-              </p>
-              <div style={{
-                width: '40px',
-                height: '2px',
-                background: '#E8380D',
-                margin: '2rem auto 0',
-              }} />
             </div>
           )}
-          {isLoading && !hasSubmitted && (
-            <div style={{
-              textAlign: 'center',
-              padding: '4rem 2.5rem',
-              background: '#FAFAF8',
-              border: '2px solid #E5E2DB',
-            }}>
-              {/* Spinner */}
-              <div style={{
-                width: '48px',
-                height: '48px',
-                border: '3px solid #E5E2DB',
-                borderTop: '3px solid #E8380D',
-                borderRadius: '50%',
-                margin: '0 auto 1.5rem',
-                animation: 'formSpin 0.8s linear infinite',
-              }} />
-              <p style={{
-                fontSize: '0.875rem',
-                letterSpacing: '0.1em',
-                textTransform: 'uppercase',
-                color: '#6B6B6B',
-              }}>
-                Submitting your inquiry...
-              </p>
+          {/* Success overlay modal */}
+          {!isLoading && hasSubmitted && confirmationType === 'message' && (
+            <div className="form-overlay">
+              <div className="form-modal">
+                <div style={{
+                  width: '64px',
+                  height: '64px',
+                  borderRadius: '50%',
+                  background: '#E8380D',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 2rem',
+                  boxShadow: '0 4px 16px rgba(232, 56, 13, 0.25)',
+                }}>
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <RichText data={confirmationMessage} />
+                <p style={{
+                  fontSize: '0.8rem',
+                  color: '#999',
+                  marginTop: '0.5rem',
+                  letterSpacing: '0.05em',
+                }}>
+                  A confirmation email has been sent to your inbox.
+                </p>
+                <div style={{
+                  width: '40px',
+                  height: '2px',
+                  background: '#E8380D',
+                  margin: '2rem auto 0',
+                }} />
+              </div>
             </div>
           )}
           {error && <div style={{ color: '#E8380D' }}>{`${error.status || '500'}: ${error.message || ''}`}</div>}
@@ -350,8 +347,12 @@ export const FormBlock: React.FC<
           box-shadow: 0 0 0 3px rgba(232,56,13,0.08) !important;
           outline: none;
         }
-        .contact-form .form-group button[role="combobox"] span[style] {
-          color: #B0AEA6;
+        .contact-form .form-group button[role="combobox"] span {
+          color: #1A1A1A;
+        }
+        .contact-form .form-group button[role="combobox"] span[style*="pointer-events"],
+        .contact-form .form-group button[role="combobox"] [data-placeholder] {
+          color: #B0AEA6 !important;
         }
 
         /* ── Submit button ── */
@@ -381,6 +382,39 @@ export const FormBlock: React.FC<
           .contact-form .form-row {
             grid-template-columns: 1fr !important;
           }
+        }
+
+        /* ── Overlay modal ── */
+        .form-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 9999;
+          animation: formFadeIn 0.2s ease;
+        }
+        .form-modal {
+          background: #FFFFFF;
+          border: 1px solid #E5E2DB;
+          padding: 3rem 2.5rem;
+          text-align: center;
+          max-width: 480px;
+          width: 90%;
+          box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+          animation: formSlideUp 0.3s ease;
+        }
+        @keyframes formFadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        @keyframes formSlideUp {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
         }
 
         /* ── Spinner ── */

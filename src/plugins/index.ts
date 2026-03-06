@@ -48,10 +48,21 @@ export const plugins: Plugin[] = [
     generateURL,
   }),
   formBuilderPlugin({
-    beforeEmail: async (emails) => {
+    beforeEmail: async (emails, afterChangeData) => {
+      const { req: { payload } } = afterChangeData
+      let logoUrl: string | undefined
+      try {
+        const header = await payload.findGlobal({ slug: 'header' })
+        const logo = header?.logo
+        if (logo && typeof logo === 'object' && 'url' in logo && logo.url) {
+          logoUrl = logo.url as string
+        }
+      } catch {
+        // fallback to no logo
+      }
       return emails.map((email) => ({
         ...email,
-        html: wrapEmailHtml(email.html, email.subject),
+        html: wrapEmailHtml(email.html, email.subject, logoUrl),
       }))
     },
     fields: {

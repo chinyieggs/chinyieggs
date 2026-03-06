@@ -3,10 +3,9 @@
  * Used by the `beforeEmail` hook in plugins/index.ts.
  */
 
-const LOGO_URL = 'https://chinyieggs.com/logo.png'
 const SITE_URL = 'https://chinyieggs.com'
 
-export function wrapEmailHtml(html: string, subject: string): string {
+export function wrapEmailHtml(html: string, subject: string, logoUrl?: string): string {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +22,7 @@ export function wrapEmailHtml(html: string, subject: string): string {
           <tr>
             <td style="padding:32px 40px 24px;text-align:center;border-bottom:1px solid #E5E2DB;">
               <a href="${SITE_URL}" style="text-decoration:none;">
-                <img src="${LOGO_URL}" alt="Chinyi Eggs Technology" width="36" height="44" style="display:inline-block;vertical-align:middle;margin-right:12px;" />
+                ${logoUrl ? `<img src="${logoUrl}" alt="Chinyi Eggs Technology" width="36" height="44" style="display:inline-block;vertical-align:middle;margin-right:12px;" />` : ''}
                 <span style="font-size:16px;letter-spacing:0.2em;color:#1A1A1A;vertical-align:middle;font-weight:400;">CHINYI EGGS</span>
               </a>
             </td>
