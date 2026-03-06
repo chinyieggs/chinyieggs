@@ -153,41 +153,44 @@ export const FormBlock: React.FC<
               </div>
             </div>
           )}
-          {/* Success overlay modal */}
+          {/* Success message inline */}
           {!isLoading && hasSubmitted && confirmationType === 'message' && (
-            <div className="form-overlay">
-              <div className="form-modal">
-                <div style={{
-                  width: '64px',
-                  height: '64px',
-                  borderRadius: '50%',
-                  background: '#E8380D',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  margin: '0 auto 2rem',
-                  boxShadow: '0 4px 16px rgba(232, 56, 13, 0.25)',
-                }}>
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                </div>
-                <RichText data={confirmationMessage} />
-                <p style={{
-                  fontSize: '0.8rem',
-                  color: '#999',
-                  marginTop: '0.5rem',
-                  letterSpacing: '0.05em',
-                }}>
-                  A confirmation email has been sent to your inbox.
-                </p>
-                <div style={{
-                  width: '40px',
-                  height: '2px',
-                  background: '#E8380D',
-                  margin: '2rem auto 0',
-                }} />
+            <div style={{
+              textAlign: 'center',
+              padding: '4rem 2.5rem',
+              background: '#FAFAF8',
+              border: '2px solid #E5E2DB',
+            }}>
+              <div style={{
+                width: '64px',
+                height: '64px',
+                borderRadius: '50%',
+                background: '#E8380D',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 2rem',
+                boxShadow: '0 4px 16px rgba(232, 56, 13, 0.25)',
+              }}>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
               </div>
+              <RichText data={confirmationMessage} />
+              <p style={{
+                fontSize: '0.8rem',
+                color: '#999',
+                marginTop: '0.5rem',
+                letterSpacing: '0.05em',
+              }}>
+                A confirmation email has been sent to your inbox.
+              </p>
+              <div style={{
+                width: '40px',
+                height: '2px',
+                background: '#E8380D',
+                margin: '2rem auto 0',
+              }} />
             </div>
           )}
           {error && <div style={{ color: '#E8380D' }}>{`${error.status || '500'}: ${error.message || ''}`}</div>}
@@ -218,6 +221,7 @@ export const FormBlock: React.FC<
                             <Field
                               form={formFromProps}
                               {...field}
+                              width={100}
                               {...formMethods}
                               control={control}
                               errors={errors}
@@ -229,6 +233,7 @@ export const FormBlock: React.FC<
                               <NextField
                                 form={formFromProps}
                                 {...allFields[i + 1]}
+                                width={100}
                                 {...formMethods}
                                 control={control}
                                 errors={errors}
@@ -350,9 +355,8 @@ export const FormBlock: React.FC<
         .contact-form .form-group button[role="combobox"] span {
           color: #1A1A1A;
         }
-        .contact-form .form-group button[role="combobox"] span[style*="pointer-events"],
-        .contact-form .form-group button[role="combobox"] [data-placeholder] {
-          color: #B0AEA6 !important;
+        .contact-form .form-group button[role="combobox"].select-placeholder span {
+          color: #B0AEA6;
         }
 
         /* ── Submit button ── */
@@ -401,9 +405,9 @@ export const FormBlock: React.FC<
         .form-modal {
           background: #FFFFFF;
           border: 1px solid #E5E2DB;
-          padding: 3rem 2.5rem;
+          padding: 4rem 3.5rem;
           text-align: center;
-          max-width: 480px;
+          max-width: 600px;
           width: 90%;
           box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
           animation: formSlideUp 0.3s ease;

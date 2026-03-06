@@ -40,7 +40,7 @@ export const Select: React.FC<
 
           return (
             <SelectComponent onValueChange={(val) => onChange(val)} value={controlledValue?.value}>
-              <SelectTrigger className="w-full" id={name}>
+              <SelectTrigger className={`w-full${controlledValue ? '' : ' select-placeholder'}`} id={name}>
                 <SelectValue placeholder="— Select —" />
               </SelectTrigger>
               <SelectContent>
