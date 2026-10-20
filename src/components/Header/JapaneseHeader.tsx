@@ -482,43 +482,98 @@ export const JapaneseHeader: React.FC<JapaneseHeaderProps> = ({
         </button>
 
         {/* Nav Content */}
+        {/* 與桌機同步：順序用 navOnlySections，Contact 獨立放最底部 */}
         <div className="flex flex-col gap-8 px-8 w-full max-w-sm">
-          {sections.map((section, sectionIndex) => (
-            <div key={section.title || `section-${sectionIndex}`} className="text-center">
-              <h3
-                className="tracking-[0.2em] text-hai uppercase border-b border-border"
+          {navOnlySections.map((section, sectionIndex) => {
+            const hasSubmenu = section.items.length > 1
+
+            // 單一連結：比照桌機下排選單，直接顯示連結，不加標題
+            if (!hasSubmenu) {
+              const singleHref = section.items[0]?.href
+              return (
+                <div key={section.title || `section-${sectionIndex}`} className="text-center">
+                  <Link
+                    href={singleHref || '/'}
+                    className={cn(
+                      'inline-block py-1 text-sumi hover:text-aka transition-colors',
+                      isSectionActive(section) && 'border-b border-sumi',
+                    )}
+                    style={{
+                      fontFamily: navFont,
+                      fontSize: '0.75rem',
+                      letterSpacing: '0.15em',
+                      textTransform: 'uppercase',
+                    }}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {section.title}
+                  </Link>
+                </div>
+              )
+            }
+
+            // 有子選單：比照桌機 Mega Menu（標題大寫、子項目保留原大小寫）
+            return (
+              <div key={section.title || `section-${sectionIndex}`} className="text-center">
+                <h3
+                  className="text-hai border-b border-border"
+                  style={{
+                    fontFamily: navFont,
+                    fontSize: '0.75rem',
+                    letterSpacing: '0.2em',
+                    textTransform: 'uppercase',
+                    fontWeight: 400,
+                    marginBottom: '1.25rem',
+                    paddingBottom: '0.75rem',
+                  }}
+                >
+                  {section.title}
+                </h3>
+                <ul className="list-none">
+                  {section.items.map((item, itemIndex) => (
+                    <li key={item.href || `item-${sectionIndex}-${itemIndex}`} style={{ marginBottom: '0.5rem' }}>
+                      <Link
+                        href={item.href || '/'}
+                        className={cn(
+                          'inline-block text-sm transition-colors',
+                          pathname === item.href
+                            ? 'text-sumi border-b border-sumi'
+                            : 'text-hai hover:text-sumi',
+                        )}
+                        style={{
+                          fontFamily: navFont,
+                          letterSpacing: '0.04em',
+                        }}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )
+          })}
+
+          {/* Contact — 比照桌機右上角樣式 */}
+          {contactSection && (
+            <div className="text-center pt-6 border-t border-border">
+              <Link
+                href={contactHref}
+                className="inline-block py-1 text-sumi hover:text-aka transition-colors"
                 style={{
-                  fontFamily: "'Cormorant Garamond', 'Noto Serif', 'Noto Serif TC', serif",
-                  fontSize: '0.875rem',
-                  marginBottom: '1.25rem',
-                  paddingBottom: '0.75rem',
+                  fontFamily: navFont,
+                  fontSize: '0.6875rem',
+                  fontWeight: 600,
+                  letterSpacing: '0.15em',
+                  textTransform: 'uppercase',
                 }}
+                onClick={() => setIsOpen(false)}
               >
-                {section.title}
-              </h3>
-              <ul className="list-none">
-                {section.items.map((item, itemIndex) => (
-                  <li key={item.href || `item-${sectionIndex}-${itemIndex}`} style={{ marginBottom: '0.5rem' }}>
-                    <Link
-                      href={item.href || '/'}
-                      className={cn(
-                        'text-hai hover:text-sumi inline-block transition-colors uppercase tracking-[0.08em]',
-                        pathname === item.href && 'text-sumi border-b border-sumi',
-                      )}
-                      style={{
-                        fontFamily: navFont,
-                        fontSize: '0.875rem',
-                        fontWeight: 400,
-                      }}
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+                Contact
+              </Link>
             </div>
-          ))}
+          )}
         </div>
 
         {/* Nav Footer - with safe bottom padding */}
